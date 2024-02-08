@@ -1,14 +1,51 @@
-header.bg-primary
-    .container-fluid
-        .row.justify-content-between.align-items-center
-            .col.f-18px.ksht-left-menu
-                a.text-black(href="#") Дітям
-                a.text-black.active(href="#") Батькам
-                a.text-decoration-none(data-bs-toggle="offcanvas" href="#mobileMenu" aria-controls="mobileMenu")
-                    i.ri-menu-line
-            .col
-                a.ksht-logo(href="/")
-            .col
+header
+    .bg-primary.header
+        .container-fluid
+            .row.justify-content-between.align-items-center
+                .col.f-18px.ksht-left-menu
+                    a.text-black.d-xl-inline-block.d-none(href="#") Дітям
+                    a.text-black.active.d-xl-inline-block.d-none(href="#") Батькам
+                    a.text-decoration-none.ksht-icon-menu.d-xl-none(data-bs-toggle="offcanvas" href="#mobileMenu" aria-controls="mobileMenu")
+                        i.ci-Hamburger_LG
+                .col
+                    a.ksht-logo(href="/")
+                .col.ksht-rigth-menu
+                    a.ksht-icon-menu.d-xl-inline-block.d-none(href="#")
+                        i.ci-Search_Magnifying_Glass
+                    a.ksht-icon-menu.d-sm-inline-block.d-none(href="#")
+                        i.ci-User_01
+                    a.ksht-icon-menu.d-sm-inline-block.d-none(href="#")
+                        i.ci-Heart_01
+                    a.ksht-icon-menu.d-sm-inline-block.d-none(href="#")
+                        i.ci-Shopping_Cart_02
+            .input-group
+                i.input-group-text.ci-Search_Magnifying_Glass
+                input.form-control(type="text" placeholder="Я шукаю")
+    .ksht-first-menu-container.d-xl-block.d-none
+        a.text-dark(href="#") Про нас
+        a.text-dark(href="#") Бренди
+        a.text-dark(href="#") Акції
+        a.text-dark(href="#") Подарунки
+        a.text-dark(href="#") Оплата та доставка
+        a.text-dark(href="#") Співпраця
+    .ksht-second-menu-container.d-xl-block.d-none
+        a.text-black(href="#") Хіти
+        a.text-black(href="#") NEW
+        a.text-black(href="#") Малюкам до року
+        a.text-black(href="#") Дівчаткам
+        a.text-black(href="#") Хлопчикам
+        a.text-black(href="#") Іграшки
+        a.text-black(href="#") Розвиток та школа
+        a.text-black(href="#") Гігієна та догляд
+        a.text-black(href="#") Харчування
+        a.text-black(href="#") Текстиль
+        a.text-black(href="#") Меблі та декор
+        a.text-black(href="#") Послуги
+        a.text-black(href="#") Sale
+    .d-flex.ksht-short-menu.align-items-center.d-xl-none
+        a(href="#") Дітям
+        .ksht-short-menu-space
+        a.active(href="#") Батькам
 .offcanvas.offcanvas-start#mobileMenu
     .offcanvas-header
         button.btn-close(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
