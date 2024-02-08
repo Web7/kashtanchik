@@ -29,10 +29,10 @@
 //
 //@include fontSizes(11px,12px,13px,14px,15px,20px,25px)
 
-.h3
-	font-family: 'montserratbold'
-.h4
-	font-family: 'montserratextrabold'
+//.h3
+//	font-family: 'montserratbold'
+//.h4
+//	font-family: 'montserratextrabold'
 
 @mixin headersTag($sizes...)
 	@for $i from 0 to length($sizes)
@@ -50,8 +50,19 @@
 @media (min-width: 540px)
 	@include headersTag(24px, 22px, 22px, 18px)
 
-@media (min-width: 768px)
+@media (min-width: 1140px)
 	@include headersTag(38px, 32px, 24px, 22px)
+
+@mixin paragraph($sizes...)
+	@for $i from 0 to length($sizes)
+		.p#{$i + 1}
+			font-size: #{nth($sizes, $i+1)}
+			font-weight: normal
+
+@include paragraph(16px, 16px, 15px, 14px, 12px, 12px)
+
+@media (min-width: 1140px)
+	@include paragraph(18px, 16px, 15px, 14px, 13px, 12px)
 
 @function breakpoint-next($name, $breakpoints: $grid-breakpoints, $breakpoint-names: map-keys($breakpoints))
 	$n: index($breakpoint-names, $name)
