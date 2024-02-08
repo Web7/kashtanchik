@@ -1,0 +1,36 @@
+header
+  padding: 16px
+
+  i.ri-menu-line
+    color: $black
+
+.ksht
+  &-logo
+    background: url(../images/logo.png) no-repeat center center
+    width: 195px
+    height: 30px
+    display: block
+    margin: auto
+
+@media (min-width: 768px)
+  header
+    padding: 20px
+
+  .ksht
+    &-logo
+      width: 285px
+      height: 44px
+
+    &-left-menu
+      a
+        display: inline-block
+        margin-right: 21px
+        text-decoration: none
+        line-height: 25px
+
+        &:hover,
+        &.active
+          font-family: 'montserratmedium'
+          font-weight: 500
+          margin-right: 20px
+          border-bottom: 1px solid $black
