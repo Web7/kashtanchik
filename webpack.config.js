@@ -25,7 +25,7 @@ module.exports = {
 
     output: {
         filename: 'js/temp-index.min.js',
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'docs')
     },
 
     module: {
@@ -78,6 +78,12 @@ module.exports = {
                 ]
             }
         ]
+    },
+
+    devServer: {
+        port: 8080,
+        hot: true,
+        open: true,
     },
 
     plugins: [
