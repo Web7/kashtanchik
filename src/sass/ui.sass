@@ -35,3 +35,46 @@ footer
     &-fluid
       padding-left: 60px
       padding-right: 60px
+
+
+// Coming soon
+
+.cs-footer
+  padding: 28px 16px 20px 16px
+  img.cs-logo
+    width: 285px
+    height: 44px
+
+  .btn-outline-light
+    border-color: $white
+    width: 100%
+    margin-bottom: 16px
+    &:hover,
+    &:active,
+    &:focus
+      background-color: $green-secondary
+
+.cs-main
+  background: url(../images/cs-mobile.jpg) no-repeat center center
+  height: 400px
+  width: 100%
+  background-size: cover
+
+@media (min-width: 540px)
+  .cs-main
+    background-image: url(../images/cs.jpg)
+    height: 512px
+  .btn-outline-light
+    margin-right: 20px
+    &:last-child
+      margin-right: 0
+
+@media (min-width: 960px)
+  .cs-footer
+    padding: 28px 60px 20px 60px
+    img.cs-logo
+      width: 465px
+      height: 72px
+    .btn-outline-light
+      width: 148px
+

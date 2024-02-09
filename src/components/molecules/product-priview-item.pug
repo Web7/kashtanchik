@@ -1,11 +1,17 @@
 mixin ProductPreviewItem(data)
-    a.text-decoration-none.ksht-product-preview-item.d-inline-block&attributes(attributes)
+    .text-decoration-none.ksht-product-preview-item.d-inline-block
         .ksht-product-preview-item-img(style="background-image: url(" + data.image + ")")
             .badge-container
                 if data.isNew
                     .badge.new.text-white.bg-secondary.p3 New
                 if data.salePercent
                     .badge.new.text-white.bg-orange.p3= data.salePercent
-
-            a.ksht-add-to-favorites(href="#")
-                i.ci-Heart_01
+            .right-container
+                a.ksht-add-to-favorites(href="#")
+                    i.ci-Heart_01
+                if data.isChestnut
+                    i.ki-chestnut
+        a.ksht-product-preview-item-link.d-block&attributes(attributes)
+            .d-flex
+                span= data.name
+                i.ci-Shopping_Cart_02.ksht-icon-circle.bg-green-secondary
