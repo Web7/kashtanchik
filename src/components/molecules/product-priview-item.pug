@@ -1,0 +1,11 @@
+mixin ProductPreviewItem(data)
+    a.text-decoration-none.ksht-product-preview-item.d-inline-block&attributes(attributes)
+        .ksht-product-preview-item-img(style="background-image: url(" + data.image + ")")
+            .badge-container
+                if data.isNew
+                    .badge.new.text-white.bg-secondary.p3 New
+                if data.salePercent
+                    .badge.new.text-white.bg-orange.p3= data.salePercent
+
+            a.ksht-add-to-favorites(href="#")
+                i.ci-Heart_01

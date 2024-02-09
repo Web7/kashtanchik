@@ -1,7 +1,16 @@
 extends ../templates/layout
 include ../organisms/main/top-slider
+include ../molecules/product-priview-item
 
 block main
 	main
 		.container-fluid
 			+TopSlider()
+
+			section
+				p.h4 Новинки
+				.row
+					- var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}]
+					each item in [...items, ...items, ...items]
+						.col
+							+ProductPreviewItem(item)(href="product.html")
