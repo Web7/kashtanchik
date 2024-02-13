@@ -13,4 +13,18 @@
 		return this.length !== 0;
 	};
 
+	$(function (){
+		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
+
+		if ($kshtSelectionContainerCols4.exists()) {
+			$kshtSelectionContainerCols4.slick({
+				infinite: true,
+				slidesToShow: 4,
+				appendArrows: '.ksht-selection-arrows-cols-4'
+			});
+		}
+	});
+
+
+
 }, window.jQuery, window.Zepto));

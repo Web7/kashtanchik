@@ -37,6 +37,31 @@ footer
       padding-right: 60px
 
 
+.slick
+  &-arrow
+    display: inline-block
+    width: 32px
+    height: 32px
+    background-color: $green-secondary
+    border: none
+    position: static
+    margin-bottom: 0
+    transform: none
+    margin-left: 8px
+    &:before
+      content: ""
+      font-family: 'coolicons' !important
+    &:focus,
+    &:hover
+      background-color: $green
+  &-prev
+    &:before
+      content: "\e97f"
+  &-next
+    &:before
+      content: "\e982"
+
+
 // Coming soon
 
 .cs-footer

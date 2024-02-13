@@ -1,16 +1,52 @@
 extends ../templates/layout
 include ../organisms/main/top-slider
 include ../molecules/product-priview-item
+include ../molecules/selection-item
 
 block main
 	main
 		.container-fluid
 			+TopSlider()
 
-			section
-				p.h4 Новинки
+			section.mb-80
+				p.h4.f-medium Новинки
 				.row.row-cols-xxxl-6.row-cols-xl-5.row-cols-lg-4.row-cols-md-3.row-cols-2
 					- var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
 					each item in [...items, ...items, ...items]
 						.col
 							+ProductPreviewItem(item)(href="product.html")
+				.text-center
+					a.btn.btn-primary Дивитися ще
+			section.mb-56
+				.d-flex.justify-content-between.align-items-center
+					p.h4.f-medium Підбірка
+					.ksht-selection-arrows-cols-4
+				.ksht-selection-container-cols-4
+					- var items = [{image: ''}]
+					each item in [...items, ...items, ...items, ...items, ...items]
+						+SelectionItem(item)
+			section.mb-56
+				.d-flex.justify-content-between.align-items-center
+					p.h4.f-medium Підбірка
+					.ksht-selection-arrows-cols-2
+				.ksht-selection-container-cols-2
+					- var items = [{image: ''}]
+					each item in [...items, ...items, ...items, ...items, ...items]
+						+SelectionItem(item)
+			section.mb-56
+				.d-flex.justify-content-between.align-items-center
+					p.h4.f-medium Підбірка
+					.ksht-selection-arrows-cols-4
+				.ksht-selection-container-cols-4
+					- var items = [{image: ''}]
+					each item in [...items, ...items, ...items, ...items, ...items]
+						+SelectionItem(item)
+			section.mb-80
+				p.h4.f-medium Хіти
+				.row.row-cols-xxxl-6.row-cols-xl-5.row-cols-lg-4.row-cols-md-3.row-cols-2
+					- var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
+					each item in [...items, ...items, ...items]
+						.col
+							+ProductPreviewItem(item)(href="product.html")
+				.text-center
+					a.btn.btn-primary Дивитися ще

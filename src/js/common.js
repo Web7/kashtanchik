@@ -13,4 +13,31 @@
 		return this.length !== 0;
 	};
 
+	$(function (){
+		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
+		var $kshtSelectionContainerCols2 = $('.ksht-selection-container-cols-2');
+
+		if ($kshtSelectionContainerCols4.exists()) {
+			$kshtSelectionContainerCols4.each(function() {
+				var $this = $(this);
+				var $kshtSelectionArrowsCols4 = $this.closest('section').find('.ksht-selection-arrows-cols-4');
+				$this.slick({
+					infinite: true,
+					slidesToShow: 4,
+					appendArrows: $kshtSelectionArrowsCols4
+				});
+			});
+		}
+
+		if ($kshtSelectionContainerCols2.exists()) {
+			$kshtSelectionContainerCols2.slick({
+				infinite: true,
+				slidesToShow: 2,
+				appendArrows: '.ksht-selection-arrows-cols-2'
+			});
+		}
+	});
+
+
+
 }, window.jQuery, window.Zepto));
