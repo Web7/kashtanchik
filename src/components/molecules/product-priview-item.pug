@@ -1,5 +1,5 @@
 mixin ProductPreviewItem(data)
-    .text-decoration-none.ksht-product-preview-item.d-inline-block
+    .text-decoration-none.ksht-product-preview-item.d-inline-block.mb-30
         .ksht-product-preview-item-img(style="background-image: url(" + data.image + ")")
             .badge-container
                 if data.isNew
@@ -11,7 +11,11 @@ mixin ProductPreviewItem(data)
                     i.ci-Heart_01
                 if data.isChestnut
                     i.ki-chestnut
-        a.ksht-product-preview-item-link.d-block&attributes(attributes)
+        a.d-flex.flex-column.ksht-product-preview-item-link.d-block.text-decoration-none&attributes(attributes)
             .d-flex
-                span= data.name
+                span.text-black.p3= data.name
                 i.ci-Shopping_Cart_02.ksht-icon-circle.bg-green-secondary
+            .mt-auto
+                if data.oldPrice
+                    s.p3.text-dark.me-16= data.oldPrice
+                b.p2.text-black.f-medium= data.price
