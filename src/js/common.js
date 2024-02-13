@@ -24,7 +24,16 @@
 				$this.slick({
 					infinite: true,
 					slidesToShow: 4,
-					appendArrows: $kshtSelectionArrowsCols4
+					appendArrows: $kshtSelectionArrowsCols4,
+					variableWidth: false,
+					responsive: [
+						{
+							breakpoint: 1320,
+							settings: {
+								variableWidth: true,
+							}
+						}
+					]
 				});
 			});
 		}
@@ -33,7 +42,16 @@
 			$kshtSelectionContainerCols2.slick({
 				infinite: true,
 				slidesToShow: 2,
-				appendArrows: '.ksht-selection-arrows-cols-2'
+				appendArrows: '.ksht-selection-arrows-cols-2',
+				variableWidth: false,
+				responsive: [
+					{
+						breakpoint: 1320,
+						settings: {
+							variableWidth: true,
+						}
+					}
+				]
 			});
 		}
 	});

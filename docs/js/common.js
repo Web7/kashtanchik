@@ -15,12 +15,43 @@
 
 	$(function (){
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
+		var $kshtSelectionContainerCols2 = $('.ksht-selection-container-cols-2');
 
 		if ($kshtSelectionContainerCols4.exists()) {
-			$kshtSelectionContainerCols4.slick({
+			$kshtSelectionContainerCols4.each(function() {
+				var $this = $(this);
+				var $kshtSelectionArrowsCols4 = $this.closest('section').find('.ksht-selection-arrows-cols-4');
+				$this.slick({
+					infinite: true,
+					slidesToShow: 4,
+					appendArrows: $kshtSelectionArrowsCols4,
+					variableWidth: false,
+					responsive: [
+						{
+							breakpoint: 1320,
+							settings: {
+								variableWidth: true,
+							}
+						}
+					]
+				});
+			});
+		}
+
+		if ($kshtSelectionContainerCols2.exists()) {
+			$kshtSelectionContainerCols2.slick({
 				infinite: true,
-				slidesToShow: 4,
-				appendArrows: '.ksht-selection-arrows-cols-4'
+				slidesToShow: 2,
+				appendArrows: '.ksht-selection-arrows-cols-2',
+				variableWidth: false,
+				responsive: [
+					{
+						breakpoint: 1320,
+						settings: {
+							variableWidth: true,
+						}
+					}
+				]
 			});
 		}
 	});
