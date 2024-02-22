@@ -14,7 +14,7 @@ $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
 $gray-600: #6c757d !default;
 $gray-700: #495057 !default;
-$gray-800: #343a40 !default;
+$gray-800: #d9d9d9 !default;
 $gray-900: #7D7D7D !default;
 $black:    #000000 !default;
 // scss-docs-end gray-color-variables
@@ -500,7 +500,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
-  xxxl: 1600px
+  xxxl: 1400px
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -519,7 +519,7 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px,
   xxl: 1320px,
-  xxxl: 1520px
+  xxxl: 1440px
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -531,7 +531,7 @@ $container-max-widths: (
 // Set the number of columns and specify the width of the gutters.
 
 $grid-columns:                12 !default;
-$grid-gutter-width:           1.5rem !default;
+$grid-gutter-width:           20px !default;
 $grid-row-columns:            6 !default;
 
 // Container padding
@@ -669,7 +669,7 @@ $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
-$headings-color:              inherit !default;
+$headings-color:              $black !default;
 // scss-docs-end headings-variables
 
 // scss-docs-start display-headings
