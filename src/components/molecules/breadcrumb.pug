@@ -1,0 +1,9 @@
+mixin Breadcrumb(data)
+    nav
+        ol.breadcrumb.p6
+            each item in data
+                if item.active
+                    li.breadcrumb-item(class={active: item.active})= item.name
+                else
+                    li.breadcrumb-item
+                        a.text-dark.text-decoration-none(href="#")= item.name

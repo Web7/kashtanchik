@@ -1,0 +1,10 @@
+mixin CatalogFilters()
+    - var titles = [{name: 'Категорії'}, {name: 'Сезон'}, {name: 'Стать'}, {name: 'Розмір'}, {name: 'Матеріал'}, {name: 'Колір'}, {name: 'Рік'}, {name: 'Знижка'}]
+    .accordion.mb-28
+        each title, index in titles
+            .accordion-item
+                .accordion-header
+                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse" + index)= title.name
+                .accordion-collapse.collapse(id="panelsStayOpenCollapse" + index)
+                    .accordion-body
+    a.btn.btn-green-secondary.w-100 Застосувати
