@@ -418,6 +418,7 @@ $spacers: (
   8: 8px,
   10: 10px,
   12: 12px,
+  14: 14px,
   15: 15px,
   16: 16px,
   20: 20px,
@@ -486,7 +487,7 @@ $icon-link-icon-transform:    translate3d(.25em, 0, 0) !default;
 //
 // Style p element.
 
-$paragraph-margin-bottom:   1rem !default;
+$paragraph-margin-bottom:   8px !default;
 
 
 // Grid breakpoints

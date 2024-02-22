@@ -20,6 +20,15 @@ footer
   &-250
     width: 250px
 
+ol
+  counter-reset: listCounter
+  list-style: none
+  padding-left: 0
+  > li
+    &:before
+      content: counter(listCounter) ') '
+      counter-increment: listCounter
+
 .container
   &-fluid
     padding-left: 16px
