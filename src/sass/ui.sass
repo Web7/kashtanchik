@@ -81,9 +81,20 @@ ol:not(.breadcrumb)
 .ksht
   &-page-not-found-img
     background: url(../images/404.png) no-repeat center center
-    width: 595px
-    height: 325px
+    background-size: contain
+    width: 328px
+    height: 179px
 
+@media (min-width: 540px)
+  .ksht
+    &-page-not-found-img
+      width: 436px
+      height: 233px
+@media (min-width: 960px)
+  .ksht
+    &-page-not-found-img
+      width: 595px
+      height: 325px
 
 // Coming soon
 
