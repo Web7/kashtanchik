@@ -1,4 +1,25 @@
 extends ../templates/layout
+include ../molecules/breadcrumb
+include ../molecules/product-priview-item
+include ../organisms/catalog-filters
+include ../organisms/carousel-medium
 
 block main
     main
+        .container-fluid.container-xxl
+            - var breadcrumb = [{name: 'Хлопчикам'}, {name: 'Сорочки', active: true}]
+            +Breadcrumb(breadcrumb)
+            section.mb-80
+                .row
+                    .col-3
+                        +CatalogFilters()
+                    .col-9
+                        +CarouselMedium()
+                        p.p3.mb-36 Найкращі пропозиції зі знижками
+                        .row.row-cols-4
+                            - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
+                            each item in [...items, ...items, ...items]
+                                .col
+                                    +ProductPreviewItem(item)(href="product.html")
+                        .text-center
+                            a.btn.btn-green-secondary.w-250 Дивитися ще
