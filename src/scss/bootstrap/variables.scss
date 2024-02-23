@@ -430,6 +430,7 @@ $spacers: (
   56: 56px,
   80: 80px,
   81: 81px,
+  120: 120px,
 ) !default;
 // scss-docs-end spacer-variables-maps
 
@@ -1664,15 +1665,15 @@ $breadcrumb-border-radius:          null !default;
 // scss-docs-start carousel-variables
 $carousel-control-color:             $white !default;
 $carousel-control-width:             15% !default;
-$carousel-control-opacity:           .5 !default;
-$carousel-control-hover-opacity:     .9 !default;
+$carousel-control-opacity:           1 !default;
+$carousel-control-hover-opacity:     1 !default;
 $carousel-control-transition:        opacity .15s ease !default;
 
 $carousel-indicator-width:           30px !default;
 $carousel-indicator-height:          3px !default;
 $carousel-indicator-hit-area-height: 10px !default;
 $carousel-indicator-spacer:          3px !default;
-$carousel-indicator-opacity:         .5 !default;
+$carousel-indicator-opacity:         1 !default;
 $carousel-indicator-active-bg:       $white !default;
 $carousel-indicator-active-opacity:  1 !default;
 $carousel-indicator-transition:      opacity .6s ease !default;

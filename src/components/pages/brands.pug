@@ -8,22 +8,15 @@ include ../atoms/sort-select
 block main
     main
         .container-fluid.container-xxl
-            - var breadcrumb = [{name: 'Головна'}, {name: 'Бренд', active: true}]
+            - var breadcrumb = [{name: 'Головна'}, {name: 'Бренди', active: true}]
             +Breadcrumb(breadcrumb)
             section.mb-80
-                .d-flex.mb-28.align-items-center
-                    h1.h4.f-medium.mb-0 Бренд
-                    .ms-auto
-                        +SortSelect()
-                .row
-                    .col-3
-                        +CatalogFilters()
-                    .col-9
-                        +CarouselMedium('Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками ')
-                        .row.row-cols-4
-                            - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
-                            each item in [...items, ...items, ...items]
-                                .col
-                                    +ProductPreviewItem(item)(href="product.html")
-                        .text-center
-                            a.btn.btn-green-secondary.w-250 Дивитися ще
+                h1.h4.f-medium.mb-28 Бренди
+                form.mb-28
+                    input.form-control(placeholder="Шукати бренд")
+                .d-flex.flex-wrap.mb-56
+                    - var names = ['Всі', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '123']
+                    each name, index in names
+                        .me-16
+                            input.btn-check(type="checkbox" id="btnCheck" + index)
+                            label.btn.btn-light(for="btnCheck" + index)= name
