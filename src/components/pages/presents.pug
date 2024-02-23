@@ -14,8 +14,7 @@ block main
                     .col-3
                         +CatalogFilters()
                     .col-9
-                        +CarouselMedium()
-                        p.p3.mb-36 Найкращі пропозиції зі знижками
+                        +CarouselMedium('Найкращі пропозиції зі знижками')
                         .row.row-cols-4
                             - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
                             each item in [...items, ...items, ...items]

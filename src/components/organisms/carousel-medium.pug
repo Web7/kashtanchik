@@ -1,4 +1,4 @@
-mixin CarouselMedium()
+mixin CarouselMedium(text)
     .ksht-carousel-medium.mb-36
         .carousel.slider.carousel-fade#carouselMedium
             .carousel-indicators
@@ -19,3 +19,5 @@ mixin CarouselMedium()
                 i.ci-Chevron_Left
             button.carousel-control-next(type="button" data-bs-target="#carouselMedium" data-bs-slide="next")
                 i.ci-Chevron_Right
+        if text
+            p.p3.mt-8= text
