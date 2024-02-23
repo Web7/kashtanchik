@@ -28,20 +28,27 @@ header
         a.text-dark(href="presents.html") Подарунки
         a.text-dark(href="exchange-and-return.html") Оплата та доставка
         a.text-dark(href="#") Співпраця
-    .ksht-second-menu-container.d-xl-block.d-none
-        a.text-black(href="#") Хіти
-        a.text-black(href="#") NEW
-        a.text-black(href="#") Малюкам до року
-        a.text-black(href="#") Дівчаткам
-        a.text-black(href="#") Хлопчикам
-        a.text-black(href="#") Іграшки
-        a.text-black(href="#") Розвиток та школа
-        a.text-black(href="#") Гігієна та догляд
-        a.text-black(href="#") Харчування
-        a.text-black(href="#") Текстиль
-        a.text-black(href="#") Меблі та декор
-        a.text-black(href="#") Послуги
-        a.text-black(href="#") Sale
+    .container-fluid.container-xxl
+        .ksht-second-menu-container.d-xl-block.d-none
+            a.text-black(href="#") Хіти
+            a.text-black(href="#") NEW
+            .dropdown.d-inline-block
+                a.text-black.dropdown-toggle(href="#" data-bs-toggle="dropdown") Малюкам до року
+                .dropdown-menu
+                    .row
+                        .col-9
+                        .col-3
+                            .ksht-submenu-image-preview
+            a.text-black(href="#") Дівчаткам
+            a.text-black(href="#") Хлопчикам
+            a.text-black(href="#") Іграшки
+            a.text-black(href="#") Розвиток та школа
+            a.text-black(href="#") Гігієна та догляд
+            a.text-black(href="#") Харчування
+            a.text-black(href="#") Текстиль
+            a.text-black(href="#") Меблі та декор
+            a.text-black(href="#") Послуги
+            a.text-black(href="#") Sale
     .d-flex.ksht-short-menu.align-items-center.d-xl-none
         a(href="#") Дітям
         .ksht-short-menu-space

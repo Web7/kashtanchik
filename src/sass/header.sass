@@ -55,6 +55,8 @@ header
   &-second-menu-container
     padding-bottom: 26px
     text-align: center
+    position: relative
+    margin: 0 -22px
     a
       text-decoration: none
       display: inline-block
@@ -63,6 +65,29 @@ header
       font-weight: 400
       line-height: 17px
       text-transform: uppercase
+      &:after
+        display: none
+      &.show
+        color: $primary !important
+
+    .dropdown
+      position: static
+      &-menu
+        width: calc(100% - 24px)
+        transform: translate(12px, 41px) !important
+        border-radius: 0
+        border-left: 0
+        border-right: 0
+        border-bottom: 0
+        border-top-color: $primary
+        min-height: 573px
+        padding: 28px 0
+
+  &-submenu-image-preview
+    width: 315px
+    height: 380px
+    background: $gray-800 no-repeat center center
+    background-size: cover
 
   &-short-menu
     &-space
