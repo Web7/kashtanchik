@@ -3,13 +3,18 @@ include ../molecules/breadcrumb
 include ../molecules/product-priview-item
 include ../organisms/catalog-filters
 include ../organisms/carousel-medium
+include ../atoms/sort-select
 
 block main
     main
         .container-fluid.container-xxl
-            - var breadcrumb = [{name: 'Хлопчикам'}, {name: 'Сорочки', active: true}]
+            - var breadcrumb = [{name: 'Головна'}, {name: 'Подарунки', active: true}]
             +Breadcrumb(breadcrumb)
             section.mb-80
+                .d-flex.mb-28.align-items-center
+                    h1.h4.f-medium.mb-0 Подарунки
+                    .ms-auto
+                        +SortSelect()
                 .row
                     .col-3
                         +CatalogFilters()
