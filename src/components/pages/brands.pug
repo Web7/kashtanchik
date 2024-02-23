@@ -6,6 +6,7 @@ include ../organisms/carousel-medium
 include ../atoms/sort-select
 
 block main
+    - var names = ['Всі', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '123']
     main
         .container-fluid.container-xxl
             - var breadcrumb = [{name: 'Головна'}, {name: 'Бренди', active: true}]
@@ -15,8 +16,17 @@ block main
                 form.mb-28
                     input.form-control(placeholder="Шукати бренд")
                 .d-flex.flex-wrap.mb-56
-                    - var names = ['Всі', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '123']
                     each name, index in names
                         .me-16
                             input.btn-check(type="checkbox" id="btnCheck" + index)
                             label.btn.btn-light(for="btnCheck" + index)= name
+                each name in names
+                    if (name !== 'Всі')
+                        .row.border-bottom.pb-28.mb-28
+                            .col-12.col-md-3
+                                h2.h4.f-medium= name
+                            .col
+                                .row.row-cols-2.row-cols-md-3
+                                    - for (var x = 0; x < 10; x++)
+                                        .col.mb-20
+                                            a.text-decoration-none.text-black(href="brend.html")= name + ' Baby Brand'
