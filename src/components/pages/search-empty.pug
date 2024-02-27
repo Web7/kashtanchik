@@ -1,4 +1,20 @@
 extends ../templates/layout
+include ../molecules/product-priview-item
 
 block main
     main
+        .container-fluid.container-xxl
+            section.ksht-search-section.text-center.pt-120.pb-200
+                h1.h4.f-medium.mb-16 Результат пошуку
+                p.p3.mb-36 Результати пошуку за запитом «dfdfdf». Знайдено 0 товарів.
+                a.btn.btn-green-secondary.w-250(href="catalog.html") До каталогу
+            section.mb-80
+                .d-flex.justify-content-between.align-items-center.mb-28
+                    p.h4.f-medium Рекомендовані товари
+                    .ksht-product-carousel-arrows
+                .ksht-product-carousel-container
+                    .ksht-product-carousel-items
+                        - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
+                        each item in [...items, ...items, ...items]
+                            .px-10
+                                +ProductPreviewItem(item)(href="product.html")
