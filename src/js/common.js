@@ -29,9 +29,27 @@
 					variableWidth: false,
 					responsive: [
 						{
-							breakpoint: 1320,
+							breakpoint: 768,
 							settings: {
-								variableWidth: true,
+								slidesToShow: 2,
+							}
+						},
+						{
+							breakpoint: 992,
+							settings: {
+								slidesToShow: 3,
+							}
+						},
+						{
+							breakpoint: 1200,
+							settings: {
+								slidesToShow: 4,
+							}
+						},
+						{
+							breakpoint: 1400,
+							settings: {
+								slidesToShow: 5,
 							}
 						}
 					]
