@@ -16,6 +16,28 @@
 	$(function (){
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
 		var $kshtSelectionContainerCols2 = $('.ksht-selection-container-cols-2');
+		var $kshtProductCarouselItems = $('.ksht-product-carousel-items');
+
+		if ($kshtProductCarouselItems.exists()) {
+			$kshtProductCarouselItems.each(function() {
+				var $this = $(this);
+				var $kshtProductCarouselArrows = $this.closest('section').find('.ksht-product-carousel-arrows');
+				$this.slick({
+					infinite: true,
+					slidesToShow: 5,
+					appendArrows: $kshtProductCarouselArrows,
+					variableWidth: false,
+					responsive: [
+						{
+							breakpoint: 1320,
+							settings: {
+								variableWidth: true,
+							}
+						}
+					]
+				});
+			});
+		}
 
 		if ($kshtSelectionContainerCols4.exists()) {
 			$kshtSelectionContainerCols4.each(function() {
