@@ -308,6 +308,7 @@ $danger:          $red !default;
 $light:           $gray-100 !default;
 $dark:            $gray-900 !default;
 $orange:          #E8AB80 !default;
+$danger-dark:     #BF685C !default;
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -321,7 +322,8 @@ $theme-colors: (
   "danger":          $danger,
   "light":           $light,
   "dark":            $dark,
-  "orange":          $orange
+  "orange":          $orange,
+  "danger-dark":     $danger-dark
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -421,10 +423,12 @@ $spacers: (
   14: 14px,
   15: 15px,
   16: 16px,
+  18: 18px,
   20: 20px,
   25: 25px,
   28: 28px,
   30: 30px,
+  34: 34px,
   35: 35px,
   36: 36px,
   56: 56px,
@@ -1391,7 +1395,7 @@ $accordion-border-radius:                 0 !default;
 $accordion-inner-border-radius:           0 !default;
 
 $accordion-body-padding-y:                $accordion-padding-y !default;
-$accordion-body-padding-x:                $accordion-padding-x !default;
+$accordion-body-padding-x:                0 !default;
 
 $accordion-button-padding-y:              12px !default;
 $accordion-button-padding-x:              0 !default;

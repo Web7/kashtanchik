@@ -1,4 +1,124 @@
 extends ../templates/layout
+include ../molecules/breadcrumb
+include ../atoms/input-counter
+include ../molecules/product-priview-item
 
 block main
     main
+        .container-fluid.container-xxl
+            section.ksht-product-section.mb-80
+                - var breadcrumb = [{name: 'Головна'}, {name: 'Хлопчикам'}, {name: 'Сорочки'}, {name: 'Chamonix Floral Snowsuit Violet Grape Floral Snowsuit', active: true}]
+                +Breadcrumb(breadcrumb)
+                .row
+                    .col-8
+                        .row.ksht-product-images
+                            .col-6
+                                .ksht-product-image(style="background-image: none")
+                            .col-6
+                                .ksht-product-image(style="background-image: none")
+                            .col-4
+                                .ksht-product-image(style="background-image: none")
+                            .col-4
+                                .ksht-product-image(style="background-image: none")
+                            .col-4
+                                .ksht-product-image(style="background-image: none")
+                    .col-4
+                        .d-flex.mb-18
+                            h1.h3.mb-0 Chamonix Floral Snowsuit Violet Grape Floral Snowsuit ...
+                            .d-flex.flex-column.justify-content-between.ms-34
+                                a.ksht-size-24(href="#")
+                                    i.ci-Heart_01
+                                a.ksht-size-24
+                                    i.ki-chestnut
+                        p.text-dark.mb-18 Код товару: LGWUA-0154
+                        .d-flex.justify-content-between.mb-28
+                            p.mb-0.h3.f-medium 2578₴&nbsp;
+                                s.text-dark.f-regular.p3 6434₴
+                            .badge.new.text-white.bg-orange.p3 -30%
+                        .d-flex.justify-content-between.mb-28
+                            p.f-medium.p2 Колір:&nbsp;
+                                span.f-regular Фіолетовий
+                            a.ksht-size-24
+                                i.ci-Share_iOS_Export
+                        .mb-36
+                            .d-flex.justify-content-between.mb-8
+                                +InputCounter()
+                                a.btn.btn-green-secondary.flex-fill.ms-16(href="#") Додати у кошик
+                            span.text-danger-dark В наявності під замовлення (5-10) робочих днів
+                        .accordion
+                            .accordion-item
+                                .accordion-header
+                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsCollapseInfo") Інформація
+                                .accordion-collapse.collapse(id="panelsCollapseInfo")
+                                    .accordion-body
+                                        p Найбільш продавана куртка німецького бренду ENGEL застібається на дерев'яні ґудзики, а її м'який і гладкий матеріал забезпечує тепло, комфорт і зручність. Для виробництва використовувалася 100% чиста, натуральна мериносова вовна з додаванням шовку. Своєю функціональністю куртка завдячує концентрації ланоліну у шерсті мериноса, яка освіжається під час провітрювання.
+                            .accordion-item
+                                .accordion-header
+                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsCollapseCharacteristics") Характеристики
+                                .accordion-collapse.collapse(id="panelsCollapseCharacteristics")
+                                    .accordion-body
+                                        p.f-medium.p2 Склад:&nbsp;
+                                            span.f-regular Бавовна - 70%, Тенсел - 30%
+                                        p.f-medium.p2 Матеріал підкладки:&nbsp;
+                                            span.f-regular Бавовна - 100%
+                                        p.f-medium.p2 Сезон:&nbsp;
+                                            span.f-regular Мульти
+                                        p.f-medium.p2 Колір:&nbsp;
+                                            span.f-regular Фіолетовий
+                                        p.f-medium.p2 Візерунок:&nbsp;
+                                            span.f-regular Однотонний
+                                        p.f-medium.p2 Гарантійний період:&nbsp;
+                                            span.f-regular 14днів
+
+                            .accordion-item
+                                .accordion-header
+                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsCollapseBrand") Бренд
+                                .accordion-collapse.collapse(id="panelsCollapseBrand")
+                                    .accordion-body
+                                        a(href="brand.html") Назва бренду
+                            .accordion-item
+                                .accordion-header
+                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsCollapseSizes") Розміри
+                                .accordion-collapse.collapse(id="panelsCollapseSizes")
+                                    .accordion-body
+                                        p.mb-8 50/56
+                                        p.mb-8 50/56
+                                        p.mb-8 50/56
+                                        p.mb-8 50/56
+                                        p.mb-8 50/56
+                                        p.mb-8 50/56
+                                        p.mb-8 50/56
+                            .accordion-item
+                                .accordion-header
+                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsCollapseCertificate") Сертифікат
+                                .accordion-collapse.collapse(id="panelsCollapseCertificate")
+                                    .accordion-body
+                            .accordion-item
+                                .accordion-header
+                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsCollapseCare") Догляд
+                                .accordion-collapse.collapse(id="panelsCollapseCare")
+                                    .accordion-body
+                                        p Рекомендації щодо використання та догляду: протирати губкою з водо- і брудовідштовхувальними просоченнями.
+            section.mb-80
+                .d-flex.justify-content-between.align-items-center.mb-28
+                    p.h4.f-medium Схожі товари
+                    .ksht-product-carousel-arrows
+                .ksht-product-carousel-container
+                    .ksht-product-carousel-items
+                        - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
+                        each item in [...items, ...items, ...items]
+                            .px-10
+                                +ProductPreviewItem(item)(href="product.html")
+            section.mb-80
+                .d-flex.justify-content-between.align-items-center.mb-28
+                    p.h4.f-medium З цим товаром купують
+                    .ksht-product-carousel-arrows
+                .ksht-product-carousel-container
+                    .ksht-product-carousel-items
+                        - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
+                        each item in [...items, ...items, ...items]
+                            .px-10
+                                +ProductPreviewItem(item)(href="product.html")
+
+
+
