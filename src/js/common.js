@@ -14,8 +14,11 @@
 	};
 
 	var kshtLettersContainerPS;
+	var kshtBasketItemsContainerPS;
 
 	var $kshtLettersContainer = $('.ksht-letters-container');
+	var $kshtBasketItemsContainer = $('.ksht-basket-items-container');
+	var $kshtBasketItemName = $('.ksht-basket-item-name');
 
 	var updateLettersContainerScroll = function() {
 		if ($kshtLettersContainer.exists()) {
@@ -26,6 +29,15 @@
 		}
 	};
 
+	var updateBasketItemsContainerScroll = function() {
+		if ($kshtBasketItemsContainer.exists()) {
+			$kshtBasketItemsContainer.scrollTop(0);
+		}
+		if (kshtBasketItemsContainerPS) {
+			kshtBasketItemsContainerPS.update();
+		}
+	};
+
 	$(function (){
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
 		var $kshtSelectionContainerCols2 = $('.ksht-selection-container-cols-2');
@@ -33,6 +45,16 @@
 
 		if ($kshtLettersContainer.exists()) {
 			kshtLettersContainerPS = new PerfectScrollbar('.ksht-letters-container', {wheelPropagation: false})
+		}
+
+		if ($kshtBasketItemsContainer.exists()) {
+			kshtBasketItemsContainerPS = new PerfectScrollbar('.ksht-basket-items-container', {wheelPropagation: false})
+		}
+
+		if ($kshtBasketItemName.exists()) {
+			$kshtBasketItemName.each(function() {
+				new Dotdotdot(this);
+			});
 		}
 
 		if ($kshtProductCarouselItems.exists()) {

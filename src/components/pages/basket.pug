@@ -1,4 +1,45 @@
 extends ../templates/layout
+include ../molecules/breadcrumb
+include ../molecules/product-priview-item
+include ../molecules/basket-item
 
 block main
     main
+        .container-fluid.container-xxl
+            - var breadcrumb = [{name: 'Головна'}, {name: 'Кошик', active: true}]
+            +Breadcrumb(breadcrumb)
+            section.mb-80
+                h1.h4.f-medium.mb-28 Вміст кошика (2 шт.)
+                .row.justify-content-between
+                    .col-8
+                        .ksht-basket-items-container.pe-16
+                            .ksht-basket-items
+                                - var items = [{index: 0, isNone: true}, {index: 1, price: '25783₴'}, {index: 1, price: '25783₴', sale: '2578₴'}, {index: 1, price: '25783₴', sale: '2578₴', isOrder: true}, {index: 1, price: '25783₴', sale: '2578₴', isError: true}]
+                                each item in items
+                                    +BasketItem(item)
+                    .col-3
+                        .border-bottom.mb-16
+                            .d-flex.justify-content-between.p2.mb-16
+                                span Сума замовлення
+                                span 2473₴
+                            .d-flex.justify-content-between.p2.mb-16
+                                span Сумма знижки
+                                span 73₴
+                        .d-flex.justify-content-between.p1.f-medium.mb-12
+                            span Загальна сума
+                            span 2400₴
+                        p.text-dark.p6.mb-16 Без урахування можливої вартості доставки
+                        a.btn.btn-green-secondary.w-100(href="#") Оформити замовлення
+                        p.text-danger.p2.mb-8 Мінімальна сума замовлення 500₴.
+                        p.text-danger.p2.mb-28 Вам не вистачае всього 55₴.
+                        a.btn.btn-green-secondary.w-100.disabled(href="#") Оформити замовлення
+            section.mb-80
+                .d-flex.justify-content-between.align-items-center.mb-28
+                    p.h4.f-medium Рекомендовані товари
+                    .ksht-product-carousel-arrows
+                .ksht-product-carousel-container
+                    .ksht-product-carousel-items
+                        - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
+                        each item in [...items, ...items, ...items]
+                            .px-10
+                                +ProductPreviewItem(item)(href="product.html")

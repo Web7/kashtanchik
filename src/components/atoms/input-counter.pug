@@ -1,7 +1,7 @@
-mixin InputCounter()
+mixin InputCounter(isDisabled)
     .input-group.input-counter
-        button.btn.btn-outline-light.border-end-0.text-black
+        button.btn.btn-outline-light.border-end-0.text-black(class={'disabled': isDisabled})
             i.ci-Remove_Minus
-        input.form-control.border-end-0.border-start-0.text-center.f-medium(value="1")
-        button.btn.btn-outline-light.border-start-0.text-black
+        input.form-control.border-end-0.border-start-0.text-center.f-medium(value="1" disabled=isDisabled)
+        button.btn.btn-outline-light.border-start-0.text-black(class={'disabled': isDisabled})
             i.ci-Add_Plus
