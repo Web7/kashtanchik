@@ -6,3 +6,8 @@ mixin BlogItem(data)
                 .d-flex.align-items-center
                     img.me-12(src="")
                     span.p3= data.author
+        if data.description
+            div.mt-8.text-black= data.description
+            .badge.text-bg-secondary.text-white
+                i.ci-Clock.me-8
+                span= data.dateEnd
