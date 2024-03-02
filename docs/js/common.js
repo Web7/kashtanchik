@@ -13,10 +13,49 @@
 		return this.length !== 0;
 	};
 
+	var kshtLettersContainerPS;
+	var kshtBasketItemsContainerPS;
+
+	var $kshtLettersContainer = $('.ksht-letters-container');
+	var $kshtBasketItemsContainer = $('.ksht-basket-items-container');
+	var $kshtBasketItemName = $('.ksht-basket-item-name');
+
+	var updateLettersContainerScroll = function() {
+		if ($kshtLettersContainer.exists()) {
+			$kshtLettersContainer.scrollTop(0);
+		}
+		if (kshtLettersContainerPS) {
+			kshtLettersContainerPS.update();
+		}
+	};
+
+	var updateBasketItemsContainerScroll = function() {
+		if ($kshtBasketItemsContainer.exists()) {
+			$kshtBasketItemsContainer.scrollTop(0);
+		}
+		if (kshtBasketItemsContainerPS) {
+			kshtBasketItemsContainerPS.update();
+		}
+	};
+
 	$(function (){
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
 		var $kshtSelectionContainerCols2 = $('.ksht-selection-container-cols-2');
 		var $kshtProductCarouselItems = $('.ksht-product-carousel-items');
+
+		if ($kshtLettersContainer.exists()) {
+			kshtLettersContainerPS = new PerfectScrollbar('.ksht-letters-container', {wheelPropagation: false})
+		}
+
+		if ($kshtBasketItemsContainer.exists()) {
+			kshtBasketItemsContainerPS = new PerfectScrollbar('.ksht-basket-items-container', {wheelPropagation: false})
+		}
+
+		if ($kshtBasketItemName.exists()) {
+			$kshtBasketItemName.each(function() {
+				new Dotdotdot(this);
+			});
+		}
 
 		if ($kshtProductCarouselItems.exists()) {
 			$kshtProductCarouselItems.each(function() {
@@ -29,9 +68,27 @@
 					variableWidth: false,
 					responsive: [
 						{
-							breakpoint: 1320,
+							breakpoint: 768,
 							settings: {
-								variableWidth: true,
+								slidesToShow: 2,
+							}
+						},
+						{
+							breakpoint: 992,
+							settings: {
+								slidesToShow: 3,
+							}
+						},
+						{
+							breakpoint: 1200,
+							settings: {
+								slidesToShow: 4,
+							}
+						},
+						{
+							breakpoint: 1400,
+							settings: {
+								slidesToShow: 5,
 							}
 						}
 					]
@@ -76,8 +133,14 @@
 				]
 			});
 		}
+
+
+		updateLettersContainerScroll();
 	});
 
+	$(window).on('resize', function () {
+		updateLettersContainerScroll();
+	});
 
 
 }, window.jQuery, window.Zepto));
