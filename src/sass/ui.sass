@@ -12,6 +12,46 @@ main
 footer
   flex: 0 0 auto
 
+.ps
+  &__rail
+    &-x,
+    &-y
+      opacity: 1 !important
+    &-x
+      &:hover,
+      &:focus,
+      &.ps--clicking,
+        > .ps__thumb-x,
+        .ps__thumb-x
+          background-color: #A7D8B6
+          height: 4px
+          opacity: 1 !important
+  &__thumb
+    &-x,
+    &-y
+      background-color: #A7D8B6
+      border-radius: 0
+    &-x
+      height: 4px
+      bottom: 0
+    &-y
+      width: 4px
+      right: 0
+  &--active
+    &-x,
+    &-y
+      > .ps__rail
+        &-x,
+        &-y
+          background-color: #F8F8F8
+  &--active
+    &-x
+      > .ps__rail-x
+        height: 4px
+    &-y
+      > .ps__rail-y
+        width: 4px
+
 
 .text-decoration-none
   text-decoration: none !important

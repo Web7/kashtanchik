@@ -14,12 +14,14 @@ block main
             section.mb-80
                 h1.h4.f-medium.mb-28 Бренди
                 form.mb-28
-                    input.form-control.w-425(placeholder="Шукати бренд")
-                .d-flex.flex-wrap.mb-56
-                    each name, index in names
-                        .me-16
-                            input.btn-check(type="checkbox" id="btnCheck" + index)
-                            label.btn.btn-light(for="btnCheck" + index)= name
+                    input.form-control.ksht-search-brand-input(placeholder="Шукати бренд")
+                .w-100.mb-56
+                    .ksht-letters-container.position-relative(data-mdb-perfect-scrollbar="true")
+                        .text-nowrap
+                            each name, index in names
+                                .me-16.d-inline-block
+                                    input.btn-check(type="checkbox" id="btnCheck" + index)
+                                    label.btn.btn-light(for="btnCheck" + index)= name
                 each name in names
                     if (name !== 'Всі')
                         .row.border-bottom.pb-28.mb-28
@@ -29,4 +31,4 @@ block main
                                 .row.row-cols-2.row-cols-md-3
                                     - for (var x = 0; x < 10; x++)
                                         .col.mb-20
-                                            a.text-decoration-none.text-black(href="brend.html")= name + ' Baby Brand'
+                                            a.text-decoration-none.text-black.ksht-brand-link(href="brend.html")= name + ' Baby Brand'

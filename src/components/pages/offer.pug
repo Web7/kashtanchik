@@ -1,0 +1,9 @@
+extends ../templates/layout
+include ../molecules/breadcrumb
+
+block main
+    main
+        .container-fluid.container-xxl
+            - var breadcrumb = [{name: 'Хлопчикам'}, {name: 'Сорочки', active: true}]
+            +Breadcrumb(breadcrumb)
+            section.mb-80

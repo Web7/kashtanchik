@@ -13,10 +13,27 @@
 		return this.length !== 0;
 	};
 
+	var kshtLettersContainerPS;
+
+	var $kshtLettersContainer = $('.ksht-letters-container');
+
+	var updateLettersContainerScroll = function() {
+		if ($kshtLettersContainer.exists()) {
+			$kshtLettersContainer.scrollTop(0);
+		}
+		if (kshtLettersContainerPS) {
+			kshtLettersContainerPS.update();
+		}
+	};
+
 	$(function (){
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
 		var $kshtSelectionContainerCols2 = $('.ksht-selection-container-cols-2');
 		var $kshtProductCarouselItems = $('.ksht-product-carousel-items');
+
+		if ($kshtLettersContainer.exists()) {
+			kshtLettersContainerPS = new PerfectScrollbar('.ksht-letters-container', {wheelPropagation: false})
+		}
 
 		if ($kshtProductCarouselItems.exists()) {
 			$kshtProductCarouselItems.each(function() {
@@ -94,8 +111,14 @@
 				]
 			});
 		}
+
+
+		updateLettersContainerScroll();
 	});
 
+	$(window).on('resize', function () {
+		updateLettersContainerScroll();
+	});
 
 
 }, window.jQuery, window.Zepto));
