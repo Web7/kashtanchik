@@ -6,15 +6,57 @@
       position: relative
     &-item
       &-image
-        width: 155px
-        height: 186px
+        min-width: 86px
+        width: 86px
+        height: 108px
         background: $gray-800
       &-check
-        width: 28px
+        width: 18px
       &-name
-        width: 367px
-        height: 48px
+        width: calc(100% - 30px)
+        max-height: 24px
       &-delete
         font-size: 20px
+        position: absolute
+        right: 0
+        top: 0
         i:before
-          line-height: 34px
+          line-height: 22px
+
+
+@media (min-width: 540px)
+  .ksht
+    &-basket
+      &-items-container
+      &-item
+        &-image
+          width: 86px
+          height: 108px
+        &-check
+          width: 18px
+        &-name
+          width: 100%
+          max-height: 24px
+        &-delete
+          position: static
+          font-size: 20px
+          i:before
+            line-height: 34px
+
+@media (min-width: 1320px)
+  .ksht
+    &-basket
+      &-items-container
+      &-item
+        &-image
+          width: 155px
+          height: 186px
+        &-check
+          width: 28px
+        &-name
+          width: 367px
+          max-height: 48px
+        &-delete
+          font-size: 20px
+          i:before
+            line-height: 34px

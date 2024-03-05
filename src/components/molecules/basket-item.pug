@@ -2,30 +2,30 @@ include ../atoms/input-counter
 
 mixin BasketItem(data)
     .d-flex.align-items-center.mb-16
-        .me-16.ksht-basket-item-check.pb-16
+        .me-6.me-sm-8.me-xxl-16.ksht-basket-item-check.pb-16
             .form-check
                 input.form-check-input.form-circle-check-input(type="checkbox" value="" id="flexCheck" + data.index)
                 label.form-check-label(for="flexCheck" + data.index)
         .col
             .pb-16.border-bottom
                 .d-flex
-                    .ksht-basket-item-image.me-16
-                    .flex-fill
+                    .ksht-basket-item-image.me-8.me-xxl-16
+                    .flex-fill.position-relative
                         .d-flex.flex-column.h-100
-                            .position-relative(class={'text-dark': data.isNone})
-                                p.p2.f-medium.ksht-basket-item-name Chamonix Floral Snowsuit Violet Grape Violet Grape Violet Grape Violet Grapeeeee Grape Violet Grape Violet Grapeeeee
-                                p.p3.text-dark.mb-8 Розмір:
+                            div(class={'text-dark': data.isNone})
+                                p.p2.f-medium.ksht-basket-item-name.mb-4.mb-xxl-8 Chamonix Floral Snowsuit Violet Grape Violet Grape Violet Grape Violet Grapeeeee Grape Violet Grape Violet Grapeeeee
+                                p.p3.text-dark.mb-4.mb-xxl-8 Розмір:
                                     span.d-inline-block.ms-20(class={'text-black': !data.isNone}) 50/56
-                                p.p3.text-dark Дівчатам
+                                p.p3.text-dark.mb-0 Дівчатам
                             div.mt-auto
                                 .d-flex.justify-content-between.align-items-center
                                     div
                                         +InputCounter(data.isNone)
                                     .ms-auto
                                         if !data.isNone
+                                            .d-inline-block.p2.f-medium= data.price
                                             if data.sale
                                                 s.d-inline-block.p3.f-medium.text-dark= data.sale
-                                            .d-inline-block.p2.f-medium= data.price
 
                                         else
                                             .d-inline-block.p2.f-medium.text-danger Немає в наявності

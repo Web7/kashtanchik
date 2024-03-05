@@ -11,13 +11,13 @@ block main
             section.mb-80
                 h1.h4.f-medium.mb-28 Вміст кошика (2 шт.)
                 .row.justify-content-between
-                    .col-8
+                    .col-xxl-8.col-12.mb-16
                         .ksht-basket-items-container.pe-16
                             .ksht-basket-items
                                 - var items = [{index: 0, isNone: true}, {index: 1, price: '25783₴'}, {index: 1, price: '25783₴', sale: '2578₴'}, {index: 1, price: '25783₴', sale: '2578₴', isOrder: true}, {index: 1, price: '25783₴', sale: '2578₴', isError: true}]
                                 each item in items
                                     +BasketItem(item)
-                    .col-3
+                    .col-xxl-3.col-12
                         .border-bottom.mb-16
                             .d-flex.justify-content-between.p2.mb-16
                                 span Сума замовлення
