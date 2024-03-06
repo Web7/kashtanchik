@@ -70,7 +70,73 @@
     <main>
       <div class="container-fluid container-xxl">
         <section class="mb-80">
-          <div class="row"></div>
+          <div class="d-flex">
+            <div class="d-none d-xxl-block px-xxl-0 flex-shrink-0">
+              <nav class="nav nav-underline flex-column nav-personal-area"><a class="nav-link active" href="contact-information.html">Контактна інформація</a><a class="nav-link" href="my-orders.html">Мої замовлення</a><a class="nav-link" href="wish-list.html">Список бажань</a><a class="nav-link text-dark mt-24" href="#">Вихід</a></nav>
+            </div>
+            <div class="border-xxl-start w-100 ms-16">
+              <div class="d-xxl-none"><a class="nav-personal-area-button d-flex w-100" href="contact-information.html"><span>Контактна інформація</span><i class="ci-Chevron_Up ms-auto"></i></a></div>
+              <h1 class="h3 f-medium mb-36 ms-xxl-132 d-none d-xxl-block">Контактна інформація</h1>
+              <form class="needs-validation mb-16 mt-4 mt-xxl-0" novalidate>
+                <div class="row row-cols-1 row-cols-md-2">
+                  <div class="col ps-xxl-132">
+                    <div class="mb-28">
+                      <label class="form-label" for="">Ваше ім’я</label>
+                      <input class="form-control" placeholder="Ваше ім’я" id="" type="text">
+                    </div>
+                    <div class="mb-28">
+                      <label class="form-label" for="">Ваше прізвище</label>
+                      <input class="form-control" placeholder="Ваше прізвище" id="" type="text">
+                    </div>
+                    <div class="mb-28">
+                      <label class="form-label" for="">По-батькові</label>
+                      <input class="form-control" placeholder="По-батькові" id="" type="text">
+                    </div>
+                    <div class="mb-28">
+                      <label class="form-label" for="">Ваш телефон</label>
+                      <input class="form-control form-phone" required="true" id="" type="tel">
+                    </div>
+                    <div class="mb-28">
+                      <label class="form-label" for="">Ваша пошта</label>
+                      <input class="form-control" placeholder="Ваша пошта" id="" type="e-mail">
+                    </div>
+                    <div class="input-datepicker mb-28">
+                      <label class="form-label" for="">Ваша дата народження</label>
+                      <input class="form-control form-datepicker" placeholder="Ваша дата народження" id="" type="text">
+                    </div>
+                  </div>
+                  <div class="col ps-xxl-132">
+                    <p class="p1 f-medium mb-16">Зміна паролю</p>
+                    <div class="input-password mb-28">
+                      <div class="input-group">
+                        <input class="form-control" placeholder="Старий пароль" type="password">
+                        <button class="btn btn-password"><i class="ci-Hide"></i><i class="ci-Show d-none"></i></button>
+                      </div>
+                    </div>
+                    <div class="input-password mb-28">
+                      <div class="input-group">
+                        <input class="form-control" placeholder="Новий пароль" type="password">
+                        <button class="btn btn-password"><i class="ci-Hide"></i><i class="ci-Show d-none"></i></button>
+                      </div>
+                    </div>
+                    <div class="input-password mb-28">
+                      <div class="input-group">
+                        <input class="form-control" placeholder="Підтвердження паролю" type="password">
+                        <button class="btn btn-password"><i class="ci-Hide"></i><i class="ci-Show d-none"></i></button>
+                      </div>
+                    </div>
+                    <p class="p1 f-medium mb-16">Інформація про дітей</p>
+                  </div>
+                  <div class="col ps-xxl-132">
+                    <button class="btn btn-green-secondary w-100" type="submit">Зберегти</button>
+                  </div>
+                </div>
+              </form>
+              <div class="d-xxl-none"><a class="nav-personal-area-button d-flex w-100" href="my-orders.html"><span>Мої замовлення</span><i class="ci-Chevron_Down ms-auto"></i></a></div>
+              <div class="d-xxl-none"><a class="nav-personal-area-button d-flex w-100" href="wish-list.html"><span>Список бажань</span><i class="ci-Chevron_Down ms-auto"></i></a></div>
+              <div class="d-xxl-none"><a class="nav-personal-area-button d-flex w-100 text-dark" href="#"><span>Вихід</span></a></div>
+            </div>
+          </div>
         </section>
       </div>
     </main>
@@ -92,5 +158,6 @@
     </div>
   </div>
 </footer>
+    <script src="//unpkg.com/bootstrap-datepicker@1.9.0/dist/locales/bootstrap-datepicker.uk.min.js" charset="UTF-8"></script>
   </body>
 </html>
