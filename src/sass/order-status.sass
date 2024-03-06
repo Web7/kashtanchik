@@ -1,13 +1,12 @@
 .order-status
   &-item
-    width: 103px
+    width: 36px
     text-align: center
     font-size: 12px
     color: $gray-900
-
+    line-height: 1
     i
       display: inline-block
-      margin-bottom: 8px
       width: 30px
       height: 30px
       background: no-repeat 0 0
@@ -41,8 +40,8 @@
 
 
   &-separator
-    width: 31px
-    height: 3px
+    width: 14px
+    height: 2px
     background-color: $gray-900
     border-radius: 2px
     &.active
@@ -55,13 +54,17 @@
       &-button
         padding: 0
         box-shadow: none !important
+        &:after
+          position: absolute
+          top: 0
+          right: 0
 
   &-image
-    width: 71px
-    height: 86px
+    width: 43px
+    height: 52px
     background: $gray-800 no-repeat center center
     background-size: cover
-    margin-right: 12px
+    margin-right: 8px
   &-xl-image
     width: 100px
     height: 119px
@@ -74,3 +77,34 @@
     width: 721px
     &:first-child
       border-top: 1px solid $gray-100
+  &-price-container
+    position: absolute
+    bottom: 0
+    right: 0
+
+@media (min-width: 540px)
+  .order-status
+    &-item
+      width: 103px
+      i
+        margin-bottom: 8px
+    &-separator
+      width: 23px
+      height: 3px
+    &-image
+      width: 71px
+      height: 86px
+      margin-right: 12px
+    &-price-container
+      position: static
+    &-accordion
+      .accordion
+        &-button
+          &:after
+            position: static
+
+@media (min-width: 1320px)
+  .order-status
+    &-separator
+      width: 31px
+      height: 3px

@@ -3,21 +3,25 @@ mixin OrderStatusAfter(index)
         .accordion.order-status-accordion(id="accordion-" + index)
             .accordion-item
                 .accordion-header
-                    .accordion-button.collapsed(data-bs-toggle="collapse" data-bs-target="#order-collapse-" + index)
-                        .d-flex.align-items-center
-                            .me-50
-                                p.p4.text-dark Статус
-                                p.p2.f-medium.mb-0 Виконан
-                            .me-50
-                                p.p4.text-dark Номер замовлення
-                                p.p2.f-medium.mb-0 1234-2144-2424
-                            .me-50
-                                p.p4.text-dark Дата замовлення
-                                p.p2.f-medium.mb-0 12/12/2023
-                            .me-50
-                                p.p4.text-dark Сума замовлення
-                                p.p2.f-medium.mb-0 1455₴
-                            .ms-auto.d-flex
+                    .accordion-button.collapsed.position-relative(data-bs-toggle="collapse" data-bs-target="#order-collapse-" + index)
+                        .d-flex.align-items-md-center.w-100.flex-column.flex-md-row
+                            .d-flex.align-items-xxl-center.flex-column.flex-xxl-row
+                                .me-50.order-1.order-xxl-0.mb-15.mb-xxl-0
+                                    p.p4.text-dark.d-none.d-xxl-block Статус
+                                    p.p2.f-xxl-medium.mb-0 Виконан
+                                .d-flex.order-0.order-xxl-1.mb-8.mb-xxl-0
+                                    .me-xxl-50
+                                        p.p4.text-dark.d-none.d-xxl-block Номер замовлення
+                                        p.p2.f-xxl-medium.mb-0 1234-2144-2424
+                                    .mx-6.d-xxl-none -
+                                    .me-xxl-50
+                                        p.p4.text-dark.d-none.d-xxl-block Дата замовлення
+                                        p.p2.f-xxl-medium.mb-0 12/12/2023
+
+                                .me-md-50.order-2.order-status-price-container
+                                    p.p4.text-dark.d-none.d-xxl-block Сума замовлення
+                                    p.p2.f-medium.mb-0 1455₴
+                            .ms-md-auto.d-flex
                                 .order-status-image(style="background-image: none")
                                 .order-status-image(style="background-image: none")
                                 .order-status-image(style="background-image: none")
@@ -43,6 +47,7 @@ mixin OrderStatusAfter(index)
                             div
                                 p.p4.text-dark Сума
                                 p.p2.f-medium 1244₴
+
                         .d-flex.align-items-center.order-status-product-item
                             .ksht-basket-item-check
                                 .form-check
@@ -62,6 +67,7 @@ mixin OrderStatusAfter(index)
                             div
                                 p.p4.text-dark Сума
                                 p.p2.f-medium 1244₴
+
                         .w-425.mt-18
                             .d-flex.p3.mb-12
                                 span Оплата:
