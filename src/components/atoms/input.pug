@@ -1,0 +1,9 @@
+mixin Input()
+    div(class= attributes.class)
+        if attributes.label
+            label.form-label(for= attributes.id)= attributes.label
+        input.form-control(required= attributes.required placeholder= attributes.placeholder id= attributes.id type= attributes.type)
+        if attributes.validFeedback
+            .valid-feedback= attributes.validFeedback
+        if attributes.invalidFeedback
+            .invalid-feedback= attributes.invalidFeedback

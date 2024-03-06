@@ -1,7 +1,53 @@
 extends ../templates/layout
+include ../atoms/input
+include ../atoms/input-phone
+include ../atoms/input-password
+include ../atoms/input-datepicker
 
 block main
     main
         .container-fluid.container-xxl
             section.mb-80
                 .row
+                    .col-12.col-xxl-2.d-none.d-xxl-block
+                        nav.nav.nav-underline.flex-column.nav-personal-area
+                            a.nav-link.active(href="contact-information.html") Контактна інформація
+                            a.nav-link(href="my-orders.html") Мої замовлення
+                            a.nav-link(href="wish-list.html") Список бажань
+                            a.nav-link.text-dark.mt-24(href="#") Вихід
+                    .col-12.col-xxl-10.border-xxl-start
+                        .d-xxl-none
+                            a.nav-personal-area-button.d-flex.w-100(href="contact-information.html")
+                                span Контактна інформація
+                                i.ci-Chevron_Up.ms-auto
+                        h1.h3.f-medium.mb-36.ms-xxl-132.d-none.d-xxl-block Контактна інформація
+                        form.needs-validation.mb-16.mt-4.mt-xxl-0(novalidate)
+                            .row.row-cols-1.row-cols-md-2
+                                .col.ps-xxl-132
+                                    +Input()(class="mb-28" id="" type="text" placeholder="Ваше ім’я" label="Ваше ім’я")
+                                    +Input()(class="mb-28" id="" type="text" placeholder="Ваше прізвище" label="Ваше прізвище")
+                                    +Input()(class="mb-28" id="" type="text" placeholder="По-батькові" label="По-батькові")
+                                    +InputPhone()(class="mb-28" id="" label="Ваш телефон" invalidFeedback="" required="true")
+                                    +Input()(class="mb-28" id="" type="e-mail" placeholder="Ваша пошта" label="Ваша пошта")
+                                    +InputDatepicker()(class="mb-28" id="" placeholder="Ваша дата народження" label="Ваша дата народження")
+                                .col.ps-xxl-132
+                                    p.p1.f-medium.mb-16 Зміна паролю
+                                    +InputPassword()(class="mb-28" placeholder="Старий пароль")
+                                    +InputPassword()(class="mb-28" placeholder="Новий пароль")
+                                    +InputPassword()(class="mb-28" placeholder="Підтвердження паролю")
+
+                                    p.p1.f-medium.mb-16 Інформація про дітей
+                                .col.ps-xxl-132
+                                    button.btn.btn-green-secondary.w-100(type="submit") Зберегти
+
+                        .d-xxl-none
+                            a.nav-personal-area-button.d-flex.w-100(href="my-orders.html")
+                                span Мої замовлення
+                                i.ci-Chevron_Down.ms-auto
+                        .d-xxl-none
+                            a.nav-personal-area-button.d-flex.w-100(href="wish-list.html")
+                                span Список бажань
+                                i.ci-Chevron_Down.ms-auto
+                        .d-xxl-none
+                            a.nav-personal-area-button.d-flex.w-100.text-dark(href="#")
+                                span Вихід

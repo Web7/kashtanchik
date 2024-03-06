@@ -427,6 +427,7 @@ $spacers: (
   16: 16px,
   18: 18px,
   20: 20px,
+  24: 24px,
   25: 25px,
   28: 28px,
   30: 30px,
@@ -438,6 +439,7 @@ $spacers: (
   81: 81px,
   100: 100px,
   120: 120px,
+  132: 132px,
   200: 200px,
 ) !default;
 // scss-docs-end spacer-variables-maps
@@ -900,11 +902,11 @@ $form-text-color:                       var(--#{$prefix}secondary-color) !defaul
 // scss-docs-end form-text-variables
 
 // scss-docs-start form-label-variables
-$form-label-margin-bottom:              .5rem !default;
-$form-label-font-size:                  null !default;
+$form-label-margin-bottom:              8px !default;
+$form-label-font-size:                  12px !default;
 $form-label-font-style:                 null !default;
 $form-label-font-weight:                null !default;
-$form-label-color:                      null !default;
+$form-label-color:                      $gray-900 !default;
 // scss-docs-end form-label-variables
 
 // scss-docs-start form-input-variables

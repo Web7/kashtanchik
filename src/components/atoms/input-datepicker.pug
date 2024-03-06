@@ -1,0 +1,9 @@
+mixin InputDatepicker()
+    .input-datepicker(class= attributes.class)
+        if attributes.label
+            label.form-label(for= attributes.id)= attributes.label
+        input.form-control.form-datepicker(required= attributes.required placeholder= attributes.placeholder id= attributes.id type="text")
+        if attributes.validFeedback
+            .valid-feedback= attributes.validFeedback
+        if attributes.invalidFeedback
+            .invalid-feedback= attributes.invalidFeedback

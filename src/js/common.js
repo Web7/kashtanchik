@@ -13,6 +13,20 @@
 		return this.length !== 0;
 	};
 
+	$.fn.toggleAttrVal = function(attr, val1, val2) {
+		var test = $(this).attr(attr);
+		if ( test === val1) {
+			$(this).attr(attr, val2);
+			return this;
+		}
+		if ( test === val2) {
+			$(this).attr(attr, val1);
+			return this;
+		}
+		$(this).attr(attr, val1);
+		return this;
+	};
+
 	var kshtLettersContainerPS;
 	var kshtBasketItemsContainerPS;
 
@@ -42,6 +56,17 @@
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
 		var $kshtSelectionContainerCols2 = $('.ksht-selection-container-cols-2');
 		var $kshtProductCarouselItems = $('.ksht-product-carousel-items');
+		var $formDatepicker = $('.form-datepicker');
+
+		if ($formDatepicker.exists()) {
+			$formDatepicker.each(function() {
+				$(this).datepicker({
+					language: 'uk',
+					autoclose: true,
+					container: '.input-datepicker'
+				});
+			});
+		}
 
 		if ($kshtLettersContainer.exists()) {
 			kshtLettersContainerPS = new PerfectScrollbar('.ksht-letters-container', {wheelPropagation: false})
@@ -140,6 +165,15 @@
 
 	$(window).on('resize', function () {
 		updateLettersContainerScroll();
+	})
+
+	$(document).on('click', '.btn-password', function() {
+		var $this = $(this);
+		var $inputGroup = $this.closest('.input-group');
+		var $formPhone = $inputGroup.find('.form-phone');
+
+		$formPhone.toggleAttrVal('type', 'password', 'text');
+		$this.find('i').toggleClass('d-none');
 	});
 
 
