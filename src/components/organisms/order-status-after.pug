@@ -1,0 +1,26 @@
+mixin OrderStatusAfter(index)
+    .border.py-14.px-16.w-100.mb-16
+        .accordion.order-status-accordion(id="accordion-" + index)
+            .accordion-item
+                .accordion-header
+                    .accordion-button.collapsed(data-bs-toggle="collapse" data-bs-target="#order-collapse-" + index)
+                        .d-flex.align-items-center
+                            .me-50
+                                p.p4.text-dark Статус
+                                p.p2.f-medium.mb-0 Виконан
+                            .me-50
+                                p.p4.text-dark Номер замовлення
+                                p.p2.f-medium.mb-0 1234-2144-2424
+                            .me-50
+                                p.p4.text-dark Дата замовлення
+                                p.p2.f-medium.mb-0 12/12/2023
+                            .me-50
+                                p.p4.text-dark Сума замовлення
+                                p.p2.f-medium.mb-0 1455₴
+                            .ms-auto.d-flex
+                                .order-status-image(style="background-image: none")
+                                .order-status-image(style="background-image: none")
+                                .order-status-image(style="background-image: none")
+
+                .accordion-collapse.collapse(id="order-collapse-" + index data-bs-parent="#accordion-" + index)
+                    .accordion-body
