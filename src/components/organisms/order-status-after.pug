@@ -24,3 +24,52 @@ mixin OrderStatusAfter(index)
 
                 .accordion-collapse.collapse(id="order-collapse-" + index data-bs-parent="#accordion-" + index)
                     .accordion-body
+                        .d-flex.align-items-center.order-status-product-item
+                            .ksht-basket-item-check
+                                .form-check
+                                    input.form-check-input.form-circle-check-input(type="checkbox" value="" id="flexCheck" + index)
+                                    label.form-check-label(for="flexCheck" + index)
+                            .order-status-xl-image(style="background-image: none")
+                            .me-auto.w-250.p2
+                                p.f-medium Chamonix Floral Snowsuit Violet Grape
+                                p.text-dark Розмір:
+                                    span.text-black 50/56
+                            .me-50
+                                p.p4.text-dark Ціна
+                                p.p2.f-medium 1244₴
+                            .me-50.text-center
+                                p.p4.text-dark Кількість
+                                p.p2.f-medium 2
+                            div
+                                p.p4.text-dark Сума
+                                p.p2.f-medium 1244₴
+                        .d-flex.align-items-center.order-status-product-item
+                            .ksht-basket-item-check
+                                .form-check
+                                    input.form-check-input.form-circle-check-input(type="checkbox" value="" id="flexCheck" + index)
+                                    label.form-check-label(for="flexCheck" + index)
+                            .order-status-xl-image(style="background-image: none")
+                            .me-auto.w-250.p2
+                                p.f-medium Chamonix Floral Snowsuit Violet Grape
+                                p.text-dark Розмір:
+                                    span.text-black 50/56
+                            .me-50
+                                p.p4.text-dark Ціна
+                                p.p2.f-medium 1244₴
+                            .me-50.text-center
+                                p.p4.text-dark Кількість
+                                p.p2.f-medium 2
+                            div
+                                p.p4.text-dark Сума
+                                p.p2.f-medium 1244₴
+                        .w-425.mt-18
+                            .d-flex.p3.mb-12
+                                span Оплата:
+                                span.ms-auto Оплата при отриманні товару
+                            .d-flex.p3.mb-28
+                                span Доставка:
+                                span.ms-auto Безкоштовно
+                            .d-flex.p1.mb-28.f-medium
+                                span Загальна сума
+                                span.ms-auto 2473₴
+                            a.btn.btn-green-secondary.w-100.disabled(href="#") Повторити замовлення
