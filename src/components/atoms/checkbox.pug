@@ -1,0 +1,4 @@
+mixin Checkbox()
+    .form-check(class= attributes.class)
+        input.form-check-input(type="checkbox" id="checkbox" + attributes.id)
+        label.form-check-label(for="checkbox" + attributes.id)= attributes.label

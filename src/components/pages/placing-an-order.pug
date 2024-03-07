@@ -1,4 +1,44 @@
 extends ../templates/layout
+include ../atoms/checkbox
+include ../atoms/select
+include ../atoms/input
+include ../atoms/input-phone
 
 block main
     main
+        .container-fluid.container-xxl
+            .row.mb-36
+                .col-8
+                    h2.h3.f-medium.mb-28 1. Оформлення замовлення
+                    .row.row-cols-2.pb-36.mb-36.border-bottom
+                        .col
+                            +Input()(class="mb-28" id="" type="text" label="Ваше ім’я*" placeholder="Ваше ім’я" invalidFeedback="" required="true")
+                            +Input()(class="mb-28" id="" type="text" label="Ваше прізвище*" placeholder="Ваше прізвище" invalidFeedback="" required="true")
+                            +Input()(class="mb-28" id="" type="text" label="По-батькові" placeholder="По-батькові" invalidFeedback="" required="true")
+                            +Checkbox()(id="1" label="Отримувати буде інша людина")
+                        .col
+                            +InputPhone()(class="mb-28" id="" label="Номер телефону*" placeholder="" invalidFeedback="" required="true")
+                            +Input()(class="mb-28" id="" type="text" label="E-mail*" placeholder="E-mail" invalidFeedback="" required="true")
+                            +Checkbox()(id="2" label="Хочу отримувати інформацію про новинки та акції")
+
+                    h2.h3.f-medium.mb-28 2. Доставка
+                    .row.row-cols-2.pb-36.mb-36.border-bottom
+                        .col
+                            +Input()(class="mb-28" id="" type="text" label="Оберіть місто*" placeholder="Оберіть місто" invalidFeedback="" required="true")
+                        .col
+                            +Select(['Кур’єром Нової пошти', 'Нова пошта (самовивіз)', 'Доставка в інші країни'])(class="my-28" id="select1" placeholder="Варіант доставки")
+
+                    h2.h3.f-medium.mb-28 3. Оплата
+                    .row.row-cols-2.pb-36.mb-36.border-bottom
+                        .col
+                            +Select(['Накладений платіж', 'Оплата картою', 'Google Pay'])(class="my-28" id="select2" placeholder="Оплата")
+                            +Input()(class="mb-28" id="" type="text" label="Ваше ім’я*" placeholder="Ваше ім’я" invalidFeedback="" required="true")
+                            +Input()(class="mb-28" id="" type="text" label="Ваше прізвище*" placeholder="Ваше прізвище" invalidFeedback="" required="true")
+                            +Input()(class="mb-28" id="" type="number" label="Номер карти*" placeholder="Номер карти" invalidFeedback="" required="true")
+                            .row
+                                .col-6
+                                    +Input()(class="mb-28" classInput="text-center" id="" type="number" label="Термін дії*" placeholder="Термін дії*" invalidFeedback="" required="true")
+                                .col-3
+                                    +Input()(class="mb-28" classInput="text-center" id="" type="password" label="CVV*" placeholder="CVV*" invalidFeedback="" required="true")
+                        .col
+                .col-4

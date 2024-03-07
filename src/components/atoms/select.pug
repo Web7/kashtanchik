@@ -1,0 +1,7 @@
+mixin Select(data)
+    .select-container(class= attributes.class)
+        if attributes.label
+            label.form-label(for= attributes.id)= attributes.label
+        select(name="" id= attributes.id placeholder= attributes.placeholder)
+            for option in data
+                option(value= option)= option

@@ -1,0 +1,35 @@
+.iti
+  display: block
+
+  &--allow-dropdown
+    .iti__flag-container
+      .iti__selected-flag
+        border-right: 1px solid $gray-100
+        background-color: transparent
+        padding: 12px 16px
+      &:hover
+        .iti__selected-flag
+          background-color: transparent
+  &__tel-input
+    padding-right: 16px !important
+  &__country-list
+    border-top: 0 !important
+  &__search-input
+    border-radius: 0
+    border-bottom: 1px solid $gray-100
+    margin: 0 16px
+    width: calc(100% - 32px)
+    &:focus-visible
+      outline: 0
+  &__country
+    padding: 10px 16px
+    line-height: 1
+    &.iti__highlight
+      background-color: $green-secondary
+  &__dial-code
+    color: $black
+    order: 1
+    margin-left: 12px
+  &__country-name
+    order: 2
+    margin-left: 26px
