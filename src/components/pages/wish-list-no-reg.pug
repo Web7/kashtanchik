@@ -1,30 +1,14 @@
 extends ../templates/layout
+include ../molecules/product-priview-item
 
 block main
     main
         .container-fluid.container-xxl
             section.mb-80
-                .d-flex
-                    .d-none.d-xxl-block.px-xxl-0.flex-shrink-0
-                        nav.nav.nav-underline.flex-column.nav-personal-area
-                            a.nav-link(href="contact-information.html") Контактна інформація
-                            a.nav-link(href="my-orders.html") Мої замовлення
-                            a.nav-link.active(href="wish-list.html") Список бажань
-                            a.nav-link.text-dark.mt-24(href="#") Вихід
-                    .border-xxl-start.w-100.ms-16
-                        .d-xxl-none
-                            a.nav-personal-area-button.d-flex.w-100(href="contact-information.html")
-                                span Контактна інформація
-                                i.ci-Chevron_Down.ms-auto
-                        h1.h3.f-medium.mb-36.ms-xxl-132.d-none.d-xxl-block Список бажань
-                        .d-xxl-none
-                            a.nav-personal-area-button.d-flex.w-100(href="my-orders.html")
-                                span Мої замовлення
-                                i.ci-Chevron_Down.ms-auto
-                        .d-xxl-none
-                            a.nav-personal-area-button.d-flex.w-100(href="wish-list.html")
-                                span Список бажань
-                                i.ci-Chevron_Up.ms-auto
-                        .d-xxl-none
-                            a.nav-personal-area-button.d-flex.w-100.text-dark(href="#")
-                                span Вихід
+                .row.row-cols-5
+                    - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
+                    each item in [...items, ...items, ...items]
+                        .col
+                            +ProductPreviewItem(item)(href="product.html")
+                .text-center
+                    a.btn.btn-green-secondary.w-250 Дивитися ще
