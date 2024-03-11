@@ -11,17 +11,21 @@ block main
         .container-fluid.container-xxl
             - var breadcrumb = [{name: 'Головна'}, {name: 'Подарунки', active: true}]
             +Breadcrumb(breadcrumb)
-            section.mb-80
-                .d-flex.mb-28.align-items-center
-                    h1.h4.f-medium.mb-0 Подарунки
-                    .ms-auto
-                        +SortSelect()
+            section.mb-80.search-section
+                .d-flex.flex-column
+                    .d-flex.mb-16.align-items-center.flex-column.flex-md-row.order-1.order-md-0.search-header-container
+                        h1.h4.f-medium.mb-16.mb-md-0 Подарунки
+                        .row.row-cols-2.row-cols-md-1.ms-md-auto.search-buttons-container
+                            .d-md-none
+                                a.btn.btn-outline-dark.w-100.rounded.py-13 Фільтри
+                            .ms-auto
+                                +SortSelect()
                 .row
-                    .col-3
+                    .col-md-4.col-xxl-3.col-12.d-none.d-md-block
                         +CatalogFilters()
-                    .col-9
+                    .col-md-8.col-xxl-9.col-12
                         +CarouselMedium('Найкращі пропозиції зі знижками')
-                        .row.row-cols-4
+                        .row.row-cols-xxl-4.row-cols-2.row-cols-lg-3
                             - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
                             each item in [...items, ...items, ...items]
                                 .col

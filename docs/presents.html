@@ -131,22 +131,27 @@
             <li class="breadcrumb-item active">Подарунки</li>
           </ol>
         </nav>
-        <section class="mb-80">
-          <div class="d-flex mb-28 align-items-center">
-            <h1 class="h4 f-medium mb-0">Подарунки</h1>
-            <div class="ms-auto">
-              <div class="select-container">
-                <select class="form-select border-top-0 border-start-0 border-end-0 ps-0">
-                  <option selected>Рекомендовані вам</option>
-                  <option value="1">Найновіщі</option>
-                  <option value="2">Найдешевші</option>
-                  <option value="3">Найдородчі</option>
-                </select>
+        <section class="mb-80 search-section">
+          <div class="d-flex flex-column">
+            <div class="d-flex mb-16 align-items-center flex-column flex-md-row order-1 order-md-0 search-header-container">
+              <h1 class="h4 f-medium mb-16 mb-md-0">Подарунки</h1>
+              <div class="row row-cols-2 row-cols-md-1 ms-md-auto search-buttons-container">
+                <div class="d-md-none"><a class="btn btn-outline-dark w-100 rounded py-13">Фільтри</a></div>
+                <div class="ms-auto">
+                  <div class="select-container">
+                    <select class="form-select border-top-0 border-start-0 border-end-0 ps-0">
+                      <option selected>Рекомендовані вам</option>
+                      <option value="1">Найновіщі</option>
+                      <option value="2">Найдешевші</option>
+                      <option value="3">Найдородчі</option>
+                    </select>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="col-3">
+            <div class="col-md-4 col-xxl-3 col-12 d-none d-md-block">
               <div class="accordion mb-28">
                 <div class="accordion-item">
                   <div class="accordion-header">
@@ -382,7 +387,7 @@
                 </div>
               </div><a class="btn btn-green-secondary w-100">Застосувати</a>
             </div>
-            <div class="col-9">
+            <div class="col-md-8 col-xxl-9 col-12">
               <div class="ksht-carousel-medium mb-36">
                 <div class="carousel slider carousel-fade" id="carouselMedium">
                   <div class="carousel-indicators">
@@ -406,7 +411,7 @@
                 </div>
                 <p class="p3 mt-8">Найкращі пропозиції зі знижками</p>
               </div>
-              <div class="row row-cols-4">
+              <div class="row row-cols-xxl-4 row-cols-2 row-cols-lg-3">
                 <div class="col">
                   <div class="ksht-product-preview-item d-inline-block mb-30">
                     <div class="ksht-product-preview-item-img" style="background-image: url()">
