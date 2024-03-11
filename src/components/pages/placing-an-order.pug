@@ -1,4 +1,4 @@
-extends ../templates/layout
+extends ../templates/layout-header-short
 include ../atoms/checkbox
 include ../atoms/select
 include ../atoms/input
@@ -8,7 +8,7 @@ include ../organisms/delivery
 block main
     main
         .container-fluid.container-xxl
-            section.mb-80
+            section.mb-80.mt-36
                 .row.mb-36
                     .col-12.col-xxl-8
                         h2.h3.f-medium.mb-28 1. Оформлення замовлення
@@ -44,4 +44,10 @@ block main
                                         +Input()(class="mb-28" classInput="text-center" id="" type="password" label="CVV*" placeholder="CVV*" invalidFeedback="" required="true")
                             .col
                     .col-12.col-xxl-4
+                        .border.p-20.mt-87.mb-28
+                        a.btn.btn-green-secondary.w-100.mb-18(href="#") Оформити замовлення
+                        span.p6 Натискаючи кнопку 'Оформити замовлення', я підтверджую згоду з умовами
+                            a(href="#") Договору приєднання
+                            | та
+                            a(href="#") Публічного договору
                 +Delivery()

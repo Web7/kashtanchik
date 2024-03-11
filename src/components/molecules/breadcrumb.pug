@@ -6,4 +6,4 @@ mixin Breadcrumb(data)
                     li.breadcrumb-item(class={active: item.active})= item.name
                 else
                     li.breadcrumb-item
-                        a.text-dark.text-decoration-none(href="#")= item.name
+                        a.text-dark(href="#")= item.name
