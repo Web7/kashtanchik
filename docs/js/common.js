@@ -220,6 +220,12 @@
 		updateDeliveryContainerScroll();
 		updateLettersContainerScroll();
 		updatePlacingAnOrderItemsContainerScroll();
+
+		// buttonScrollToTop({
+		// 	typeButton: 'circle-o',
+		// 	color: 'color-warning',
+		// 	onMouseShow: true
+		// });
 	});
 
 	$(window).on('resize', function () {
