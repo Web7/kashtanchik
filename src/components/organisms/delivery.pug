@@ -1,0 +1,10 @@
+include ../atoms/icon-delivery
+
+mixin Delivery()
+    .delivery-scroll-container
+        .d-flex.align-items-center.justify-content-between.delivery-container
+            +IconDelivery('Безкоштовна доставка', 'у відділення та поштомат НП по Україні при замовленні від 2000 ₴', 'icon-1')
+            +IconDelivery('500 грн', 'сума мінімального замовлення', 'icon-2')
+            +IconDelivery('Еко-пакування', 'для всіх замовлень', 'icon-3')
+            +IconDelivery('Доставка по світу', 'без післяплати', 'icon-4')
+            +IconDelivery('Доставка меблів і великогабаритних товарів', 'без післяплати', 'icon-5')

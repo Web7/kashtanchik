@@ -29,10 +29,21 @@
 
 	var kshtLettersContainerPS;
 	var kshtBasketItemsContainerPS;
+	var deliverContainerPS;
 
+	var $deliveryContainer = $('.delivery-container');
 	var $kshtLettersContainer = $('.ksht-letters-container');
 	var $kshtBasketItemsContainer = $('.ksht-basket-items-container');
 	var $kshtBasketItemName = $('.ksht-basket-item-name');
+
+	var updateDeliveryContainerScroll = function() {
+		if ($deliveryContainer.exists()) {
+			$deliveryContainer.scrollTop(0);
+		}
+		if (deliverContainerPS) {
+			deliverContainerPS.update();
+		}
+	};
 
 	var updateLettersContainerScroll = function() {
 		if ($kshtLettersContainer.exists()) {
@@ -92,6 +103,10 @@
 					container: '.input-datepicker'
 				});
 			});
+		}
+
+		if ($deliveryContainer.exists()) {
+			deliverContainerPS = new PerfectScrollbar('.delivery-container', {wheelPropagation: false})
 		}
 
 		if ($kshtLettersContainer.exists()) {
@@ -185,12 +200,13 @@
 			});
 		}
 
-
+		updateDeliveryContainerScroll();
 		updateLettersContainerScroll();
 	});
 
 	$(window).on('resize', function () {
 		updateLettersContainerScroll();
+		updateDeliveryContainerScroll();
 	})
 
 	$(document).on('click', '.btn-password', function() {
