@@ -4,6 +4,7 @@ include ../atoms/input-phone
 include ../atoms/input-password
 include ../atoms/input-datepicker
 include ../atoms/checkbox
+include ../atoms/radio
 
 block main
     main
@@ -30,7 +31,7 @@ block main
                                     +Input()(class="mb-28" id="" type="text" placeholder="По-батькові" label="По-батькові")
                                     +InputPhone()(class="mb-28" id="" label="Ваш телефон" invalidFeedback="" required="true")
                                     +Input()(class="mb-28" id="" type="e-mail" placeholder="Ваша пошта" label="Ваша пошта")
-                                    +InputDatepicker()(class="mb-28" id="" placeholder="Ваша дата народження" label="Ваша дата народження")
+                                    +InputDatepicker()(class="mb-28" id="sex1" placeholder="Ваша дата народження" label="Ваша дата народження")
                                 .col.ps-xxl-132
                                     p.p1.f-medium.mb-16 Зміна паролю
                                     +InputPassword()(class="mb-28" placeholder="Старий пароль")
@@ -46,9 +47,23 @@ block main
                                             img.me-12(src="images/fb.png" width="34" height="34" alt="" title="")
                                             span Facebook
 
+                                    p.p1.f-medium.mb-16 Інформація про вашу дитину
+                                    .d-flex.mb-28
+                                        span Дівчинка:
+                                        span.ms-8.me-20 Валерія Валерія
+                                        span 22.06.2020
+                                        a.text-black.ms-auto(href="#")
+                                            i.ci-Close_LG
+
                                     p.p1.f-medium.mb-16 Інформація про дітей
                                     a.text-black.d-inline-block.mb-16(href="#") + Додати
-                                    +Checkbox()(id="11" label="Я очікую дитину")
+                                    +Checkbox()(id="11" label="Я очікую дитину" class="mb-28")
+                                    p.p1.f-medium.mb-16 Стать
+                                    .d-flex.mb-28
+                                        +Radio()(id="1" label="Хлопчик" name="sex" class="me-28")
+                                        +Radio()(id="2" label="Дівчинка" name="sex")
+                                    +Input()(class="mb-28" id="" type="text" placeholder="Ім’я дитини" label="Ім’я дитини")
+                                    +InputDatepicker()(class="mb-28" id="sex2" placeholder="Дата народження дитини" label="Дата народження дитини")
                                 .col.ps-xxl-132
                                     button.btn.btn-green-secondary.w-100(type="submit") Зберегти
 

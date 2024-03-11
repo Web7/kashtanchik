@@ -1,0 +1,4 @@
+mixin Radio()
+    .form-radio(class= attributes.class)
+        input.form-check-input(type="radio" id="radio" + attributes.id name= attributes.name)
+        label.form-check-label(for="radio" + attributes.id)= attributes.label
