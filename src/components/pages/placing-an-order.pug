@@ -5,6 +5,7 @@ include ../atoms/input
 include ../atoms/input-phone
 include ../organisms/delivery
 include ../molecules/placing-an-order-item
+include ../atoms/textarea
 
 block main
     main
@@ -46,6 +47,11 @@ block main
                                     .col-3
                                         +Input()(class="mb-28" classInput="text-center" id="" type="password" label="CVV*" placeholder="CVV*" invalidFeedback="" required="true")
                             .col
+                                a.text-black.mb-12.d-block(href="#") + Додати коментар до замовлення
+                                +TextArea()(id="34" placeholder="Коментар" class="mb-28")
+                                a.text-black.mb-12.d-block(href="#") + Я маю промокод
+                                +Input()(class="mb-28" id="22" type="text" placeholder="Промокод")
+                                +Checkbox()(id="3" label="Передзвоніть мені")
                     .col-12.col-xxl-4
                         .border.p-20.mt-87.border-bottom-0
                             p.p1.f-medium.mb-28 Ваше замовлення
