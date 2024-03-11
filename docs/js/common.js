@@ -29,10 +29,34 @@
 
 	var kshtLettersContainerPS;
 	var kshtBasketItemsContainerPS;
+	var deliverContainerPS;
+	var placingAnOrderItemsContainerPS
 
+	var $deliveryContainer = $('.delivery-container');
 	var $kshtLettersContainer = $('.ksht-letters-container');
 	var $kshtBasketItemsContainer = $('.ksht-basket-items-container');
+	var $placingAnOrderItemsContainer = $('.placing-an-order-items-container');
 	var $kshtBasketItemName = $('.ksht-basket-item-name');
+	var $dotdotdotName = $('.dotdotdot-name')
+
+	var updatePlacingAnOrderItemsContainerScroll = function() {
+		if ($placingAnOrderItemsContainer.exists()) {
+			$placingAnOrderItemsContainer.scrollTop(0)
+		}
+
+		if (placingAnOrderItemsContainerPS) {
+			placingAnOrderItemsContainerPS.update();
+		}
+	};
+
+	var updateDeliveryContainerScroll = function() {
+		if ($deliveryContainer.exists()) {
+			$deliveryContainer.scrollTop(0);
+		}
+		if (deliverContainerPS) {
+			deliverContainerPS.update();
+		}
+	};
 
 	var updateLettersContainerScroll = function() {
 		if ($kshtLettersContainer.exists()) {
@@ -57,6 +81,32 @@
 		var $kshtSelectionContainerCols2 = $('.ksht-selection-container-cols-2');
 		var $kshtProductCarouselItems = $('.ksht-product-carousel-items');
 		var $formDatepicker = $('.form-datepicker');
+		var $selectContainer = $('.select-container');
+		var $formPhone = $('.form-phone');
+
+		if ($formPhone.exists()) {
+			$formPhone.each(function(){
+				$(this).intlTelInput({
+					showSelectedDialCode: true,
+					initialCountry: 'auto',
+					geoIpLookup: callback => {
+						fetch('https://ipapi.co/json')
+							.then(res => res.json())
+							.then(data => callback(data.country_code))
+							.catch(() => callback('uk'));
+					},
+					i18n: {
+						searchPlaceholder: 'Пошук країни'
+					}
+
+					// utilsScript: '/intl-tel-input/js/utils.js'
+				});
+			});
+		}
+
+		if ($selectContainer.exists()) {
+			$selectContainer.selectJS({});
+		}
 
 		if ($formDatepicker.exists()) {
 			$formDatepicker.each(function() {
@@ -68,6 +118,14 @@
 			});
 		}
 
+		if ($placingAnOrderItemsContainer.exists()) {
+			placingAnOrderItemsContainerPS = new PerfectScrollbar('.placing-an-order-items-container', {wheelPropagation: false})
+		}
+
+		if ($deliveryContainer.exists()) {
+			deliverContainerPS = new PerfectScrollbar('.delivery-container', {wheelPropagation: false})
+		}
+
 		if ($kshtLettersContainer.exists()) {
 			kshtLettersContainerPS = new PerfectScrollbar('.ksht-letters-container', {wheelPropagation: false})
 		}
@@ -76,8 +134,8 @@
 			kshtBasketItemsContainerPS = new PerfectScrollbar('.ksht-basket-items-container', {wheelPropagation: false})
 		}
 
-		if ($kshtBasketItemName.exists()) {
-			$kshtBasketItemName.each(function() {
+		if ($dotdotdotName.exists()) {
+			$dotdotdotName.each(function() {
 				new Dotdotdot(this);
 			});
 		}
@@ -159,12 +217,15 @@
 			});
 		}
 
-
+		updateDeliveryContainerScroll();
 		updateLettersContainerScroll();
+		updatePlacingAnOrderItemsContainerScroll();
 	});
 
 	$(window).on('resize', function () {
 		updateLettersContainerScroll();
+		updateDeliveryContainerScroll();
+		updatePlacingAnOrderItemsContainerScroll();
 	})
 
 	$(document).on('click', '.btn-password', function() {
