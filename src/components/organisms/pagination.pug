@@ -1,0 +1,19 @@
+mixin Pagination()
+    nav.mt-18
+        ul.pagination.justify-content-center
+            li.page-item.disabled
+                a.page-link
+                    i.ci-Chevron_Left
+            li.page-item
+                a.page-link(href="#") 1
+            li.page-item
+                a.page-link(href="#") 2
+            li.page-item
+                span.page-link 3
+            li.page-item
+                span.page-link ...
+            li.page-item
+                a.page-link(href="#") 1234
+            li.page-item
+                a.page-link(href="#")
+                    i.ci-Chevron_Right

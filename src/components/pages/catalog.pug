@@ -2,6 +2,7 @@ extends ../templates/layout
 include ../molecules/breadcrumb
 include ../molecules/product-priview-item
 include ../organisms/catalog-filters
+include ../organisms/pagination
 
 block main
     main
@@ -20,3 +21,4 @@ block main
                                     +ProductPreviewItem(item)(href="product.html")
                         .text-center
                             a.btn.btn-green-secondary.w-250 Дивитися ще
+                        +Pagination()

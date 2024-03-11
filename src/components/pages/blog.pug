@@ -2,6 +2,7 @@ extends ../templates/layout
 include ../molecules/breadcrumb
 include ../molecules/blog-item
 include ../organisms/carousel-medium
+include ../organisms/pagination
 
 block main
     main
@@ -18,3 +19,4 @@ block main
                             +BlogItem(item)
                 .text-center
                     a.btn.btn-green-secondary.w-250 Дивитися ще
+                +Pagination()

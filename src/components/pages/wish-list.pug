@@ -1,5 +1,6 @@
 extends ../templates/layout
 include ../molecules/product-priview-item
+include ../organisms/pagination
 
 block main
     main
@@ -33,6 +34,7 @@ block main
                                     +ProductPreviewItem(item)(href="product.html")
                         .text-center.ms-xxl-65
                             a.btn.btn-green-secondary.w-250 Дивитися ще
+                        +Pagination()
                         .d-xxl-none
                             a.nav-personal-area-button.d-flex.w-100.text-dark(href="#")
                                 span Вихід
