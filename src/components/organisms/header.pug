@@ -1,3 +1,6 @@
+include left-side-menu
+include left-side-sub-menu
+
 header
     .bg-primary.header
         .container-fluid
@@ -58,6 +61,5 @@ header
         a(href="#") Дітям
         .ksht-short-menu-space
         a.active(href="#") Батькам
-.offcanvas.offcanvas-start#mobileMenu
-    .offcanvas-header
-        button.btn-close(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
++LeftSideMenu()
++LeftSideSubMenu()

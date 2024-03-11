@@ -1,0 +1,17 @@
+mixin LeftSideSubMenu()
+    .offcanvas.offcanvas-start#mobileSubMenu
+        .offcanvas-header
+            a.ksht-icon-menu.text-black.me-20.p3.f-medium(data-bs-toggle="offcanvas" href="#mobileMenu" aria-controls="mobileMenu")
+                i.ci-Chevron_Left
+                span.ms-12 Повернутись
+            button.btn-close.ms-auto(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
+        .offcanvas-body
+            .offcanvas-image-menu(style="background-image: none")
+            p.p2.f-medium.text-green-secondary Малюкам до року
+            .mt-20
+                - var menus = ['Боді/ чоловічки/ пісочники', 'Сорочки/штанці', 'Кофти/ светри', 'Сукні/спідниці', 'Шорти/брючки', 'Слюнявчики/серветки', 'Футболки/сорочки', 'Комплекти', 'Конверти', 'Верхній одяг/комбінезон', 'Чепчеки/шапочки', 'Шарфи/руковиці/ подряпини', 'Шкарпетки/пенетки/колготки', 'Іграшки', 'Текстиль', 'Показати все', 'Інше']
+                each menu, index in menus
+                    .border-top.py-12(class={'border-bottom': index == 16})
+                        a.d-flex.text-black(href="#")
+                            span= menu
+                            i.ci-Chevron_Right.ms-auto

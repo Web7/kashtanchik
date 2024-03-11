@@ -1,0 +1,30 @@
+mixin LeftSideMenu()
+    .offcanvas.offcanvas-start#mobileMenu
+        .offcanvas-header
+            a.ksht-icon-menu.text-black.me-20(href="#")
+                i.ci-Search_Magnifying_Glass
+            a.ksht-icon-menu.text-black.me-20(href="#")
+                i.ci-User_01
+            a.ksht-icon-menu.text-black.me-20(href="#")
+                i.ci-Heart_01
+            a.ksht-icon-menu.text-black.me-20(href="#")
+                i.ci-Shopping_Cart_02
+            button.btn-close.ms-auto(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
+        .offcanvas-body
+            .d-flex.ksht-short-menu.align-items-center.border-bottom.mb-28
+                a(href="#") Дітям
+                .ksht-short-menu-space
+                a.active(href="#") Батькам
+            .row.row-cols-2
+                - var menus = ['Хіти', 'NEW', 'Малюкам до року', 'Дівчаткам', 'Хлопчикам', 'Іграшки', 'Розвиток та школа', 'Гігієна та догляд', 'Харчування', 'Текстиль', 'Меблі та декор', 'Послуги', 'Sale', 'Подарунки']
+                each menu, index in menus
+                    a.pb-8.text-black(data-bs-toggle="offcanvas" href="#mobileSubMenu" aria-controls="mobileSubMenu")
+                        img.mb-4(src="images/menu-" + index + ".png" width="156" height="74" alt= menu title= menu)
+                        p.p3= menu
+            .mt-20
+                - var menus = ['Про нас', 'Бренди', 'Акції', 'Оплата та доставка', 'Співпраця', ]
+                each menu, index in menus
+                    .border-top.py-12(class={'border-bottom': index == 4})
+                        a.d-flex.text-black(href="#")
+                            span= menu
+                            i.ci-Chevron_Right.ms-auto
