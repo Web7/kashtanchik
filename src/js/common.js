@@ -30,11 +30,24 @@
 	var kshtLettersContainerPS;
 	var kshtBasketItemsContainerPS;
 	var deliverContainerPS;
+	var placingAnOrderItemsContainerPS
 
 	var $deliveryContainer = $('.delivery-container');
 	var $kshtLettersContainer = $('.ksht-letters-container');
 	var $kshtBasketItemsContainer = $('.ksht-basket-items-container');
+	var $placingAnOrderItemsContainer = $('.placing-an-order-items-container');
 	var $kshtBasketItemName = $('.ksht-basket-item-name');
+	var $dotdotdotName = $('.dotdotdot-name')
+
+	var updatePlacingAnOrderItemsContainerScroll = function() {
+		if ($placingAnOrderItemsContainer.exists()) {
+			$placingAnOrderItemsContainer.scrollTop(0)
+		}
+
+		if (placingAnOrderItemsContainerPS) {
+			placingAnOrderItemsContainerPS.update();
+		}
+	};
 
 	var updateDeliveryContainerScroll = function() {
 		if ($deliveryContainer.exists()) {
@@ -105,6 +118,10 @@
 			});
 		}
 
+		if ($placingAnOrderItemsContainer.exists()) {
+			placingAnOrderItemsContainerPS = new PerfectScrollbar('.placing-an-order-items-container', {wheelPropagation: false})
+		}
+
 		if ($deliveryContainer.exists()) {
 			deliverContainerPS = new PerfectScrollbar('.delivery-container', {wheelPropagation: false})
 		}
@@ -117,8 +134,8 @@
 			kshtBasketItemsContainerPS = new PerfectScrollbar('.ksht-basket-items-container', {wheelPropagation: false})
 		}
 
-		if ($kshtBasketItemName.exists()) {
-			$kshtBasketItemName.each(function() {
+		if ($dotdotdotName.exists()) {
+			$dotdotdotName.each(function() {
 				new Dotdotdot(this);
 			});
 		}
@@ -202,11 +219,13 @@
 
 		updateDeliveryContainerScroll();
 		updateLettersContainerScroll();
+		updatePlacingAnOrderItemsContainerScroll();
 	});
 
 	$(window).on('resize', function () {
 		updateLettersContainerScroll();
 		updateDeliveryContainerScroll();
+		updatePlacingAnOrderItemsContainerScroll();
 	})
 
 	$(document).on('click', '.btn-password', function() {
