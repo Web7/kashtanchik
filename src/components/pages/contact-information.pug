@@ -3,6 +3,7 @@ include ../atoms/input
 include ../atoms/input-phone
 include ../atoms/input-password
 include ../atoms/input-datepicker
+include ../atoms/checkbox
 
 block main
     main
@@ -36,7 +37,18 @@ block main
                                     +InputPassword()(class="mb-28" placeholder="Новий пароль")
                                     +InputPassword()(class="mb-28" placeholder="Підтвердження паролю")
 
+                                    p.text-center.p4.mb-16 Прив'яжіть до акаунта
+                                    .d-flex.mb-36
+                                        a.btn.btn-outline-light.text-black.py-8.w-100
+                                            img.me-12(src="images/gg.png" width="34" height="34" alt="" title="")
+                                            span Google
+                                        a.btn.btn-outline-light.text-black.py-8.w-100
+                                            img.me-12(src="images/fb.png" width="34" height="34" alt="" title="")
+                                            span Facebook
+
                                     p.p1.f-medium.mb-16 Інформація про дітей
+                                    a.text-black.d-inline-block.mb-16(href="#") + Додати
+                                    +Checkbox()(id="11" label="Я очікую дитину")
                                 .col.ps-xxl-132
                                     button.btn.btn-green-secondary.w-100(type="submit") Зберегти
 
