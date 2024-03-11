@@ -1,3 +1,5 @@
+include ../atoms/checkbox
+
 mixin CatalogFilters()
     - var titles = [{name: 'Категорії'}, {name: 'Сезон'}, {name: 'Стать'}, {name: 'Розмір'}, {name: 'Матеріал'}, {name: 'Колір'}, {name: 'Рік'}, {name: 'Знижка'}]
     .accordion.mb-28
@@ -7,4 +9,10 @@ mixin CatalogFilters()
                     button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse" + index)= title.name
                 .accordion-collapse.collapse(id="panelsStayOpenCollapse" + index)
                     .accordion-body
+                        +Checkbox()(id="1" + index label= title.name class="mb-12")
+                        +Checkbox()(id="2" + index label= title.name class="mb-12")
+                        +Checkbox()(id="3" + index label= title.name class="mb-12")
+                        +Checkbox()(id="4" + index label= title.name class="mb-12")
+                        +Checkbox()(id="5" + index label= title.name class="mb-12")
+
     a.btn.btn-green-secondary.w-100 Застосувати
