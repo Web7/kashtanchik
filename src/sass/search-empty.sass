@@ -2,3 +2,29 @@
   &-search
     &-section
       height: 478px
+
+.search-section
+  .btn.rounded
+    border-radius: 30px !important
+
+  .search-buttons-container
+    width: 100%
+  .search-header-container
+    margin: 0 -8px
+
+  .search-find-text
+    border-bottom: 1px solid $gray-100
+    margin: 0 -16px
+    padding: 0 16px
+
+@media (min-width: 540px)
+  .search-section
+    .search-buttons-container
+      width: auto
+    .search-header-container
+      margin: 0
+
+    .search-find-text
+      border-bottom: 0
+      margin: 0
+      padding: 0

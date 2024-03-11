@@ -13,6 +13,10 @@ global.intlTelInput = require('intl-tel-input/build/js/intlTelInput-jquery.min')
 
 import PerfectScrollbar from 'perfect-scrollbar';
 import datepicker from 'bootstrap-datepicker';
+// import buttonScrollToTop from './js/button-scroll-to-top.min';
+//
+// window.buttonScrollToTop = buttonScrollToTop;
+global.buttonScrollToTop = require('./js/button-scroll-to-top.min');
 
 window.jQuery = $;
 window.PerfectScrollbar = PerfectScrollbar;
