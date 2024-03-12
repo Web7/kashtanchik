@@ -2,7 +2,7 @@ extends ../templates/layout
 include ../molecules/breadcrumb
 include ../molecules/product-priview-item
 include ../organisms/catalog-filters
-include ../atoms/sort-select
+include ../organisms/catalog-sort-filter-buttons
 include ../organisms/pagination
 
 block main
@@ -10,16 +10,12 @@ block main
         .container-fluid.container-xxl
             - var breadcrumb = [{name: 'Хлопчикам'}, {name: 'Сорочки', active: true}]
             +Breadcrumb(breadcrumb)
-            section.mb-80.search-section
+            section.mb-80.catalog-section
                 .d-flex.flex-column
-                    .d-flex.mb-16.align-items-center.flex-column.flex-md-row.order-1.order-md-0.search-header-container
+                    .d-flex.mb-16.align-items-center.flex-column.flex-md-row.order-1.order-md-0.catalog-header-container
                         h1.h4.f-medium.mb-16.mb-md-0 Результати пошуку
-                        .row.row-cols-2.row-cols-md-1.ms-md-auto.search-buttons-container
-                            .d-md-none
-                                a.btn.btn-outline-dark.w-100.rounded.py-13 Фільтри
-                            .ms-auto
-                                +SortSelect()
-                    p.p3.mb-28.order-0.order-md-1.pb-12.pb-md-0.text-dark.search-find-text Результати пошуку за запитом «вав». Знайдено 18 товарів.
+                        +CatalogSortFilterButtons()
+                    p.p3.mb-28.order-0.order-md-1.pb-12.pb-md-0.text-dark.catalog-find-text Результати пошуку за запитом «вав». Знайдено 18 товарів.
                 .row
                     .col-md-4.col-xxl-3.col-12.d-none.d-md-block
                         +CatalogFilters()

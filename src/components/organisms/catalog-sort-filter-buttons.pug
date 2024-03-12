@@ -1,0 +1,17 @@
+include ../atoms/sort-select
+include ../organisms/catalog-filters
+
+mixin CatalogSortFilterButtons()
+    .row.row-cols-2.row-cols-md-1.ms-md-auto.catalog-buttons-container
+        .d-md-none
+            a.btn.btn-outline-light.w-100.py-8.text-black.d-flex.align-items-center.justify-content-center(data-bs-toggle="offcanvas" href="#mobileFilters" aria-controls="mobileFilters")
+                span Фільтри
+                i.ci-Filter.ms-6
+            .offcanvas.offcanvas-start#mobileFilters
+                .offcanvas-header
+                    span.f-medium.p2.text-black Фільтри
+                    button.btn-close.ms-auto(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
+                .offcanvas-body
+                    +CatalogFilters()
+        .ms-auto
+            +SortSelect()

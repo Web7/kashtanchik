@@ -131,12 +131,254 @@
             <li class="breadcrumb-item active">Сорочки</li>
           </ol>
         </nav>
-        <section class="mb-80 search-section">
+        <section class="mb-80 catalog-section">
           <div class="d-flex flex-column">
-            <div class="d-flex mb-16 align-items-center flex-column flex-md-row order-1 order-md-0 search-header-container">
+            <div class="d-flex mb-16 align-items-center flex-column flex-md-row order-1 order-md-0 catalog-header-container">
               <h1 class="h4 f-medium mb-16 mb-md-0">Розвиток та школа</h1>
-              <div class="row row-cols-2 row-cols-md-1 ms-md-auto search-buttons-container">
-                <div class="d-md-none"><a class="btn btn-outline-dark w-100 rounded py-13">Фільтри</a></div>
+              <div class="row row-cols-2 row-cols-md-1 ms-md-auto catalog-buttons-container">
+                <div class="d-md-none"><a class="btn btn-outline-light w-100 py-8 text-black d-flex align-items-center justify-content-center" data-bs-toggle="offcanvas" href="#mobileFilters" aria-controls="mobileFilters"><span>Фільтри</span><i class="ci-Filter ms-6"></i></a>
+                  <div class="offcanvas offcanvas-start" id="mobileFilters">
+                    <div class="offcanvas-header"><span class="f-medium p2 text-black">Фільтри</span>
+                      <button class="btn-close ms-auto" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                      <div class="accordion mb-28">
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse0">Категорії</button>
+                          </div>
+                          <div class="accordion-collapse collapse" id="panelsStayOpenCollapse0">
+                            <div class="accordion-body">
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox10">
+                                <label class="form-check-label" for="checkbox10">Категорії</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox20">
+                                <label class="form-check-label" for="checkbox20">Категорії</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox30">
+                                <label class="form-check-label" for="checkbox30">Категорії</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox40">
+                                <label class="form-check-label" for="checkbox40">Категорії</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox50">
+                                <label class="form-check-label" for="checkbox50">Категорії</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse1">Сезон</button>
+                          </div>
+                          <div class="accordion-collapse collapse" id="panelsStayOpenCollapse1">
+                            <div class="accordion-body">
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox11">
+                                <label class="form-check-label" for="checkbox11">Сезон</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox21">
+                                <label class="form-check-label" for="checkbox21">Сезон</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox31">
+                                <label class="form-check-label" for="checkbox31">Сезон</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox41">
+                                <label class="form-check-label" for="checkbox41">Сезон</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox51">
+                                <label class="form-check-label" for="checkbox51">Сезон</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse2">Стать</button>
+                          </div>
+                          <div class="accordion-collapse collapse" id="panelsStayOpenCollapse2">
+                            <div class="accordion-body">
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox12">
+                                <label class="form-check-label" for="checkbox12">Стать</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox22">
+                                <label class="form-check-label" for="checkbox22">Стать</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox32">
+                                <label class="form-check-label" for="checkbox32">Стать</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox42">
+                                <label class="form-check-label" for="checkbox42">Стать</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox52">
+                                <label class="form-check-label" for="checkbox52">Стать</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse3">Розмір</button>
+                          </div>
+                          <div class="accordion-collapse collapse" id="panelsStayOpenCollapse3">
+                            <div class="accordion-body">
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox13">
+                                <label class="form-check-label" for="checkbox13">Розмір</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox23">
+                                <label class="form-check-label" for="checkbox23">Розмір</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox33">
+                                <label class="form-check-label" for="checkbox33">Розмір</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox43">
+                                <label class="form-check-label" for="checkbox43">Розмір</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox53">
+                                <label class="form-check-label" for="checkbox53">Розмір</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse4">Матеріал</button>
+                          </div>
+                          <div class="accordion-collapse collapse" id="panelsStayOpenCollapse4">
+                            <div class="accordion-body">
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox14">
+                                <label class="form-check-label" for="checkbox14">Матеріал</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox24">
+                                <label class="form-check-label" for="checkbox24">Матеріал</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox34">
+                                <label class="form-check-label" for="checkbox34">Матеріал</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox44">
+                                <label class="form-check-label" for="checkbox44">Матеріал</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox54">
+                                <label class="form-check-label" for="checkbox54">Матеріал</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse5">Колір</button>
+                          </div>
+                          <div class="accordion-collapse collapse" id="panelsStayOpenCollapse5">
+                            <div class="accordion-body">
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox15">
+                                <label class="form-check-label" for="checkbox15">Колір</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox25">
+                                <label class="form-check-label" for="checkbox25">Колір</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox35">
+                                <label class="form-check-label" for="checkbox35">Колір</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox45">
+                                <label class="form-check-label" for="checkbox45">Колір</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox55">
+                                <label class="form-check-label" for="checkbox55">Колір</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse6">Рік</button>
+                          </div>
+                          <div class="accordion-collapse collapse" id="panelsStayOpenCollapse6">
+                            <div class="accordion-body">
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox16">
+                                <label class="form-check-label" for="checkbox16">Рік</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox26">
+                                <label class="form-check-label" for="checkbox26">Рік</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox36">
+                                <label class="form-check-label" for="checkbox36">Рік</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox46">
+                                <label class="form-check-label" for="checkbox46">Рік</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox56">
+                                <label class="form-check-label" for="checkbox56">Рік</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item">
+                          <div class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse7">Знижка</button>
+                          </div>
+                          <div class="accordion-collapse collapse" id="panelsStayOpenCollapse7">
+                            <div class="accordion-body">
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox17">
+                                <label class="form-check-label" for="checkbox17">Знижка</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox27">
+                                <label class="form-check-label" for="checkbox27">Знижка</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox37">
+                                <label class="form-check-label" for="checkbox37">Знижка</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox47">
+                                <label class="form-check-label" for="checkbox47">Знижка</label>
+                              </div>
+                              <div class="form-check mb-12">
+                                <input class="form-check-input" type="checkbox" id="checkbox57">
+                                <label class="form-check-label" for="checkbox57">Знижка</label>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div><a class="btn btn-green-secondary w-100">Застосувати</a>
+                    </div>
+                  </div>
+                </div>
                 <div class="ms-auto">
                   <div class="select-container">
                     <select class="form-select border-top-0 border-start-0 border-end-0 ps-0">

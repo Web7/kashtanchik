@@ -3,7 +3,7 @@ include ../molecules/breadcrumb
 include ../molecules/product-priview-item
 include ../organisms/catalog-filters
 include ../organisms/carousel-medium
-include ../atoms/sort-select
+include ../organisms/catalog-sort-filter-buttons
 include ../organisms/pagination
 
 block main
@@ -11,11 +11,11 @@ block main
         .container-fluid.container-xxl
             - var breadcrumb = [{name: 'Головна'}, {name: 'Бренд', active: true}]
             +Breadcrumb(breadcrumb)
-            section.mb-80
-                .d-flex.mb-28.align-items-center
-                    h1.h4.f-medium.mb-0 Бренд
-                    .ms-auto
-                        +SortSelect()
+            section.mb-80.catalog-section
+                .d-flex.flex-column
+                    .d-flex.mb-16.align-items-center.flex-column.flex-md-row.order-1.order-md-0.catalog-header-container
+                        h1.h4.f-medium.mb-0 Бренд
+                        +CatalogSortFilterButtons()
                 .row
                     .col-3
                         +CatalogFilters()
