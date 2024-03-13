@@ -21659,6 +21659,25 @@ textarea.form-control-lg {
   border-left: none;
   border-right: none; }
 
+.catalog-filter {
+  top: 36px; }
+  .catalog-filter-accordion .form-check-label {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 100%; }
+  .catalog-filter-search .form-control {
+    padding: 6px 16px;
+    height: 36px;
+    border-right: 0; }
+  .catalog-filter-search .btn-control {
+    height: 36px;
+    font-size: 24px;
+    padding: 6px;
+    border-top: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+    border-right: 1px solid #DFDFDF; }
+
 .ksht-blog-item-image {
   background-color: #d9d9d9;
   height: 420px;
@@ -21775,16 +21794,25 @@ textarea.form-control-lg {
   .ksht-search-brand-input {
     width: 425px; } }
 
-.ksht-basket-items-container {
-  max-height: 455px;
-  overflow: hidden;
-  position: relative; }
+.ksht-basket-item .badge {
+  position: absolute;
+  right: 0;
+  top: 42px; }
 
 .ksht-basket-item-image {
   min-width: 86px;
   width: 86px;
   height: 108px;
-  background: #d9d9d9; }
+  background: #d9d9d9;
+  position: relative; }
+  .ksht-basket-item-image .ksht-add-to-favorites {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    font-size: 12px;
+    line-height: 22px; }
 
 .ksht-basket-item-check {
   width: 18px; }
@@ -21800,6 +21828,8 @@ textarea.form-control-lg {
   top: 0; }
   .ksht-basket-item-delete i:before {
     line-height: 22px; }
+  .ksht-basket-item-delete.text-black:hover, .ksht-basket-item-delete.text-black:focus, .ksht-basket-item-delete.text-dark:hover, .ksht-basket-item-delete.text-dark:focus {
+    color: #FF0000 !important; }
 
 @media (min-width: 540px) {
   .ksht-basket-item-image {
@@ -21817,9 +21847,18 @@ textarea.form-control-lg {
       line-height: 34px; } }
 
 @media (min-width: 1320px) {
+  .ksht-basket-item .badge {
+    top: 0; }
   .ksht-basket-item-image {
     width: 155px;
     height: 186px; }
+    .ksht-basket-item-image .ksht-add-to-favorites {
+      width: 36px;
+      height: 36px;
+      top: 14px;
+      right: 14px;
+      line-height: 44px;
+      font-size: 24px; }
   .ksht-basket-item-check {
     width: 28px; }
   .ksht-basket-item-name {
@@ -21828,7 +21867,9 @@ textarea.form-control-lg {
   .ksht-basket-item-delete {
     font-size: 20px; }
     .ksht-basket-item-delete i:before {
-      line-height: 34px; } }
+      line-height: 34px; }
+  .basket-total {
+    top: 36px; } }
 
 .nav-personal-area.nav-underline {
   gap: 16px; }
@@ -22126,6 +22167,8 @@ header {
   line-height: 17px !important;
   font-size: 24px;
   border-bottom: none !important; }
+  .ksht-icon-menu:hover i, .ksht-icon-menu:focus i {
+    color: #ffffff !important; }
 
 .ksht-left-menu {
   display: flex; }
@@ -22468,6 +22511,9 @@ ol:not(.breadcrumb) {
   padding-left: 16px;
   padding-right: 16px; }
 
+a.text-black:hover, a.text-black:focus, a.text-dark:hover, a.text-dark:focus {
+  color: #7FC394 !important; }
+
 @media (min-width: 540px) {
   
   .container-fluid,
@@ -22598,6 +22644,15 @@ ol:not(.breadcrumb) {
 
 .icon-size-64 {
   font-size: 64px; }
+
+.ci-Heart_Fill_01:before {
+  content: "";
+  background: url(../fonts/heart-01.svg) no-repeat center center;
+  background-size: contain;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-bottom: -1px; }
 
 @media (min-width: 576px) {
   .f-sm-bold {

@@ -1,18 +1,31 @@
 include ../atoms/checkbox
+include ../atoms/input-group-button
 
 mixin CatalogFilters()
     - var titles = [{name: 'Категорії'}, {name: 'Сезон'}, {name: 'Стать'}, {name: 'Розмір'}, {name: 'Матеріал'}, {name: 'Колір'}, {name: 'Рік'}, {name: 'Знижка'}]
-    .accordion.mb-28
-        each title, index in titles
+    .catalog-filter.position-sticky
+        .accordion.mb-28
+            each title, index in titles
+                .accordion-item
+                    .accordion-header
+                        button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse" + index)= title.name
+                    .accordion-collapse.collapse(id="panelsStayOpenCollapse" + index)
+                        .accordion-body.catalog-filter-accordion
+                            +Checkbox()(id="1" + index label= title.name + ' ' + title.name + ' ' + title.name + ' ' + title.name class="mb-12")
+                            +Checkbox()(id="2" + index label= title.name class="mb-12")
+                            +Checkbox()(id="3" + index label= title.name class="mb-12")
+                            +Checkbox()(id="4" + index label= title.name class="mb-12")
+                            +Checkbox()(id="5" + index label= title.name class="mb-12")
             .accordion-item
                 .accordion-header
-                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse" + index)= title.name
-                .accordion-collapse.collapse(id="panelsStayOpenCollapse" + index)
-                    .accordion-body
-                        +Checkbox()(id="1" + index label= title.name class="mb-12")
-                        +Checkbox()(id="2" + index label= title.name class="mb-12")
-                        +Checkbox()(id="3" + index label= title.name class="mb-12")
-                        +Checkbox()(id="4" + index label= title.name class="mb-12")
-                        +Checkbox()(id="5" + index label= title.name class="mb-12")
+                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpenCollapse8") Бренд
+                .accordion-collapse.collapse(id="panelsStayOpenCollapse8")
+                    .accordion-body.catalog-filter-accordion
+                        +InputGroupButton()(class="catalog-filter-search" iconClass="ci-Search_Magnifying_Glass" containerClass="mb-12" placeholder="Пошук")
+                        +Checkbox()(id="18" label="Бренд" class="mb-12")
+                        +Checkbox()(id="28" label="Бренд" class="mb-12")
+                        +Checkbox()(id="38" label="Бренд" class="mb-12")
+                        +Checkbox()(id="48" label="Бренд" class="mb-12")
+                        +Checkbox()(id="58" label="Бренд" class="mb-12")
 
-    a.btn.btn-green-secondary.w-100 Застосувати
+        a.btn.btn-green-secondary.w-100 Застосувати

@@ -28,13 +28,13 @@
 	};
 
 	var kshtLettersContainerPS;
-	var kshtBasketItemsContainerPS;
+	// var kshtBasketItemsContainerPS;
 	var deliverContainerPS;
 	var placingAnOrderItemsContainerPS
 
 	var $deliveryContainer = $('.delivery-container');
 	var $kshtLettersContainer = $('.ksht-letters-container');
-	var $kshtBasketItemsContainer = $('.ksht-basket-items-container');
+	// var $kshtBasketItemsContainer = $('.ksht-basket-items-container');
 	var $placingAnOrderItemsContainer = $('.placing-an-order-items-container');
 	var $kshtBasketItemName = $('.ksht-basket-item-name');
 	var $dotdotdotName = $('.dotdotdot-name')
@@ -67,14 +67,14 @@
 		}
 	};
 
-	var updateBasketItemsContainerScroll = function() {
-		if ($kshtBasketItemsContainer.exists()) {
-			$kshtBasketItemsContainer.scrollTop(0);
-		}
-		if (kshtBasketItemsContainerPS) {
-			kshtBasketItemsContainerPS.update();
-		}
-	};
+	// var updateBasketItemsContainerScroll = function() {
+	// 	if ($kshtBasketItemsContainer.exists()) {
+	// 		$kshtBasketItemsContainer.scrollTop(0);
+	// 	}
+	// 	if (kshtBasketItemsContainerPS) {
+	// 		kshtBasketItemsContainerPS.update();
+	// 	}
+	// };
 
 	$(function (){
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
@@ -130,9 +130,9 @@
 			kshtLettersContainerPS = new PerfectScrollbar('.ksht-letters-container', {wheelPropagation: false})
 		}
 
-		if ($kshtBasketItemsContainer.exists()) {
-			kshtBasketItemsContainerPS = new PerfectScrollbar('.ksht-basket-items-container', {wheelPropagation: false})
-		}
+		// if ($kshtBasketItemsContainer.exists()) {
+		// 	kshtBasketItemsContainerPS = new PerfectScrollbar('.ksht-basket-items-container', {wheelPropagation: false})
+		// }
 
 		if ($dotdotdotName.exists()) {
 			$dotdotdotName.each(function() {

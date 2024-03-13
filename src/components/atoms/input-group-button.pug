@@ -1,0 +1,12 @@
+mixin InputGroupButton()
+    div(class= attributes.containerClass)
+        if attributes.label
+            label.form-label(for= attributes.id)= attributes.label
+        .input-group(class= attributes.class)
+            input.form-control(type="text" placeholder= attributes.placeholder required= attributes.required)
+            button.btn.btn-control
+                i(class= attributes.iconClass)
+        if attributes.validFeedback
+            .valid-feedback= attributes.validFeedback
+        if attributes.invalidFeedback
+            .invalid-feedback= attributes.invalidFeedback

@@ -1,7 +1,7 @@
 include ../atoms/input-counter
 
 mixin BasketItem(data)
-    .d-flex.align-items-center.mb-16
+    .d-flex.align-items-center.mb-16.ksht-basket-item
         .me-6.me-sm-8.me-xxl-16.ksht-basket-item-check.pb-16
             .form-check
                 input.form-check-input.form-circle-check-input(type="checkbox" value="" id="flexCheck" + data.index)
@@ -9,7 +9,9 @@ mixin BasketItem(data)
         .col
             .pb-16.border-bottom
                 .d-flex
-                    .ksht-basket-item-image.me-8.me-xxl-16
+                    .ksht-basket-item-image.me-8.me-xxl-16(style="background-image: url(" + data.image + ")")
+                        a.ksht-add-to-favorites(href="#")
+                            i(class= (data.isFavorite ? 'ci-Heart_Fill_01' : 'ci-Heart_01'))
                     .flex-fill.position-relative
                         .d-flex.flex-column.h-100
                             div(class={'text-dark': data.isNone})
@@ -17,11 +19,13 @@ mixin BasketItem(data)
                                 p.p3.text-dark.mb-4.mb-xxl-8 Розмір:
                                     span.d-inline-block.ms-20(class={'text-black': !data.isNone}) 50/56
                                 p.p3.text-dark.mb-0 Дівчатам
-                            div.mt-auto
+                                if data.salePercent
+                                    .badge.new.text-white.bg-orange.p3= data.salePercent
+                            .mt-auto
                                 .d-flex.justify-content-between.align-items-center
-                                    div
+                                    .order-1.order-md-0
                                         +InputCounter(data.isNone)
-                                    .ms-auto
+                                    .ms-md-auto.order-0.order-md-1
                                         if !data.isNone
                                             .d-inline-block.p2.f-medium= data.price
                                             if data.sale

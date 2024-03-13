@@ -7,10 +7,12 @@ global.$ = global.jQuery = require('jquery');
 import popper from 'popper.js';
 import bootstrap from 'bootstrap';
 import slick from 'slick-carousel';
-global.Dotdotdot = require('dotdotdot-js');
+// global.Dotdotdot = require('dotdotdot-js');
+// require('dotdotdot-js');
 global.selectJS = require('./js/select-js');
 global.intlTelInput = require('intl-tel-input/build/js/intlTelInput-jquery.min');
 
+import Dotdotdot from 'dotdotdot-js';
 import PerfectScrollbar from 'perfect-scrollbar';
 import datepicker from 'bootstrap-datepicker';
 // import buttonScrollToTop from './js/button-scroll-to-top.min';
@@ -19,8 +21,9 @@ import datepicker from 'bootstrap-datepicker';
 global.buttonScrollToTop = require('./js/button-scroll-to-top.min');
 
 window.jQuery = $;
-window.PerfectScrollbar = PerfectScrollbar;
 window.Dotdotdot = Dotdotdot;
+window.PerfectScrollbar = PerfectScrollbar;
+
 // window.intlTelInput = intlTelInput;
 window.datepicker = datepicker;
 

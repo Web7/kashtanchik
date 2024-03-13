@@ -1,15 +1,28 @@
 .ksht
   &-basket
     &-items-container
-      max-height: 455px
-      overflow: hidden
-      position: relative
+      //max-height: 455px
+      //overflow: hidden
+      //position: relative
     &-item
+      .badge
+        position: absolute
+        right: 0
+        top: 42px
       &-image
         min-width: 86px
         width: 86px
         height: 108px
         background: $gray-800
+        position: relative
+        .ksht-add-to-favorites
+          width: 18px
+          height: 18px
+          position: absolute
+          top: 6px
+          right: 6px
+          font-size: 12px
+          line-height: 22px
       &-check
         width: 18px
       &-name
@@ -22,6 +35,12 @@
         top: 0
         i:before
           line-height: 22px
+        &.text
+          &-black,
+          &-dark
+            &:hover,
+            &:focus
+              color: $danger !important
 
 
 @media (min-width: 540px)
@@ -48,9 +67,18 @@
     &-basket
       &-items-container
       &-item
+        .badge
+          top: 0
         &-image
           width: 155px
           height: 186px
+          .ksht-add-to-favorites
+            width: 36px
+            height: 36px
+            top: 14px
+            right: 14px
+            line-height: 44px
+            font-size: 24px
         &-check
           width: 28px
         &-name
@@ -60,3 +88,5 @@
           font-size: 20px
           i:before
             line-height: 34px
+  .basket-total
+    top: 36px

@@ -8,7 +8,7 @@ mixin ProductPreviewItem(data)
                     .badge.new.text-white.bg-orange.p3= data.salePercent
             .right-container
                 a.ksht-add-to-favorites(href="#")
-                    i.ci-Heart_01
+                    i(class= (data.isFavorite ? 'ci-Heart_Fill_01' : 'ci-Heart_01'))
                 if data.isChestnut
                     i.ki-chestnut
         a.d-flex.flex-column.ksht-product-preview-item-link.d-block&attributes(attributes)
