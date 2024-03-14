@@ -1,14 +1,17 @@
 .ksht
   &-product-preview-item
     width: 100%
-    max-height: 405px
-    min-height: 405px
+    max-height: 293px
+    min-height: 293px
+    position: relative
     &-img
       background-color: #d9d9d9
-      height: 300px
+      height: 188px
       width: 100%
       position: relative
       margin-bottom: 8px
+    &-link
+      height: 97px
 
     .badge
       height: 31px
@@ -23,20 +26,72 @@
         top: 18px
         left: 18px
 
+    .ci-Shopping_Cart_02.ksht-icon-circle
+      position: absolute
+      width: 30px
+      min-width: 30px
+      height: 30px
+      min-height: 30px
+      line-height: 30px
+      font-size: 18px
+      right: 0
+      bottom: 0
+
   &-add-to-favorites
     display: block
-    width: 36px
-    height: 36px
+    width: 30px
+    height: 30px
     background-color: $green-secondary
     color: $white
     border-radius: 50%
     text-decoration: none
-    line-height: 44px
-    font-size: 24px
+    line-height: 36px
+    font-size: 18px
     text-align: center
     margin-bottom: 18px
+    i.ci-Heart_Fill_01:before
+      width: 18px
+      height: 18px
+
+
 
 .right-container
   position: absolute
-  top: 16px
-  right: 16px
+  top: 6px
+  right: 6px
+
+
+@media (min-width: 540px)
+  .ksht
+    &-product-preview-item
+      max-height: 383px
+      min-height: 383px
+      &-img
+        height: 278px
+
+@media (min-width: 1320px)
+  .ksht
+    &-product-preview-item
+      max-height: 405px
+      min-height: 405px
+      &-img
+        height: 300px
+      .ci-Shopping_Cart_02.ksht-icon-circle
+        position: static
+        width: 36px
+        min-width: 36px
+        height: 36px
+        min-height: 36px
+        line-height: 36px
+        font-size: 24px
+    &-add-to-favorites
+      width: 36px
+      height: 36px
+      line-height: 44px
+      font-size: 24px
+      i.ci-Heart_Fill_01:before
+        width: 24px
+        height: 24px
+  .right-container
+    top: 16px
+    right: 16px
