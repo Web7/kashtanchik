@@ -26,8 +26,8 @@
           <div class="row mb-36">
             <div class="col-12 col-xxl-8">
               <h2 class="h3 f-medium mb-28">1. Оформлення замовлення</h2>
-              <div class="row row-cols-sm-2 row-cols-1">
-                <div class="col">
+              <div class="row">
+                <div class="col-12 col-sm-6">
                   <div class="mb-28">
                     <label class="form-label" for="">Ваше ім’я*</label>
                     <input class="form-control" required="true" placeholder="Ваше ім’я" id="" type="text">
@@ -40,12 +40,8 @@
                     <label class="form-label" for="">По-батькові</label>
                     <input class="form-control" required="true" placeholder="По-батькові" id="" type="text">
                   </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="checkbox1">
-                    <label class="form-check-label" for="checkbox1">Отримувати буде інша людина</label>
-                  </div>
                 </div>
-                <div class="col">
+                <div class="col-12 col-sm-6">
                   <div class="mb-28">
                     <label class="form-label" for="">Номер телефону*</label>
                     <input class="form-control form-phone" required="true" placeholder="" id="" type="tel">
@@ -57,6 +53,32 @@
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="checkbox2">
                     <label class="form-check-label" for="checkbox2">Хочу отримувати інформацію про новинки та акції</label>
+                  </div>
+                </div>
+                <div class="col-12"><a class="text-black mb-12 d-block" data-bs-toggle="collapse" href="#collapseAnotherPerson">Отримувати буде інша людина</a>
+                  <div class="collapse" id="collapseAnotherPerson">
+                    <div class="row">
+                      <div class="col-12 col-sm-6">
+                        <div class="mb-28">
+                          <label class="form-label" for="">Ім’я отримувача*</label>
+                          <input class="form-control" required="true" placeholder="Ваше ім’я" id="" type="text">
+                        </div>
+                        <div class="mb-28">
+                          <label class="form-label" for="">По-батькові</label>
+                          <input class="form-control" placeholder="Ваше прізвище" id="" type="text">
+                        </div>
+                      </div>
+                      <div class="col-12 col-sm-6">
+                        <div class="mb-28">
+                          <label class="form-label" for="">Прізвище отримувача*</label>
+                          <input class="form-control" required="true" placeholder="Ваше ім’я" id="" type="text">
+                        </div>
+                        <div class="mb-28">
+                          <label class="form-label" for="">Номер телефону*</label>
+                          <input class="form-control form-phone" required="true" placeholder="" id="" type="tel">
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -117,12 +139,17 @@
                     </div>
                   </div>
                 </div>
-                <div class="col"><a class="text-black mb-12 d-block" href="#">+ Додати коментар до замовлення</a>
-                  <div class="mb-28">
-                    <textarea class="form-control" placeholder="Коментар" id="34"></textarea>
-                  </div><a class="text-black mb-12 d-block" href="#">+ Я маю промокод</a>
-                  <div class="mb-28">
-                    <input class="form-control" placeholder="Промокод" id="22" type="text">
+                <div class="col"><a class="text-black mb-12 d-block" data-bs-toggle="collapse" href="#collapseComment">Додати коментар до замовлення</a>
+                  <div class="collapse" id="collapseComment">
+                    <div class="mb-28">
+                      <textarea class="form-control" placeholder="Коментар" id="34"></textarea>
+                    </div>
+                  </div><a class="text-black mb-12 d-block" data-bs-toggle="collapse" href="#collapsePromoCode">Я маю промокод</a>
+                  <div class="collapse mb-12" id="collapsePromoCode">
+                    <div class="mb-28">
+                      <input class="form-control" placeholder="Промокод" id="22" type="text">
+                      <div class="invalid-feedback">Код купону &amp;quot;3334&amp;quot; недійсний або його неможливо застосувати на це замовлення</div>
+                    </div><a class="btn btn-green-secondary w-100" href="#">Застосувати промокод</a>
                   </div>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="checkbox3">
@@ -207,7 +234,7 @@
                 <div class="d-flex justify-content-between mb-28"><span>Вартість доставки:</span><span class="text-end">За тарифами перевізника</span></div>
                 <div class="d-flex justify-content-between mb-28"><span>Сума знижки</span><span class="text-end">73₴</span></div>
                 <div class="d-flex justify-content-between p1 f-medium"><span>Загальна сума</span><span class="text-end">2473₴</span></div>
-              </div><a class="btn btn-green-secondary w-100 mb-18" href="#">Оформити замовлення</a><span class="p6">Натискаючи кнопку 'Оформити замовлення', я підтверджую згоду з умовами<a href="#">Договору приєднання</a>та<a href="#">Публічного договору</a></span>
+              </div><a class="btn btn-green-secondary w-100 mb-18" href="placing-an-order-end.html">Оформити замовлення</a><span class="p6">Натискаючи кнопку 'Оформити замовлення', я підтверджую згоду з умовами<a href="#">Договору приєднання</a>та<a href="#">Публічного договору</a></span>
             </div>
           </div>
           <div class="delivery-scroll-container">
@@ -215,31 +242,31 @@
               <div class="d-flex align-items-center delivery-item">
                 <div class="icon-delivery icon-1"></div>
                 <div>
-                  <p class="p2 f-medium">Безкоштовна доставка</p><span class="p6">у відділення та поштомат НП по Україні при замовленні від 2000 ₴</span>
+                  <p class="p2 f-medium">Безкоштовна доставка</p><span class="p6">по Україні при замовленні від 2000 ₴</span>
                 </div>
               </div>
               <div class="d-flex align-items-center delivery-item">
-                <div class="icon-delivery icon-2"></div>
+                <div class="icon-delivery icon-6"></div>
                 <div>
-                  <p class="p2 f-medium">500 грн</p><span class="p6">сума мінімального замовлення</span>
+                  <p class="p2 f-medium">Легке повернення</p><span class="p6">14 днів</span>
                 </div>
               </div>
               <div class="d-flex align-items-center delivery-item">
-                <div class="icon-delivery icon-3"></div>
+                <div class="icon-delivery icon-7"></div>
                 <div>
-                  <p class="p2 f-medium">Еко-пакування</p><span class="p6">для всіх замовлень</span>
+                  <p class="p2 f-medium">Примірка і накладений плітіж</p><span class="p6"></span>
                 </div>
               </div>
               <div class="d-flex align-items-center delivery-item">
-                <div class="icon-delivery icon-4"></div>
+                <div class="icon-delivery icon-8"></div>
                 <div>
-                  <p class="p2 f-medium">Доставка по світу</p><span class="p6">без післяплати</span>
+                  <p class="p2 f-medium">60% Товарів</p><span class="p6">натурального та органічного складу</span>
                 </div>
               </div>
               <div class="d-flex align-items-center delivery-item">
-                <div class="icon-delivery icon-5"></div>
+                <div class="icon-delivery icon-9"></div>
                 <div>
-                  <p class="p2 f-medium">Доставка меблів і великогабаритних товарів</p><span class="p6">без післяплати</span>
+                  <p class="p2 f-medium">99% Товарів</p><span class="p6">від українських брендів</span>
                 </div>
               </div>
             </div>

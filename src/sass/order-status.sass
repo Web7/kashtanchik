@@ -66,15 +66,21 @@
     background-size: cover
     margin-right: 8px
   &-xl-image
-    width: 100px
-    height: 119px
+    width: 86px
+    min-width: 86px
+    height: 104px
     background: $gray-800 no-repeat center center
     background-size: cover
     margin-right: 12px
+  &-product-name
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+    width: calc(100% - 90px)
   &-product-item
     padding: 16px 0
     border-bottom: 1px solid $gray-100
-    width: 721px
+    width: 100%
     &:first-child
       border-top: 1px solid $gray-100
   &-price-container
@@ -84,6 +90,8 @@
 
 @media (min-width: 540px)
   .order-status
+    &-product-item
+      width: 425px
     &-item
       width: 103px
       i
@@ -102,6 +110,19 @@
         &-button
           &:after
             position: static
+    &-payment-block
+      width: 425px
+
+@media (min-width: 960px)
+  .order-status
+    &-product-item
+      width: 721px
+    &-xl-image
+      width: 100px
+      height: 119px
+    &-product-name
+      &-block
+        width: 250px
 
 @media (min-width: 1320px)
   .order-status

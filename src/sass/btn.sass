@@ -23,3 +23,11 @@
 
 .accordion-button:not(.collapsed)
   box-shadow: none
+
+a
+  &[data-bs-toggle="collapse"]
+    &:before
+      content: "+ "
+  &.open
+    &:before
+      content: "- "

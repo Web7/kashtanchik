@@ -21749,6 +21749,13 @@ textarea.form-control-lg {
   bottom: 20px;
   left: 20px; }
 
+.blog-banner {
+  width: 100%;
+  height: 294px;
+  background: #d9d9d9 no-repeat center center;
+  background-size: cover;
+  margin: 36px 0; }
+
 .ksht-carousel-medium .carousel-item-content {
   height: 364px;
   background-color: #d9d9d9; }
@@ -21804,6 +21811,15 @@ textarea.form-control-lg {
 
 .ksht-product-carousel-container {
   margin: 0 -10px; }
+
+input[type="number"] {
+  appearance: none;
+  -moz-appearance: textfield; }
+  input[type="number"]:hover, input[type="number"]:focus {
+    appearance: none;
+    -moz-appearance: textfield; }
+  input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; }
 
 .input-counter {
   width: 86px;
@@ -22090,6 +22106,14 @@ textarea.form-control-lg {
     background-image: url(../fonts/icon-delivery.svg#icon-4); }
   .delivery-container .icon-5 {
     background-image: url(../fonts/icon-delivery.svg#icon-5); }
+  .delivery-container .icon-6 {
+    background-image: url(../fonts/icon-delivery.svg#icon-6); }
+  .delivery-container .icon-7 {
+    background-image: url(../fonts/icon-delivery.svg#icon-7); }
+  .delivery-container .icon-8 {
+    background-image: url(../fonts/icon-delivery.svg#icon-8); }
+  .delivery-container .icon-9 {
+    background-image: url(../fonts/icon-delivery.svg#icon-9); }
 
 .placing-an-order-item {
   border-bottom: 1px solid #DFDFDF;
@@ -22106,6 +22130,8 @@ textarea.form-control-lg {
   .placing-an-order-item-name {
     max-height: 48px;
     overflow: hidden; }
+  .placing-an-order-item a.text-dark:hover, .placing-an-order-item a.text-dark:focus {
+    color: #ffc107 !important; }
 
 .placing-an-order-items-container {
   max-height: 468px;
@@ -22374,6 +22400,12 @@ header {
 .accordion-button:not(.collapsed) {
   box-shadow: none; }
 
+a[data-bs-toggle="collapse"]:before {
+  content: "+ "; }
+
+a.open:before {
+  content: "- "; }
+
 html {
   height: 100%; }
 
@@ -22541,6 +22573,9 @@ footer {
 
 .w-250 {
   width: 250px; }
+
+.w-315 {
+  width: 315px; }
 
 .w-425 {
   width: 425px; }

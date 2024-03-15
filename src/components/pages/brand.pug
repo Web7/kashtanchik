@@ -17,11 +17,11 @@ block main
                         h1.h4.f-medium.mb-0 Бренд
                         +CatalogSortFilterButtons()
                 .row
-                    .col-3
+                    .col-md-4.col-xxl-3.col-12.d-none.d-md-block
                         +CatalogFilters()
-                    .col-9
+                    .col-md-8.col-xxl-9.col-12
                         +CarouselMedium('Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками Найкращі пропозиції зі знижками ')
-                        .row.row-cols-4
+                        .row.row-cols-xxl-4.row-cols-2.row-cols-lg-3
                             - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
                             each item in [...items, ...items, ...items]
                                 .col

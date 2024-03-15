@@ -110,10 +110,11 @@
 
 		if ($formDatepicker.exists()) {
 			$formDatepicker.each(function() {
+				var $inputDatepicker = $(this).closest('.input-datepicker');
 				$(this).datepicker({
 					language: 'uk',
 					autoclose: true,
-					container: '.input-datepicker'
+					container: $inputDatepicker
 				});
 			});
 		}
@@ -241,6 +242,11 @@
 
 		$formPhone.toggleAttrVal('type', 'password', 'text');
 		$this.find('i').toggleClass('d-none');
+	});
+
+	$(document).on('click', '[data-bs-toggle="collapse"]', function() {
+		$(this).toggleClass('open');
+
 	});
 
 

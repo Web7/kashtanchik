@@ -2,7 +2,9 @@
   &-item
     border-bottom: 1px solid $gray-100
     margin: 0 0 16px 0
-    padding: 0 20px 16px 20px
+    padding: 0 0 16px 0
+    &-block
+      position: relative
     &-image
       min-width: 100px
       max-width: 100px
@@ -12,9 +14,40 @@
       background-size: cover
       margin-right: 12px
     &-name
-      max-height: 48px
+      max-height: 24px
       overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+      width: 100%
+
+    &-position-block
+      position: absolute
+      right: 0
+      bottom: 0
+      left: 112px
+      //width: 100%
+
+    a.text-dark
+      &:hover,
+      &:focus
+        color: $danger !important
   &-items-container
     max-height: 468px
     overflow: hidden
     position: relative
+
+@media (min-width: 540px)
+  .placing-an-order
+    &-item
+      border-bottom: 1px solid $gray-100
+      margin: 0 0 16px 0
+      padding: 0 20px 16px 20px
+
+@media (min-width: 1320px)
+  .placing-an-order
+    &-item
+      &-name
+        max-height: 48px
+        white-space: normal
+      &-position-block
+        position: static

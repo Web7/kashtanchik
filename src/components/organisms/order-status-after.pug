@@ -29,47 +29,29 @@ mixin OrderStatusAfter(index)
 
                 .accordion-collapse.collapse(id="order-collapse-" + index data-bs-parent="#accordion-" + index)
                     .accordion-body
-                        .d-flex.align-items-center.order-status-product-item
-                            .ksht-basket-item-check
-                                .form-check
-                                    input.form-check-input.form-circle-check-input(type="checkbox" value="" id="flexCheck" + index)
-                                    label.form-check-label(for="flexCheck" + index)
-                            .order-status-xl-image(style="background-image: none")
-                            .me-auto.w-250.p2
-                                p.f-medium Chamonix Floral Snowsuit Violet Grape
-                                p.text-dark Розмір:
-                                    span.text-black 50/56
-                            .me-50
-                                p.p4.text-dark Ціна
-                                p.p2.f-medium 1244₴
-                            .me-50.text-center
-                                p.p4.text-dark Кількість
-                                p.p2.f-medium 2
-                            div
-                                p.p4.text-dark Сума
-                                p.p2.f-medium 1244₴
+                        each _ in Array(5)
+                            .d-flex.align-items-center.order-status-product-item
+                                .ksht-basket-item-check.me-6
+                                    .form-check
+                                        input.form-check-input.form-circle-check-input(type="checkbox" value="" id="flexCheck" + index)
+                                        label.form-check-label(for="flexCheck" + index)
+                                .order-status-xl-image(style="background-image: none")
+                                .d-flex.flex-column.flex-lg-row
+                                    .me-auto.p2.order-status-product-name-block
+                                        p.f-medium.order-status-product-name Chamonix Floral Snowsuit Violet Grape
+                                        p.text-dark.d-none.d.d-lg-block Розмір:
+                                            span.text-black 50/56
+                                    .me-50.d-none.d-lg-block
+                                        p.p4.text-dark Ціна
+                                        p.p2.f-medium 1244₴
+                                    .me-lg-50.text-lg-center
+                                        p.p4.text-dark.d-inline-block.d-lg-block Кількість
+                                        p.p2.f-medium.d-inline-block.d-lg-block 2
+                                    div
+                                        p.p4.text-dark.d-none.d-lg-block Сума
+                                        p.p2.f-medium 1244₴
 
-                        .d-flex.align-items-center.order-status-product-item
-                            .ksht-basket-item-check
-                                .form-check
-                                    input.form-check-input.form-circle-check-input(type="checkbox" value="" id="flexCheck" + index)
-                                    label.form-check-label(for="flexCheck" + index)
-                            .order-status-xl-image(style="background-image: none")
-                            .me-auto.w-250.p2
-                                p.f-medium Chamonix Floral Snowsuit Violet Grape
-                                p.text-dark Розмір:
-                                    span.text-black 50/56
-                            .me-50
-                                p.p4.text-dark Ціна
-                                p.p2.f-medium 1244₴
-                            .me-50.text-center
-                                p.p4.text-dark Кількість
-                                p.p2.f-medium 2
-                            div
-                                p.p4.text-dark Сума
-                                p.p2.f-medium 1244₴
-
-                        .w-425.mt-18
+                        .mt-18.order-status-payment-block
                             .d-flex.p3.mb-12
                                 span Оплата:
                                 span.ms-auto Оплата при отриманні товару

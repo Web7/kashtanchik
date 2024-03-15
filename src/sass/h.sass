@@ -88,7 +88,7 @@
 	@else
 		@content
 
-$fontSizes: (18px, 16px, 15px, 14px, 13px, 12px)
+$fontSizes: (24, 21, 18, 16, 15, 14, 13, 12)
 
 .f
 	@each $breakpoint in map-keys($grid-breakpoints)
@@ -98,7 +98,7 @@ $fontSizes: (18px, 16px, 15px, 14px, 13px, 12px)
 			@include media-breakpoint-up($next)
 				@each $size in $fontSizes
 					&-#{$size}
-						font-size: $size !important
+						font-size: #{$size}px !important
 
 .lh
 	@each $breakpoint in map-keys($grid-breakpoints)
@@ -108,7 +108,7 @@ $fontSizes: (18px, 16px, 15px, 14px, 13px, 12px)
 			@include media-breakpoint-up($next)
 				@each $size in $fontSizes
 					&-#{$size}
-						line-height: $size !important
+						line-height: #{$size}px !important
 
 .invalid-feedback
 	font-size: 12px

@@ -12,18 +12,51 @@ block main
         .container-fluid.container-xxl
             section.mb-80.mt-36
                 .row.mb-36
+                    .col-12.d-sm-none
+                        .accordion.mb-16
+                            .accordion-item
+                                .accordion-header
+                                    button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#PlacingAnOrderItemsCollapse") Ваше замовлення
+                                .accordion-collapse.collapse(id="PlacingAnOrderItemsCollapse")
+                                    .accordion-body.catalog-filter-accordion.pb-0
+                                        +PlacingAnOrderItem()
+                                        +PlacingAnOrderItem()
+                                        +PlacingAnOrderItem()
+                        .border-bottom.mb-28.pb-12
+                            a.text-decoration-underline.d-block.mb-18.text-black(href="#") Обрати подарункову упаковку
+                            .d-flex.justify-content-between.mb-12
+                                span Підсумок
+                                span.text-end 2473₴
+                            .d-flex.justify-content-between.mb-12
+                                span Вартість доставки:
+                                span.text-end За тарифами перевізника
+                            .d-flex.justify-content-between.mb-16
+                                span Сума знижки
+                                span.text-end 73₴
+                            .d-flex.justify-content-between.p1.f-medium
+                                span Загальна сума
+                                span.text-end 2473₴
                     .col-12.col-xxl-8
                         h2.h3.f-medium.mb-28 1. Оформлення замовлення
-                        .row.row-cols-sm-2.row-cols-1
-                            .col
+                        .row
+                            .col-12.col-sm-6
                                 +Input()(class="mb-28" id="" type="text" label="Ваше ім’я*" placeholder="Ваше ім’я" invalidFeedback="" required="true")
                                 +Input()(class="mb-28" id="" type="text" label="Ваше прізвище*" placeholder="Ваше прізвище" invalidFeedback="" required="true")
                                 +Input()(class="mb-28" id="" type="text" label="По-батькові" placeholder="По-батькові" invalidFeedback="" required="true")
-                                +Checkbox()(id="1" label="Отримувати буде інша людина")
-                            .col
+                            .col-12.col-sm-6
                                 +InputPhone()(class="mb-28" id="" label="Номер телефону*" placeholder="" invalidFeedback="" required="true")
                                 +Input()(class="mb-28" id="" type="text" label="E-mail*" placeholder="E-mail" invalidFeedback="" required="true")
                                 +Checkbox()(id="2" label="Хочу отримувати інформацію про новинки та акції")
+                            .col-12
+                                a.text-black.mb-12.d-block(data-bs-toggle="collapse" href="#collapseAnotherPerson") Отримувати буде інша людина
+                                .collapse#collapseAnotherPerson
+                                    .row
+                                        .col-12.col-sm-6
+                                            +Input()(class="mb-28" id="" type="text" label="Ім’я отримувача*" placeholder="Ваше ім’я" invalidFeedback="" required="true")
+                                            +Input()(class="mb-28" id="" type="text" label="По-батькові" placeholder="Ваше прізвище" invalidFeedback="")
+                                        .col-12.col-sm-6
+                                            +Input()(class="mb-28" id="" type="text" label="Прізвище отримувача*" placeholder="Ваше ім’я" invalidFeedback="" required="true")
+                                            +InputPhone()(class="mb-28" id="" label="Номер телефону*" placeholder="" invalidFeedback="" required="true")
                         .border-bottom.pb-36.mb-36
 
                         h2.h3.f-medium.mb-28 2. Доставка
@@ -46,21 +79,24 @@ block main
                                         +Input()(class="mb-28" classInput="text-center" id="" type="number" label="Термін дії*" placeholder="Термін дії*" invalidFeedback="" required="true")
                                     .col-3
                                         +Input()(class="mb-28" classInput="text-center" id="" type="password" label="CVV*" placeholder="CVV*" invalidFeedback="" required="true")
-                            .col
-                                a.text-black.mb-12.d-block(href="#") + Додати коментар до замовлення
-                                +TextArea()(id="34" placeholder="Коментар" class="mb-28")
-                                a.text-black.mb-12.d-block(href="#") + Я маю промокод
-                                +Input()(class="mb-28" id="22" type="text" placeholder="Промокод")
+                            .col.mb-36
+                                a.text-black.mb-12.d-block(data-bs-toggle="collapse" href="#collapseComment") Додати коментар до замовлення
+                                .collapse#collapseComment
+                                    +TextArea()(id="34" placeholder="Коментар" class="mb-28")
+                                a.text-black.mb-12.d-block(data-bs-toggle="collapse" href="#collapsePromoCode") Я маю промокод
+                                .collapse#collapsePromoCode.mb-12
+                                    +Input()(class="mb-28" id="22" type="text" placeholder="Промокод" invalidFeedback="Код купону \"3334\" недійсний або його неможливо застосувати на це замовлення")
+                                    a.btn.btn-green-secondary.w-100(href="#") Застосувати промокод
                                 +Checkbox()(id="3" label="Передзвоніть мені")
                     .col-12.col-xxl-4
-                        .border.p-20.mt-87.border-bottom-0
+                        .border.p-20.mt-87.border-bottom-0.d-none.d-sm-block
                             p.p1.f-medium.mb-28 Ваше замовлення
-                        .border.border-top-0
+                        .border.border-top-0.d-none.d-sm-block
                             .placing-an-order-items-container
                                 +PlacingAnOrderItem()
                                 +PlacingAnOrderItem()
                                 +PlacingAnOrderItem()
-                        .border.border-top-0.p-20.mb-28
+                        .border.border-top-0.p-20.mb-28.d-none.d-sm-block
                             a.text-decoration-underline.d-block.mb-28(href="#") Обрати подарункову упаковку
                             .d-flex.justify-content-between.mb-28
                                 span Підсумок
@@ -74,7 +110,7 @@ block main
                             .d-flex.justify-content-between.p1.f-medium
                                 span Загальна сума
                                 span.text-end 2473₴
-                        a.btn.btn-green-secondary.w-100.mb-18(href="#") Оформити замовлення
+                        a.btn.btn-green-secondary.w-100.mb-18(href="placing-an-order-end.html") Оформити замовлення
                         span.p6 Натискаючи кнопку 'Оформити замовлення', я підтверджую згоду з умовами
                             a(href="#") Договору приєднання
                             | та
