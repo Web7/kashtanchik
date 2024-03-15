@@ -24,8 +24,9 @@ mixin BasketItem(data)
                                     .badge.new.text-white.bg-orange.p3= data.salePercent
                             .mt-auto
                                 .d-flex.justify-content-between.align-items-center
-                                    .order-1.order-md-0
-                                        +InputCounter(data.isNone)
+                                    if !data.isNone
+                                        .order-1.order-md-0
+                                            +InputCounter(data.isNone)
                                     .ms-md-auto.order-0.order-md-1
                                         if !data.isNone
                                             .d-inline-block.p2.f-medium= data.price

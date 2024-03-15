@@ -22,7 +22,7 @@ mixin LeftSideMenu()
                         img.mb-4(src="images/menu-" + index + ".png" width="156" height="74" alt= menu title= menu)
                         p.p3= menu
             .mt-20
-                - var menus = ['Про нас', 'Бренди', 'Акції', 'Оплата та доставка', 'Співпраця', ]
+                - var menus = ['Про нас', 'Бренди', 'Акції', 'Подарунки', 'Оплата та доставка', 'Співпраця', ]
                 each menu, index in menus
                     .border-top.py-12(class={'border-bottom': index == 4})
                         a.d-flex.text-black(href="#")

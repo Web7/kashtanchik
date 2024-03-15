@@ -12,7 +12,7 @@ block main
             +CarouselMedium()
             section.mb-80
                 h1.h4.f-medium.mb-28 Блог
-                .row.row-cols-4
+                .row.row-cols-xxl-4.row-cols-lg-3.row-cols-sm-2.row-cols-1
                     - var items = [{name: 'Новорічниай одяг для вашого малюка', author: 'Анна Шуленина'}, {name: 'Новорічниай одяг для вашого малюка', author: 'Анна Шуленина'}, {name: 'Новорічниай одяг для вашого малюка', author: 'Анна Шуленина'}, {name: 'Новорічниай одяг для вашого малюка', author: 'Анна Шуленина'}]
                     each item in [...items, ...items, ...items]
                         .col.mb-20

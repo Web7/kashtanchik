@@ -7,17 +7,17 @@ block main
             section.ksht-product-section.mb-80
                 - var breadcrumb = [{name: 'Головна'}, {name: 'Блог', active: true}]
                 +Breadcrumb(breadcrumb)
-                .blog-full
-                    .text-white.ksht-selection-item.float-start.me-20.mb-36
+                .blog-full.d-flex.d-md-block.flex-column
+                    .text-white.ksht-selection-item.float-start.me-md-20.mb-36.order-1
                         .ksht-blog-item-image.position-relative(style="background-image: url(none)")
                             .d-flex.align-items-center.blog-full-author
                                 img.me-12(src="" width="56" height="56" alt="" title="")
                                 span.p3 Анна Шуленина
-                    .mb-36
+                    .mb-16.mb-md-36.order-0
                         h1.h2.f-medium.mb-12 Як підготуватися до нового року?
                         p.text-dark.p5 24 грудня, 2023
-                    p.h1.text-secondary-light.f-italic “Казка наяву: добірка дивовижних предметів декору для дитячого інтер'єру”
-                    .p3
+                    p.h1.text-secondary-light.f-italic.order-2 “Казка наяву: добірка дивовижних предметів декору для дитячого інтер'єру”
+                    .p3.order-3
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero ac urna facilisis feugiat. Fusce quis justo a sem efficitur feugiat. Praesent ac dapibus elit. Sed ut varius purus. Quisque efficitur felis eu euismod tristique. Suspendisse potenti. Aliquam erat volutpat. Phasellus nec justo id nulla feugiat aliquam. Aenean id massa eget velit blandit hendrerit. Curabitur vel est eget ligula fermentum posuere. Integer at ultricies lacus.
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero ac urna facilisis feugiat. Fusce quis justo a sem efficitur feugiat. Praesent ac dapibus elit. Sed ut varius purus. Quisque efficitur felis eu euismod tristique. Suspendisse potenti. Aliquam erat volutpat. Phasellus nec justo id nulla feugiat aliquam. Aenean id massa eget velit blandit hendrerit. Curabitur vel est eget ligula fermentum posuere. Integer at ultricies lacus.
                         p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vel libero ac urna facilisis feugiat. Fusce quis justo a sem efficitur feugiat. Praesent ac dapibus elit. Sed ut varius purus. Quisque efficitur felis eu euismod tristique. Suspendisse potenti. Aliquam erat volutpat. Phasellus nec justo id nulla feugiat aliquam. Aenean id massa eget velit blandit hendrerit. Curabitur vel est eget ligula fermentum posuere. Integer at ultricies lacus.

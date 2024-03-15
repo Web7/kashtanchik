@@ -12,18 +12,37 @@
 
 .blog-full
   .ksht-selection-item
-    width: 427px
-    height: 567px
+    width: 100%
+    padding: 0
   .ksht-blog-item-image
-    height: 567px
+    height: 437px
   &-author
     position: absolute
     bottom: 20px
     left: 20px
 
 .blog-banner
-  width: 100%
-  height: 294px
+  height: 286px
   background: $gray-800 no-repeat center center
   background-size: cover
-  margin: 36px 0
+  margin: 36px -16px
+
+@media (min-width: 540px)
+  .blog-banner
+    width: 100%
+    height: 330px
+    margin: 36px 0
+
+  .blog-full
+    .ksht-selection-item
+      width: 427px
+      height: 567px
+    .ksht-blog-item-image
+      height: 567px
+
+@media (min-width: 1320px)
+  .blog-banner
+    height: 294px
+  .blog-full
+    .ksht-selection-item
+      width: 427px
