@@ -1,10 +1,12 @@
 .ksht
   &-carousel
     &-medium
+      margin-left: -16px
+      margin-right: -16px
       .carousel
         &-item
           &-content
-            height: 364px
+            height: 286px
             background-color: $gray-800
         &-indicators
           button
@@ -28,3 +30,21 @@
             font-size: 24px
             &:hover
               background-color: $gray-100
+
+@media (min-width: 540px)
+  .ksht
+    &-carousel
+      &-medium
+        margin-left: -20px
+        margin-right: -20px
+        .carousel
+          &-item
+            &-content
+              height: 364px
+
+@media (min-width: 1320px)
+  .ksht
+    &-carousel
+      &-medium
+        margin-left: 0
+        margin-right: 0
