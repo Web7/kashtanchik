@@ -12,6 +12,8 @@ block main
             - var breadcrumb = [{name: 'Головна'}, {name: 'Подарунки', active: true}]
             +Breadcrumb(breadcrumb)
             section.mb-80.catalog-section
+                .d-xxl-none
+                    +CarouselMedium('Найкращі пропозиції зі знижками')
                 .d-flex.flex-column
                     .d-flex.mb-16.align-items-center.flex-column.flex-md-row.order-1.order-md-0.catalog-header-container
                         h1.h4.f-medium.mb-16.mb-md-0 Подарунки
@@ -20,7 +22,8 @@ block main
                     .col-md-4.col-xxl-3.col-12.d-none.d-md-block
                         +CatalogFilters()
                     .col-md-8.col-xxl-9.col-12
-                        +CarouselMedium('Найкращі пропозиції зі знижками')
+                        .d-none.d-xxl-block
+                            +CarouselMedium('Найкращі пропозиції зі знижками')
                         .row.row-cols-xxl-4.row-cols-2.row-cols-lg-3
                             - var items = [{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isNew: true, salePercent: '-30%', isEnd: true},{image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', salePercent: '-30%'}, {image: '',name: 'Новорічниай одяг для вашого малюка',price: '1200 ₴', oldPrice: '1785 ₴', isChestnut: true}, ]
                             each item in [...items, ...items, ...items]

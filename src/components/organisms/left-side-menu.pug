@@ -1,13 +1,13 @@
 mixin LeftSideMenu()
     .offcanvas.offcanvas-start#mobileMenu
         .offcanvas-header
-            a.ksht-icon-menu.text-black.me-20(href="#")
+            a.ksht-icon-menu.text-black.me-20(href="search.html")
                 i.ci-Search_Magnifying_Glass
-            a.ksht-icon-menu.text-black.me-20(href="#")
+            a.ksht-icon-menu.text-black.me-20(href="contact-information.html")
                 i.ci-User_01
-            a.ksht-icon-menu.text-black.me-20(href="#")
+            a.ksht-icon-menu.text-black.me-20(href="wish-list-no-reg.html")
                 i.ci-Heart_01
-            a.ksht-icon-menu.text-black.me-20(href="#")
+            a.ksht-icon-menu.text-black.me-20(href="basket.html")
                 i.ci-Shopping_Cart_02
             button.btn-close.ms-auto(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
         .offcanvas-body
@@ -22,9 +22,9 @@ mixin LeftSideMenu()
                         img.mb-4(src="images/menu-" + index + ".png" width="156" height="74" alt= menu title= menu)
                         p.p3= menu
             .mt-20
-                - var menus = ['Про нас', 'Бренди', 'Акції', 'Подарунки', 'Оплата та доставка', 'Співпраця', ]
+                - var menus = [{name: 'Про нас', href: 'about-us.html'}, {name: 'Бренди', href: 'brands.html'}, {name: 'Акції', href: 'stock.html'}, {name: 'Подарунки', href: 'presents.html'}, {name: 'Оплата та доставка', href: 'payment-methods.html'}, {name: 'Співпраця', href: 'cooperation.html'} ]
                 each menu, index in menus
-                    .border-top.py-12(class={'border-bottom': index == 4})
-                        a.d-flex.text-black(href="#")
-                            span= menu
+                    .border-top.py-12(class={'border-bottom': index == 5})
+                        a.d-flex.text-black(href= menu.href)
+                            span= menu.name
                             i.ci-Chevron_Right.ms-auto
