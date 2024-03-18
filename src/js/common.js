@@ -83,6 +83,7 @@
 		var $formDatepicker = $('.form-datepicker');
 		var $selectContainer = $('.select-container');
 		var $formPhone = $('.form-phone');
+		// var $header =
 
 		if ($formPhone.exists()) {
 			$formPhone.each(function(){
