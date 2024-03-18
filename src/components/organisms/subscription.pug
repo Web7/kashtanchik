@@ -1,3 +1,5 @@
+include modals/notification
+
 mixin Subscription()
     section.bg-secondary.ksht-subscription-section.mb-80
         .d-flex.align-items-center.h-100
@@ -6,4 +8,5 @@ mixin Subscription()
                 form
                     .input-group.flex-column.flex-sm-row.flex-nowrap
                         input.form-control(type="email" placeholder="E-mail")
-                        button.btn.btn-green-secondary Підписатися
+                        button.btn.btn-green-secondary(type="button" data-bs-toggle="modal" data-bs-target="#notification") Підписатися
+        +Notification()
