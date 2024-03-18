@@ -11,11 +11,13 @@
     content: ""
     display: block
     position: absolute
-    top: 0
-    left: 542px
-    width: 60px
-    height: 60px
+    top: -23px
+    right: 0
+    width: 89px
+    height: 89px
     background: url(../images/insta-flower.svg) no-repeat center center
+    background-size: contain
+    z-index: -1
 
 @media (max-width: 540px)
   .ksht
@@ -33,6 +35,15 @@
           &:nth-child(6)
             display: none
 
+@media (min-width: 540px)
+  .instagram-title
+    &:after
+      top: -26px
+      left: 326px
+      width: 89px
+      height: 89px
+      z-index: -1
+
 @media (min-width: 720px)
   .ksht
     &-instagram
@@ -48,13 +59,6 @@
     &-instagram
       &-item
         height: 315px !important
-  .instagram-title
-    &:after
-      top: -26px
-      left: 326px
-      width: 89px
-      height: 89px
-      z-index: 0
 
 @media (min-width: 1140px)
   .ksht

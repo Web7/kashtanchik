@@ -22044,6 +22044,20 @@ textarea.form-control-lg {
   height: 328px;
   background-color: #d9d9d9; }
 
+.instagram-title {
+  position: relative; }
+  .instagram-title:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -23px;
+    right: 0;
+    width: 89px;
+    height: 89px;
+    background: url(../fonts/insta-flower.svg) no-repeat center center;
+    background-size: contain;
+    z-index: -1; }
+
 @media (max-width: 540px) {
   .ksht-instagram-container > div:nth-child(1), .ksht-instagram-container > div:nth-child(2), .ksht-instagram-container > div:nth-child(4), .ksht-instagram-container > div:nth-child(5) {
     width: 50%; }
@@ -22051,6 +22065,14 @@ textarea.form-control-lg {
       height: 156px; }
   .ksht-instagram-container > div:nth-child(6) {
     display: none; } }
+
+@media (min-width: 540px) {
+  .instagram-title:after {
+    top: -26px;
+    left: 326px;
+    width: 89px;
+    height: 89px;
+    z-index: -1; } }
 
 @media (min-width: 720px) {
   .ksht-instagram-item {
@@ -22065,6 +22087,13 @@ textarea.form-control-lg {
 @media (min-width: 1140px) {
   .ksht-instagram-container > div:nth-child(5), .ksht-instagram-container > div:nth-child(6) {
     display: none; } }
+
+@media (min-width: 1140px) {
+  .instagram-title:after {
+    top: 0;
+    left: 542px;
+    width: 60px;
+    height: 60px; } }
 
 .accordion-item {
   border-left: none;
@@ -22728,7 +22757,7 @@ header {
   .ksht-second-menu-container a {
     text-decoration: none;
     display: inline-block;
-    margin: 0 12px;
+    margin: 0 11px;
     font-size: 12px;
     font-weight: 400;
     line-height: 17px;
