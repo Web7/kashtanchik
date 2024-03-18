@@ -120,15 +120,15 @@
 		}
 
 		if ($placingAnOrderItemsContainer.exists()) {
-			placingAnOrderItemsContainerPS = new PerfectScrollbar('.placing-an-order-items-container', {wheelPropagation: false})
+			placingAnOrderItemsContainerPS = new PerfectScrollbar('.placing-an-order-items-container', {wheelPropagation: true})
 		}
 
 		if ($deliveryContainer.exists()) {
-			deliverContainerPS = new PerfectScrollbar('.delivery-container', {wheelPropagation: false})
+			deliverContainerPS = new PerfectScrollbar('.delivery-container', {wheelPropagation: true})
 		}
 
 		if ($kshtLettersContainer.exists()) {
-			kshtLettersContainerPS = new PerfectScrollbar('.ksht-letters-container', {wheelPropagation: false})
+			kshtLettersContainerPS = new PerfectScrollbar('.ksht-letters-container', {wheelPropagation: true})
 		}
 
 		// if ($kshtBasketItemsContainer.exists()) {

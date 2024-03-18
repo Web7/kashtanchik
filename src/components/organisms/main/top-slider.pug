@@ -1,23 +1,30 @@
 mixin TopSlider()
     .ksht-top-slider
-        .carousel.slide#topSlider
+        .carousel.slide#topSlider(data-bs-ride="carousel")
+            .carousel-indicators.d-xxl-none
+                button(type="button" data-bs-target="#topSlider" data-bs-slide-to="0" class="active")
+                button(type="button" data-bs-target="#topSlider" data-bs-slide-to="1")
+                button(type="button" data-bs-target="#topSlider" data-bs-slide-to="2")
             .carousel-inner
                 .carousel-item.active
                     .carousel-item-content.text-white
                         p.h2 Знижка 30% на одяг Konges Slojd та LIEWOOD
-                        p.p3 На хвилі стилю з улюбленими брендами
-                        a.btn.btn-green-secondary.w-250(href="/catalog.html") До каталогу
+                        p.p3.mb-16 На хвилі стилю з улюбленими брендами
+                        .text-center.text-sm-start
+                            a.btn.btn-green-secondary.w-250(href="/catalog.html") До каталогу
                 .carousel-item
                     .carousel-item-content.text-white
                         p.h2 Знижка 30% на одяг Konges Slojd та LIEWOOD
-                        p.p3 На хвилі стилю з улюбленими брендами
-                        a.btn.btn-green-secondary.w-250(href="/catalog.html") До каталогу
+                        p.p3.mb-16 На хвилі стилю з улюбленими брендами
+                        .text-center.text-sm-start
+                            a.btn.btn-green-secondary.w-250(href="/catalog.html") До каталогу
                 .carousel-item
                     .carousel-item-content.text-white
                         p.h2 Знижка 30% на одяг Konges Slojd та LIEWOOD
-                        p.p3 На хвилі стилю з улюбленими брендами
-                        a.btn.btn-green-secondary.w-250(href="/catalog.html") До каталогу
-            button.carousel-control-prev(type="button" data-bs-target="#topSlider" data-bs-slide="prev")
+                        p.p3.mb-16 На хвилі стилю з улюбленими брендами
+                        .text-center.text-sm-start
+                            a.btn.btn-green-secondary.w-250(href="/catalog.html") До каталогу
+            button.carousel-control-prev.d-none.d-xxl-block(type="button" data-bs-target="#topSlider" data-bs-slide="prev")
                 i.ci-Chevron_Left
-            button.carousel-control-next(type="button" data-bs-target="#topSlider" data-bs-slide="next")
+            button.carousel-control-next.d-none.d-xxl-block(type="button" data-bs-target="#topSlider" data-bs-slide="next")
                 i.ci-Chevron_Right
