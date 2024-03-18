@@ -58,7 +58,7 @@
           </div><a class="text-black" href="catalog.html">Дівчаткам</a><a class="text-black" href="catalog.html">Хлопчикам</a><a class="text-black" href="catalog.html">Іграшки</a><a class="text-black" href="catalog.html">Розвиток та школа</a><a class="text-black" href="catalog.html">Гігієна та догляд</a><a class="text-black" href="catalog.html">Харчування</a><a class="text-black" href="catalog.html">Текстиль</a><a class="text-black" href="catalog.html">Меблі та декор</a><a class="text-black" href="catalog.html">Послуги</a><a class="text-black" href="catalog.html">Sale</a>
         </div>
       </div>
-      <div class="d-flex ksht-short-menu align-items-center d-xl-none"><a href="#">Дітям</a>
+      <div class="d-flex ksht-short-menu align-items-center d-xl-none bg-white"><a href="#">Дітям</a>
         <div class="ksht-short-menu-space"></div><a class="active" href="#">Батькам</a>
       </div>
     </header>
@@ -127,29 +127,37 @@
     <main>
       <div class="container-fluid container-xxl">
         <div class="ksht-top-slider">
-          <div class="carousel slide" id="topSlider">
+          <div class="carousel slide" id="topSlider" data-bs-ride="carousel">
+            <div class="carousel-indicators d-xxl-none">
+              <button class="active" type="button" data-bs-target="#topSlider" data-bs-slide-to="0"></button>
+              <button type="button" data-bs-target="#topSlider" data-bs-slide-to="1"></button>
+              <button type="button" data-bs-target="#topSlider" data-bs-slide-to="2"></button>
+            </div>
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <div class="carousel-item-content text-white">
                   <p class="h2">Знижка 30% на одяг Konges Slojd та LIEWOOD</p>
-                  <p class="p3">На хвилі стилю з улюбленими брендами</p><a class="btn btn-green-secondary w-250" href="/catalog.html">До каталогу</a>
+                  <p class="p3 mb-16">На хвилі стилю з улюбленими брендами</p>
+                  <div class="text-center text-sm-start"><a class="btn btn-green-secondary w-250" href="/catalog.html">До каталогу</a></div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="carousel-item-content text-white">
                   <p class="h2">Знижка 30% на одяг Konges Slojd та LIEWOOD</p>
-                  <p class="p3">На хвилі стилю з улюбленими брендами</p><a class="btn btn-green-secondary w-250" href="/catalog.html">До каталогу</a>
+                  <p class="p3 mb-16">На хвилі стилю з улюбленими брендами</p>
+                  <div class="text-center text-sm-start"><a class="btn btn-green-secondary w-250" href="/catalog.html">До каталогу</a></div>
                 </div>
               </div>
               <div class="carousel-item">
                 <div class="carousel-item-content text-white">
                   <p class="h2">Знижка 30% на одяг Konges Slojd та LIEWOOD</p>
-                  <p class="p3">На хвилі стилю з улюбленими брендами</p><a class="btn btn-green-secondary w-250" href="/catalog.html">До каталогу</a>
+                  <p class="p3 mb-16">На хвилі стилю з улюбленими брендами</p>
+                  <div class="text-center text-sm-start"><a class="btn btn-green-secondary w-250" href="/catalog.html">До каталогу</a></div>
                 </div>
               </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#topSlider" data-bs-slide="prev"><i class="ci-Chevron_Left"></i></button>
-            <button class="carousel-control-next" type="button" data-bs-target="#topSlider" data-bs-slide="next"><i class="ci-Chevron_Right"></i></button>
+            <button class="carousel-control-prev d-none d-xxl-block" type="button" data-bs-target="#topSlider" data-bs-slide="prev"><i class="ci-Chevron_Left"></i></button>
+            <button class="carousel-control-next d-none d-xxl-block" type="button" data-bs-target="#topSlider" data-bs-slide="next"><i class="ci-Chevron_Right"></i></button>
           </div>
         </div>
         <div class="mb-66">
