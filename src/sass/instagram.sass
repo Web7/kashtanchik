@@ -5,6 +5,18 @@
       height: 328px
       background-color: $gray-800
 
+.instagram-title
+  position: relative
+  &:after
+    content: ""
+    display: block
+    position: absolute
+    top: 0
+    left: 542px
+    width: 60px
+    height: 60px
+    background: url(../images/insta-flower.svg) no-repeat center center
+
 @media (max-width: 540px)
   .ksht
     &-instagram
@@ -36,6 +48,13 @@
     &-instagram
       &-item
         height: 315px !important
+  .instagram-title
+    &:after
+      top: -26px
+      left: 326px
+      width: 89px
+      height: 89px
+      z-index: 0
 
 @media (min-width: 1140px)
   .ksht
@@ -45,3 +64,11 @@
           &:nth-child(5),
           &:nth-child(6)
             display: none
+
+@media (min-width: 1140px)
+  .instagram-title
+    &:after
+      top: 0
+      left: 542px
+      width: 60px
+      height: 60px
