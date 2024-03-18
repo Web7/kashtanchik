@@ -1,0 +1,17 @@
+include ../../atoms/input
+include ../../atoms/input-phone
+
+mixin Modal()
+    .modal.fade#modal
+        .modal-dialog
+            .modal-content
+                .modal-header.border-bottom
+                    .modal-title.f-medium Перевірка статуса замовлення
+                    button.btn-close(type="button" data-bs-dismiss="modal")
+                .modal-body
+                    +Input()(class="mb-28" id="" type="text" placeholder="Номер замовлення" label="Номер замовлення*" invalidFeedback="Будь ласка, введіть номер вашого замовлення" required="true")
+                    +InputPhone()(class="mb-28" id="" label="Номер телефону*" invalidFeedback="Це поле є обов'язковим " required="true")
+                    p.p6.text-danger.mb-28 Замовлення не знайдено. Будь ласка, перевірте, чи правильно вказані номер замовлення і телефон.
+                    button.btn.btn-green-secondary.w-100(type="button") Перевірити
+                    p.p6.text-dark.mt-16 Повна історія та управління замовленнями доступні за посиланням
+                        a.text-green-secondary(href="#") Мої замовлення

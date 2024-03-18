@@ -1,4 +1,5 @@
 include mobile-footer-menu
+include modals/modal
 
 footer.pb-55.pb-sm-0
     .footer
@@ -29,7 +30,7 @@ footer.pb-55.pb-sm-0
                     span.d-block.mb-16 Обробка замовлень Пн-Нд:
                         span.d-inline.d-sm-block.d-xl-inline 09:00 - 20:00
                     a.text-black.d-block.mb-28(href="mailto:info@kashtanchik.com.ua") info@kashtanchik.com.ua
-                    a.text-black.d-block.f-medium.mb-28(href="#") Перевірити статус замовлення
+                    a.text-black.d-block.f-medium.mb-28(href="#" data-bs-toggle="modal" data-bs-target="#modal") Перевірити статус замовлення
             .row.mb-44
                 .col-sm-6.mb-28.mb-md-0
                     p.p2.f-medium.mb-28 Соціальні мережі
@@ -52,3 +53,4 @@ footer.pb-55.pb-sm-0
             .text-center
                 span.text-dark.p6 © KASHTANCHIK.COM.UA 2023-2024. Всі права захищені.
 +MobileFooterMenu()
++Modal()
