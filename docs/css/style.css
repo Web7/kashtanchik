@@ -22684,7 +22684,7 @@ header {
     color: #ffffff !important; }
 
 .ksht-logo {
-  background: url(../images/logo.png) no-repeat center center;
+  background: url(../fonts/logo.svg) no-repeat center center;
   background-size: contain;
   width: 195px;
   height: 30px;
@@ -22815,7 +22815,7 @@ header {
 .footer {
   margin-bottom: 40px; }
   .footer .ksht-logo-footer {
-    background: url(../images/logo.png) no-repeat center center;
+    background: url(../fonts/logo.svg) no-repeat center center;
     display: inline-block;
     width: 221px;
     height: 34px;
