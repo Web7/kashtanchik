@@ -1,0 +1,9 @@
+mixin ModalSizes()
+    .modal.fade#modalSizes
+        .modal-dialog.modal-xl.modal-dialog-scrollable
+            .modal-content
+                .modal-header.border-bottom
+                    .modal-title.f-medium Додайте товар до кошика
+                    button.btn-close(type="button" data-bs-dismiss="modal")
+                .modal-body
+                    include table-sizes.html

@@ -4,6 +4,7 @@ include ../molecules/product-priview-item
 include ../organisms/catalog-filters
 include ../organisms/catalog-sort-filter-buttons
 include ../organisms/pagination
+include ../organisms/modals/add-to-basket
 
 block main
     main
@@ -32,3 +33,4 @@ block main
                             .d-none.d-xxl-block
                             +Pagination()
                             span.text-end.text-dark.d-none.d-xxl-block Знайдено 1344 товарів
+    +AddToBasket()

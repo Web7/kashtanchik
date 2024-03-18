@@ -11,10 +11,11 @@ mixin ProductPreviewItem(data)
                     i(class= (data.isFavorite ? 'ci-Heart_Fill_01' : 'ci-Heart_01'))
                 if data.isChestnut
                     i.ki-chestnut
-        a.d-flex.flex-column.ksht-product-preview-item-link.d-block&attributes(attributes)
+        .d-flex.flex-column.ksht-product-preview-item-link.d-block
             .d-flex.align-items-start
-                span.text-black.p3= data.name
-                i.ci-Shopping_Cart_02.ksht-icon-circle.bg-green-secondary.me-6.mx-xxl-16
+                a.text-black.p3&attributes(attributes)= data.name
+                a(href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket")
+                    i.ci-Shopping_Cart_02.ksht-icon-circle.bg-green-secondary.me-6.mx-xxl-16
             .mt-auto
                 if data.oldPrice
                     s.p3.text-dark.me-8.me-xxl-16= data.oldPrice

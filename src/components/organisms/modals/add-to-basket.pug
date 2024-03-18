@@ -1,5 +1,5 @@
-include ../../atoms/input
-include ../../atoms/input-phone
+include ../../atoms/input-counter
+include ../../atoms/select-two-text
 
 mixin AddToBasket()
     .modal.fade#modalAddToBasket
@@ -9,9 +9,9 @@ mixin AddToBasket()
                     .modal-title.f-medium Додайте товар до кошика
                     button.btn-close(type="button" data-bs-dismiss="modal")
                 .modal-body
-                    +Input()(class="mb-28" id="" type="text" placeholder="Номер замовлення" label="Номер замовлення*" invalidFeedback="Будь ласка, введіть номер вашого замовлення" required="true")
-                    +InputPhone()(class="mb-28" id="" label="Номер телефону*" invalidFeedback="Це поле є обов'язковим " required="true")
-                    p.p6.text-danger.mb-28 Замовлення не знайдено. Будь ласка, перевірте, чи правильно вказані номер замовлення і телефон.
-                    button.btn.btn-green-secondary.w-100(type="button") Перевірити
-                    p.p6.text-dark.mt-16 Повна історія та управління замовленнями доступні за посиланням
-                        a.text-green-secondary(href="#") Мої замовлення
+                    .mb-18
+                        - var data = [{value: 'Оберіть розмір', text: '', disabled: true, selected: true}, {value: '50/56', text: ''}, {value: '50/56', text: ''}, {value: '50/56', text: 'Немає в наявності', disabled: true}, {value: '50/56', text: ''}, {value: '50/56', text: ''}, {value: '50/56', text: 'Немає в наявності', disabled: true}]
+                        +SelectTwoText(data)(labelInSelect="Розмір")
+                    .d-flex.justify-content-between
+                        +InputCounter()
+                        button.btn.btn-green-secondary.w-250(type="button") Додати до кошика

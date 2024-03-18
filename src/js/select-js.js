@@ -107,6 +107,11 @@ https://github.com/alexshnur/select-js
 			$li.append(
 				$('<span/>', {text: $option.text()})
 			);
+			if ($option.data('text')) {
+				$li.append(
+					$('<span/>', {text: $option.data('text')})
+				);
+			}
 			if ($select.is('[multiple]')) {
 				$li.append(
 					$('<i/>', {'class': ($option.is(':selected') ? opts.checkedIcons.on : opts.checkedIcons.off)})
@@ -125,6 +130,11 @@ https://github.com/alexshnur/select-js
 
 		$selected.text(selectJsText.join(', '));
 
+		if ($select.data('label')) {
+			$divSelect.append(
+				$('<span/>', {text: $select.data('label'), class: 'select-js-label'})
+			)
+		}
 
 		$divSelect
 			.append($selected)
