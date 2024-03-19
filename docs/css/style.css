@@ -22488,6 +22488,8 @@ textarea.form-control-lg {
   left: 16px; }
 
 @media (min-width: 540px) {
+  .product-images-counter {
+    display: none; }
   .ksht-product-image {
     height: 100%; }
   .ksht-product-images {
