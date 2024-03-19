@@ -16,12 +16,12 @@ mixin BasketItem(data)
                         .d-flex.flex-column.h-100
                             div(class={'text-dark': data.isNone})
                                 p.p2.f-medium.dotdotdot-name.ksht-basket-item-name.mb-4.mb-xxl-8 Chamonix Floral Snowsuit Violet Grape Violet Grape Violet Grape Violet Grapeeeee Grape Violet Grape Violet Grapeeeee
-                                p.p3.text-dark.mb-4.mb-xxl-8 Розмір:
+                                p.p7.text-dark.mb-4.mb-xxl-8 Розмір:
                                     span.d-inline-block.ms-20(class={'text-black': !data.isNone}) 50/56
-                                p.p3.text-dark.mb-0 Код товару:
+                                p.p7.text-dark.mb-0 Код товару:
                                     span.d-inline-block.ms-20(class={'text-black': !data.isNone}) 2233454
                                 if data.salePercent
-                                    .badge.new.text-white.bg-orange.p3= data.salePercent
+                                    .badge.new.text-white.bg-orange.p7= data.salePercent
                             .mt-auto
                                 .d-flex.justify-content-between.align-items-center
                                     if !data.isNone
@@ -31,13 +31,13 @@ mixin BasketItem(data)
                                         if !data.isNone
                                             .d-inline-block.p2.f-medium= data.price
                                             if data.sale
-                                                s.d-inline-block.p3.f-medium.text-dark= data.sale
+                                                s.d-inline-block.p7.f-medium.text-dark= data.sale
 
                                         else
                                             .d-inline-block.p2.f-medium.text-danger Немає в наявності
                                     a.d-inline-block.ms-18.text-dark.ksht-basket-item-delete.order-2(href="#")
                                         i.ci-Trash_Empty
                 if data.isOrder
-                    p.p3.text-danger-dark.mb-0.mt-8 В наявності під замовлення (5-10) робочих днів
+                    p.p7.text-danger-dark.mb-0.mt-8 В наявності під замовлення (5-10) робочих днів
                 if data.isError
-                    p.p3.text-danger.mb-0.mt-8 Неможливо додати більшу кількість у кошик
+                    p.p7.text-danger.mb-0.mt-8 Неможливо додати більшу кількість у кошик
