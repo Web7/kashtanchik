@@ -3,17 +3,18 @@ include ../atoms/input-counter
 mixin PlacingAnOrderItem()
     .placing-an-order-item
         .placing-an-order-item-block
-            .d-flex.mb-16
+            .d-flex.mb-16.w-100
                 .placing-an-order-item-image()
-                div
-                    p.p2.f-medium.placing-an-order-item-name.mb-4.dotdotdot-name Chamonix Floral Snowsuit Violet Grape Floral Snowsuit Floralllllll Floral Snowsuit
-                    p.mb-4.text-dark Розмір: 50/56
-                    p.mb-4.text-dark Артикул: 444455
-            .d-flex.align-items-center.placing-an-order-item-position-block
-                .me-28
-                    +InputCounter()
-                b.p2.f-medium.ms-auto.ms-xxl-0 2578₴
-                s.p3.ms-12.text-dark.lh-15 1785₴
-                a.ms-16.ms-xxl-auto.text-dark.f-24.lh-18(href="#")
-                    i.ci-Trash_Empty
+                .position-relative.w-100
+                    div.w-100
+                        p.p2.f-medium.placing-an-order-item-name.mb-4.dotdotdot-name Chamonix Floral Snowsuit Violet Grape Floral Snowsuit Floralllllll Floral Snowsuit
+                        p.mb-4.text-dark Розмір: 50/56
+                        p.mb-4.text-dark Артикул: 444455
+                    .d-flex.align-items-center.w-100
+                        b.p2.f-medium 2578₴
+                        s.p3.ms-12.text-dark.lh-15 1785₴
+                        +InputCounter()(class="input-counter-sm ms-auto")
+                        a.text-dark.f-24.lh-18.placing-an-order-item-delete(href="#")
+                            i.ci-Trash_Empty
+                        .badge.new.text-white.bg-orange.p3 -30%
         .p3.mt-8.text-danger-dark В наявності під замовлення (5-10) робочих днів

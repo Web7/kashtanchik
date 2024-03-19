@@ -3,8 +3,16 @@
     border-bottom: 1px solid $gray-100
     margin: 0 0 16px 0
     padding: 0 0 16px 0
+    &-delete
+      position: absolute
+      top: 0
+      right: 0
     &-block
       position: relative
+      .badge
+        position: absolute
+        right: 0
+        top: 40px
     &-image
       min-width: 100px
       max-width: 100px
@@ -18,13 +26,13 @@
       overflow: hidden
       text-overflow: ellipsis
       white-space: nowrap
-      width: 100%
+      width: calc(100% - 20px)
 
-    &-position-block
-      position: absolute
-      right: 0
-      bottom: 0
-      left: 112px
+    //&-position-block
+    //  position: absolute
+    //  right: 0
+    //  bottom: 0
+    //  left: 112px
       //width: 100%
 
     a.text-dark
@@ -36,18 +44,15 @@
     overflow: hidden
     position: relative
 
-@media (min-width: 540px)
+@media (min-width: 1320px)
   .placing-an-order
     &-item
       border-bottom: 1px solid $gray-100
       margin: 0 0 16px 0
       padding: 0 20px 16px 20px
 
-@media (min-width: 1320px)
-  .placing-an-order
-    &-item
-      &-name
-        max-height: 48px
-        white-space: normal
-      &-position-block
-        position: static
+//@media (min-width: 1320px)
+//  .placing-an-order
+//    &-item
+//      &-position-block
+//        position: static
