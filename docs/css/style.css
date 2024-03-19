@@ -8308,20 +8308,20 @@ textarea.form-control-lg {
 
 .toast {
   --bs-toast-zindex: 1090;
-  --bs-toast-padding-x: 0.75rem;
-  --bs-toast-padding-y: 0.5rem;
+  --bs-toast-padding-x: 0;
+  --bs-toast-padding-y: 0;
   --bs-toast-spacing: 20px;
-  --bs-toast-max-width: 350px;
+  --bs-toast-max-width: auto;
   --bs-toast-font-size: 0.875rem;
   --bs-toast-color: ;
-  --bs-toast-bg: rgba(var(--bs-body-bg-rgb), 0.85);
-  --bs-toast-border-width: var(--bs-border-width);
-  --bs-toast-border-color: var(--bs-border-color-translucent);
-  --bs-toast-border-radius: var(--bs-border-radius);
-  --bs-toast-box-shadow: var(--bs-box-shadow);
+  --bs-toast-bg: #f8f8f8;
+  --bs-toast-border-width: 0;
+  --bs-toast-border-color: none;
+  --bs-toast-border-radius: 15px;
+  --bs-toast-box-shadow: none;
   --bs-toast-header-color: var(--bs-secondary-color);
   --bs-toast-header-bg: rgba(var(--bs-body-bg-rgb), 0.85);
-  --bs-toast-header-border-color: var(--bs-border-color-translucent);
+  --bs-toast-header-border-color: none;
   width: var(--bs-toast-max-width);
   max-width: 100%;
   font-size: var(--bs-toast-font-size);
@@ -22347,7 +22347,7 @@ textarea.form-control-lg {
   border-right: none; }
 
 .catalog-filter {
-  top: 36px; }
+  top: 220px; }
   .catalog-filter-accordion .form-check-label {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -22470,6 +22470,12 @@ textarea.form-control-lg {
     height: 435px; }
   .ksht-product-images .slick-dots {
     display: none !important; }
+
+.ksht-product-section .ksht-add-to-favorites {
+  position: absolute;
+  top: 16px;
+  right: 8px;
+  z-index: 9; }
 
 .ksht-product-section .slick-dotted.slick-slider {
   margin-bottom: 0 !important; }
@@ -23372,6 +23378,14 @@ footer {
     .input-datepicker .datepicker .datepicker-switch {
       text-align: center; }
 
+.toast {
+  padding: 4px 14px; }
+  .toast-body {
+    overflow: hidden;
+    max-width: 280px;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+
 .ps__rail-x, .ps__rail-y {
   opacity: 1 !important; }
 
@@ -23788,6 +23802,10 @@ a.text-black:hover, a.text-black:focus, a.text-dark:hover, a.text-dark:focus {
   font-size: 12px;
   font-weight: normal; }
 
+.p7 {
+  font-size: 12px;
+  font-weight: normal; }
+
 @media (min-width: 1140px) {
   .p1 {
     font-size: 18px;
@@ -23806,6 +23824,9 @@ a.text-black:hover, a.text-black:focus, a.text-dark:hover, a.text-dark:focus {
     font-weight: normal; }
   .p6 {
     font-size: 12px;
+    font-weight: normal; }
+  .p7 {
+    font-size: 15px;
     font-weight: normal; } }
 
 @media (min-width: 576px) {
