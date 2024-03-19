@@ -1,0 +1,5 @@
+mixin Toast(text)
+    .toast.align-items-center.show.mb-12.me-10.flex-shrink-1
+        .d-flex
+            .toast-body= text
+            button.btn-close.ms-8.m-auto(data-bs-dismiss="toast" type="button")

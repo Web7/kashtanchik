@@ -1,9 +1,16 @@
 include ../atoms/checkbox
 include ../atoms/input-group-button
+include ../molecules/toast
 
 mixin CatalogFilters()
     - var titles = [{name: 'Категорії'}, {name: 'Сезон'}, {name: 'Стать'}, {name: 'Розмір'}, {name: 'Матеріал'}, {name: 'Колір'}, {name: 'Рік'}, {name: 'Знижка'}]
     .catalog-filter.position-sticky
+        .d-flex.flex-wrap
+            +Toast('Бренд')
+            +Toast('Бренд')
+            +Toast('Бренд')
+            +Toast('Бренд')
+            +Toast('Брендддддддддддддддддддддддддддд')
         .accordion.mb-28
             each title, index in titles
                 .accordion-item
