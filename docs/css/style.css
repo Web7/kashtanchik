@@ -22540,14 +22540,17 @@ input[type="number"] {
     width: 34px;
     padding: 2px; }
 
+.ksht-product-section .input-counter,
 .modal .input-counter {
   width: 146px;
   height: auto; }
+  .ksht-product-section .input-counter .btn,
   .modal .input-counter .btn {
     margin: 0;
     line-height: 1px;
     padding: 17px 18px;
     height: auto; }
+  .ksht-product-section .input-counter .form-control,
   .modal .input-counter .form-control {
     height: auto; }
 
