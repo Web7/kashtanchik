@@ -297,23 +297,42 @@
 		init();
 	})
 
-	$(document).on('click', '.btn-password', function() {
+	$(document).on('click', '.btn-password', function(e) {
 		var $this = $(this);
 		var $inputGroup = $this.closest('.input-group');
 		var $formPhone = $inputGroup.find('.form-phone');
 
 		$formPhone.toggleAttrVal('type', 'password', 'text');
 		$this.find('i').toggleClass('d-none');
+
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
 	});
 
-	$(document).on('click', '[data-bs-toggle="collapse"]', function() {
+	$(document).on('click', '[data-bs-toggle="collapse"]', function(e) {
 		$(this).toggleClass('open');
 
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
 	});
 
 	$(document).on('init reInit afterChange', '.ksht-product-images', function(event, slick, currentSlide, nextSlide) {
 		var i = (currentSlide ? currentSlide : 0) + 1;
 		$productImagesCounter.text(i + '/' + (slick.$dots[0].children.length));
+	});
+
+	$(document).on('click', '.collapse-order-status', function(e) {
+		var $this = $(this);
+		var $i = $this.find('i');
+		var $orderStatusContainer = $this.closest('.order-status-container');
+		$orderStatusContainer.toggleClass('open');
+		$i.toggleClass(['ci-Chevron_Down','ci-Chevron_Up']);
+
+		e.preventDefault();
+		e.stopPropagation();
+		return false;
 	});
 
 
