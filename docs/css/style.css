@@ -23057,6 +23057,10 @@ input[type="number"] {
   #notification .modal-header .btn-close {
     top: 16px; } }
 
+@media (min-width: 1320px) {
+  .about-us-content {
+    width: 425px; } }
+
 header {
   margin-bottom: 12px;
   position: sticky;
