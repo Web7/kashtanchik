@@ -7,8 +7,8 @@
     line-height: 1
     i
       display: inline-block
-      width: 30px
-      height: 30px
+      width: 24px
+      height: 24px
       background: no-repeat 0 0
       background-size: contain
       &.icon
@@ -88,6 +88,34 @@
     position: absolute
     bottom: 0
     right: 0
+.collapse-order-status
+  position: absolute
+  top: 12px
+  right: 12px
+  &.text-black:focus
+    color: $black !important
+
+.order-status-container
+  &.open
+    .order-status-items-container
+      flex-direction: column !important
+      .order-status-item
+        text-align: center
+        width: 100%
+        margin-bottom: 8px
+        margin-top: 16px
+        &:first-child
+          margin-top: 0
+        &:last-child
+          margin-bottom: 0
+        i
+          width: 30px
+          height: 30px
+        p
+          display: block !important
+      .order-status-separator
+        width: 20px
+        transform: rotate(90deg)
 
 @media (min-width: 540px)
   .order-status
@@ -96,6 +124,8 @@
     &-item
       width: 103px
       i
+        width: 30px
+        height: 30px
         margin-bottom: 8px
     &-separator
       width: 23px

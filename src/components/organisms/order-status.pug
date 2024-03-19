@@ -1,9 +1,11 @@
 mixin OrderStatus()
-    .border.py-18.px-10.px-xxl-28.w-100.mb-16
+    .border.py-18.px-10.px-xxl-28.w-100.mb-16.position-relative.order-status-container
+        a.collapse-order-status.d-md-none.text-black(href="#")
+            i.ci-Chevron_Up
         .text-center.p3.f-medium
             p.mb-8 Статус вашого замовлення
             p.mb-18.text-green-secondary 43434-4343-43434
-        .px-xxl-40.d-flex.justify-content-between.align-items-center
+        .px-xxl-40.d-flex.justify-content-between.align-items-center.order-status-items-container
             .order-status-item.active
                 i.icon-1
                 p.d-none.d-md-block Замовлення прийнято
