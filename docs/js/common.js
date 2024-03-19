@@ -43,6 +43,19 @@
 	var $kshtBasketItemName = $('.ksht-basket-item-name');
 	var $dotdotdotName = $('.dotdotdot-name');
 
+	var selectJsListPS;
+	var $selectJsList = $('.select-js-list');
+
+	var updateSelectJsListScroll = function() {
+		if ($selectJsList.exists()) {
+			$selectJsList.scrollTop(0);
+		}
+
+		if (selectJsListPS) {
+			selectJsListPS.update();
+		}
+	}
+
 	var updatePlacingAnOrderItemsContainerScroll = function() {
 		if ($placingAnOrderItemsContainer.exists()) {
 			$placingAnOrderItemsContainer.scrollTop(0);
@@ -106,7 +119,16 @@
 		updateLettersContainerScroll();
 		updateDeliveryContainerScroll();
 		updatePlacingAnOrderItemsContainerScroll();
+		updateSelectJsListScroll();
 	};
+
+	var $header = document.querySelector('.header-sticky')
+	var observer = new IntersectionObserver(
+		([e]) => e.target.classList.toggle('short', e.intersectionRatio < 1),
+		{ threshold: [1] }
+	);
+
+	observer.observe($header);
 
 	$(function (){
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
@@ -154,6 +176,13 @@
 					container: $inputDatepicker
 				});
 			});
+		}
+
+		if ($selectJsList.exists()) {
+			$selectJsList.each(function() {
+				new PerfectScrollbar(this, {wheelPropagation: true})
+			});
+
 		}
 
 		if ($placingAnOrderItemsContainer.exists()) {

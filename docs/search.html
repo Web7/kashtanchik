@@ -9,14 +9,14 @@
       <link rel="icon" type="image/x-icon" href="/favicon.ico">
   <script defer src="js/temp-index.min.js"></script><link href="css/style.css" rel="stylesheet"></head>
   <body class="d-flex flex-column">
-    <header>
+    <header class="header-sticky">
       <div class="bg-primary header">
         <div class="container-fluid">
           <div class="row justify-content-between align-items-center">
             <div class="col p1 ksht-left-menu"><a class="text-black d-xl-inline-block d-none" href="#">Дітям</a><a class="text-black active d-xl-inline-block d-none" href="#">Батькам</a><a class="ksht-icon-menu d-xl-none" data-bs-toggle="offcanvas" href="#mobileMenu" aria-controls="mobileMenu"><i class="ci-Hamburger_LG"></i></a></div>
-            <div class="col"><a class="ksht-logo" href="/"></a></div>
-            <div class="col ksht-rigth-menu"><a class="ksht-icon-menu d-xl-inline-block d-none" href="search.html"><i class="ci-Search_Magnifying_Glass"></i></a><a class="ksht-icon-menu d-sm-inline-block d-none" href="contact-information.html"><i class="ci-User_01"></i></a><a class="ksht-icon-menu d-sm-inline-block d-none" href="wish-list-no-reg.html"><i class="ci-Heart_01"></i></a><a class="ksht-icon-menu d-sm-inline-block d-none" href="basket.html"><i class="ci-Shopping_Cart_02"></i></a></div>
-            <div class="col-12">
+            <div class="col sticky-hide"><a class="ksht-logo" href="/"></a></div>
+            <div class="col ksht-rigth-menu sticky-hide"><a class="ksht-icon-menu d-xl-inline-block d-none" href="search.html"><i class="ci-Search_Magnifying_Glass"></i></a><a class="ksht-icon-menu d-sm-inline-block d-none" href="contact-information.html"><i class="ci-User_01"></i></a><a class="ksht-icon-menu d-sm-inline-block d-none" href="#" data-bs-toggle="modal" data-bs-target="#modalEnter"><i class="ci-Log_Out"></i></a><a class="ksht-icon-menu d-sm-inline-block d-none" href="wish-list-no-reg.html"><i class="ci-Heart_01"></i></a><a class="ksht-icon-menu d-sm-inline-block d-none" href="basket.html"><i class="ci-Shopping_Cart_02"></i></a></div>
+            <div class="col-12 col-input-search">
               <div class="input-group d-xl-none"><i class="input-group-text ci-Search_Magnifying_Glass"></i>
                 <input class="form-control" type="text" placeholder="Я шукаю">
               </div>
@@ -126,6 +126,93 @@
             </div>
           </div>
         </div>
+        <div class="modal fade" id="modalEnter">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header border-bottom justify-content-end border-bottom-0">
+                <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <nav>
+                  <div class="nav nav-pills row-cols-2" id="nav-tab"><a class="nav-link active" id="nav-login-tab" href="#" data-bs-toggle="tab" data-bs-target="#nav-login">Увійти</a><a class="nav-link" id="nav-registration-tab" href="#" data-bs-toggle="tab" data-bs-target="#nav-registration">Створити акаунт</a></div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-login" tabindex="0">
+                        <div class="mb-28">
+                          <label class="form-label" for="">Номер телефону або e-mail*</label>
+                          <input class="form-control" required="true" placeholder="Номер телефону або e-mail" id="" type="text">
+                          <div class="invalid-feedback">Введіть коректний E-mail</div>
+                        </div>
+                        <div class="input-password mb-16">
+                          <label class="form-label">Пароль*</label>
+                          <div class="input-group">
+                            <input class="form-control" required="true" placeholder="Пароль" type="password">
+                            <button class="btn btn-password"><i class="ci-Hide"></i><i class="ci-Show d-none"></i></button>
+                          </div>
+                          <div class="invalid-feedback">Пароль повинен бути не менше ніж 6 символів</div>
+                        </div>
+                    <div class="d-flex justify-content-between mb-28">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="checkboxsaveMe">
+                            <label class="form-check-label" for="checkboxsaveMe">Запам'ятати мене?</label>
+                          </div><a class="text-black" href="#" data-bs-toggle="modal" data-bs-target="#modalPasswordRecovery">Забули пароль?</a>
+                    </div>
+                    <button class="btn btn-green-secondary w-100 mb-28" type="button">Увійти</button>
+                    <p class="text-center p4 mb-16">Прив'яжіть до акаунта
+                      <div class="d-flex mb-36"><a class="btn btn-outline-light text-black py-8 w-100"><img class="me-12" src="images/gg.png" width="34" height="34" alt="" title=""><span>Google</span></a><a class="btn btn-outline-light text-black py-8 w-100"><img class="me-12" src="images/fb.png" width="34" height="34" alt="" title=""><span>Facebook</span></a></div>
+                    </p>
+                  </div>
+                  <div class="tab-pane fade" id="nav-registration" tabindex="0">
+                        <div class="mb-28">
+                          <label class="form-label" for="">Номер телефону або e-mail*</label>
+                          <input class="form-control" required="true" placeholder="Номер телефону або e-mail" id="" type="text">
+                          <div class="invalid-feedback">Введіть коректний E-mail</div>
+                        </div>
+                        <div class="input-password mb-28">
+                          <label class="form-label">Пароль*</label>
+                          <div class="input-group">
+                            <input class="form-control" required="true" placeholder="Пароль" type="password">
+                            <button class="btn btn-password"><i class="ci-Hide"></i><i class="ci-Show d-none"></i></button>
+                          </div>
+                          <div class="invalid-feedback">Пароль повинен бути не менше ніж 6 символів</div>
+                        </div>
+                    <button class="btn btn-green-secondary w-100 mb-12" type="button">Створити акаунт</button>
+                        <div class="form-check p6 mb-8 text-dark lh-16">
+                          <input class="form-check-input" type="checkbox" id="checkboxcheck1">
+                          <label class="form-check-label" for="checkboxcheck1">Так, я хочу підписатися на розсилку новин та отримати знижку 10%(необов’язково)</label>
+                        </div>
+                        <div class="form-check p6 mb-28 text-dark lh-16">
+                          <input class="form-check-input" type="checkbox" id="checkboxcheck2">
+                          <label class="form-check-label" for="checkboxcheck2">*Я приймаю умови користування сайтом і даю згоду на використання моїх персональних даних в маркетингових цілях</label>
+                        </div>
+                    <p class="text-center p4 mb-16">Створіть акаунт за допомогою
+                      <div class="d-flex mb-36"><a class="btn btn-outline-light text-black py-8 w-100"><img class="me-12" src="images/gg.png" width="34" height="34" alt="" title=""><span>Google</span></a><a class="btn btn-outline-light text-black py-8 w-100"><img class="me-12" src="images/fb.png" width="34" height="34" alt="" title=""><span>Facebook</span></a></div>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="modalPasswordRecovery">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header border-bottom">
+                <div class="modal-title f-medium">Відновити пароль</div>
+                <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+              </div>
+              <div class="modal-body">
+                <p class="p3 text-dark mb-28">Щоб відновити пароль, введіть телефон або Email</p>
+                    <div class="mb-28">
+                      <label class="form-label" for="">Номер телефону або e-mail*</label>
+                      <input class="form-control" required="true" placeholder="Номер телефону або e-mail" id="" type="text">
+                      <div class="invalid-feedback">Введіть коректний E-mail</div>
+                    </div>
+                <button class="btn btn-green-secondary w-100 mb-28" type="button">Підтвердити</button>
+              </div>
+            </div>
+          </div>
+        </div>
     <main>
       <div class="container-fluid container-xxl">
         <nav>
@@ -185,26 +272,26 @@
                             </div>
                             <div class="accordion-collapse collapse" id="panelsStayOpenCollapse0">
                               <div class="accordion-body catalog-filter-accordion">
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox10">
-                                  <label class="form-check-label" for="checkbox10">Категорії Категорії Категорії Категорії</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox20">
-                                  <label class="form-check-label" for="checkbox20">Категорії</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox30">
-                                  <label class="form-check-label" for="checkbox30">Категорії</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox40">
-                                  <label class="form-check-label" for="checkbox40">Категорії</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox50">
-                                  <label class="form-check-label" for="checkbox50">Категорії</label>
-                                </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox10">
+                                      <label class="form-check-label" for="checkbox10">Категорії Категорії Категорії Категорії</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox20">
+                                      <label class="form-check-label" for="checkbox20">Категорії</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox30">
+                                      <label class="form-check-label" for="checkbox30">Категорії</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox40">
+                                      <label class="form-check-label" for="checkbox40">Категорії</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox50">
+                                      <label class="form-check-label" for="checkbox50">Категорії</label>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -214,26 +301,26 @@
                             </div>
                             <div class="accordion-collapse collapse" id="panelsStayOpenCollapse1">
                               <div class="accordion-body catalog-filter-accordion">
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox11">
-                                  <label class="form-check-label" for="checkbox11">Сезон Сезон Сезон Сезон</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox21">
-                                  <label class="form-check-label" for="checkbox21">Сезон</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox31">
-                                  <label class="form-check-label" for="checkbox31">Сезон</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox41">
-                                  <label class="form-check-label" for="checkbox41">Сезон</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox51">
-                                  <label class="form-check-label" for="checkbox51">Сезон</label>
-                                </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox11">
+                                      <label class="form-check-label" for="checkbox11">Сезон Сезон Сезон Сезон</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox21">
+                                      <label class="form-check-label" for="checkbox21">Сезон</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox31">
+                                      <label class="form-check-label" for="checkbox31">Сезон</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox41">
+                                      <label class="form-check-label" for="checkbox41">Сезон</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox51">
+                                      <label class="form-check-label" for="checkbox51">Сезон</label>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -243,26 +330,26 @@
                             </div>
                             <div class="accordion-collapse collapse" id="panelsStayOpenCollapse2">
                               <div class="accordion-body catalog-filter-accordion">
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox12">
-                                  <label class="form-check-label" for="checkbox12">Стать Стать Стать Стать</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox22">
-                                  <label class="form-check-label" for="checkbox22">Стать</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox32">
-                                  <label class="form-check-label" for="checkbox32">Стать</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox42">
-                                  <label class="form-check-label" for="checkbox42">Стать</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox52">
-                                  <label class="form-check-label" for="checkbox52">Стать</label>
-                                </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox12">
+                                      <label class="form-check-label" for="checkbox12">Стать Стать Стать Стать</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox22">
+                                      <label class="form-check-label" for="checkbox22">Стать</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox32">
+                                      <label class="form-check-label" for="checkbox32">Стать</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox42">
+                                      <label class="form-check-label" for="checkbox42">Стать</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox52">
+                                      <label class="form-check-label" for="checkbox52">Стать</label>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -272,26 +359,26 @@
                             </div>
                             <div class="accordion-collapse collapse" id="panelsStayOpenCollapse3">
                               <div class="accordion-body catalog-filter-accordion">
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox13">
-                                  <label class="form-check-label" for="checkbox13">Розмір Розмір Розмір Розмір</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox23">
-                                  <label class="form-check-label" for="checkbox23">Розмір</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox33">
-                                  <label class="form-check-label" for="checkbox33">Розмір</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox43">
-                                  <label class="form-check-label" for="checkbox43">Розмір</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox53">
-                                  <label class="form-check-label" for="checkbox53">Розмір</label>
-                                </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox13">
+                                      <label class="form-check-label" for="checkbox13">Розмір Розмір Розмір Розмір</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox23">
+                                      <label class="form-check-label" for="checkbox23">Розмір</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox33">
+                                      <label class="form-check-label" for="checkbox33">Розмір</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox43">
+                                      <label class="form-check-label" for="checkbox43">Розмір</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox53">
+                                      <label class="form-check-label" for="checkbox53">Розмір</label>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -301,26 +388,26 @@
                             </div>
                             <div class="accordion-collapse collapse" id="panelsStayOpenCollapse4">
                               <div class="accordion-body catalog-filter-accordion">
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox14">
-                                  <label class="form-check-label" for="checkbox14">Матеріал Матеріал Матеріал Матеріал</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox24">
-                                  <label class="form-check-label" for="checkbox24">Матеріал</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox34">
-                                  <label class="form-check-label" for="checkbox34">Матеріал</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox44">
-                                  <label class="form-check-label" for="checkbox44">Матеріал</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox54">
-                                  <label class="form-check-label" for="checkbox54">Матеріал</label>
-                                </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox14">
+                                      <label class="form-check-label" for="checkbox14">Матеріал Матеріал Матеріал Матеріал</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox24">
+                                      <label class="form-check-label" for="checkbox24">Матеріал</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox34">
+                                      <label class="form-check-label" for="checkbox34">Матеріал</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox44">
+                                      <label class="form-check-label" for="checkbox44">Матеріал</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox54">
+                                      <label class="form-check-label" for="checkbox54">Матеріал</label>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -330,26 +417,26 @@
                             </div>
                             <div class="accordion-collapse collapse" id="panelsStayOpenCollapse5">
                               <div class="accordion-body catalog-filter-accordion">
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox15">
-                                  <label class="form-check-label" for="checkbox15">Колір Колір Колір Колір</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox25">
-                                  <label class="form-check-label" for="checkbox25">Колір</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox35">
-                                  <label class="form-check-label" for="checkbox35">Колір</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox45">
-                                  <label class="form-check-label" for="checkbox45">Колір</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox55">
-                                  <label class="form-check-label" for="checkbox55">Колір</label>
-                                </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox15">
+                                      <label class="form-check-label" for="checkbox15">Колір Колір Колір Колір</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox25">
+                                      <label class="form-check-label" for="checkbox25">Колір</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox35">
+                                      <label class="form-check-label" for="checkbox35">Колір</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox45">
+                                      <label class="form-check-label" for="checkbox45">Колір</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox55">
+                                      <label class="form-check-label" for="checkbox55">Колір</label>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -359,26 +446,26 @@
                             </div>
                             <div class="accordion-collapse collapse" id="panelsStayOpenCollapse6">
                               <div class="accordion-body catalog-filter-accordion">
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox16">
-                                  <label class="form-check-label" for="checkbox16">Рік Рік Рік Рік</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox26">
-                                  <label class="form-check-label" for="checkbox26">Рік</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox36">
-                                  <label class="form-check-label" for="checkbox36">Рік</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox46">
-                                  <label class="form-check-label" for="checkbox46">Рік</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox56">
-                                  <label class="form-check-label" for="checkbox56">Рік</label>
-                                </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox16">
+                                      <label class="form-check-label" for="checkbox16">Рік Рік Рік Рік</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox26">
+                                      <label class="form-check-label" for="checkbox26">Рік</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox36">
+                                      <label class="form-check-label" for="checkbox36">Рік</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox46">
+                                      <label class="form-check-label" for="checkbox46">Рік</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox56">
+                                      <label class="form-check-label" for="checkbox56">Рік</label>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -388,26 +475,26 @@
                             </div>
                             <div class="accordion-collapse collapse" id="panelsStayOpenCollapse7">
                               <div class="accordion-body catalog-filter-accordion">
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox17">
-                                  <label class="form-check-label" for="checkbox17">Знижка Знижка Знижка Знижка</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox27">
-                                  <label class="form-check-label" for="checkbox27">Знижка</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox37">
-                                  <label class="form-check-label" for="checkbox37">Знижка</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox47">
-                                  <label class="form-check-label" for="checkbox47">Знижка</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox57">
-                                  <label class="form-check-label" for="checkbox57">Знижка</label>
-                                </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox17">
+                                      <label class="form-check-label" for="checkbox17">Знижка Знижка Знижка Знижка</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox27">
+                                      <label class="form-check-label" for="checkbox27">Знижка</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox37">
+                                      <label class="form-check-label" for="checkbox37">Знижка</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox47">
+                                      <label class="form-check-label" for="checkbox47">Знижка</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox57">
+                                      <label class="form-check-label" for="checkbox57">Знижка</label>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -423,26 +510,26 @@
                                     <button class="btn btn-control"><i class="ci-Search_Magnifying_Glass"></i></button>
                                   </div>
                                 </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox18">
-                                  <label class="form-check-label" for="checkbox18">Бренд</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox28">
-                                  <label class="form-check-label" for="checkbox28">Бренд</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox38">
-                                  <label class="form-check-label" for="checkbox38">Бренд</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox48">
-                                  <label class="form-check-label" for="checkbox48">Бренд</label>
-                                </div>
-                                <div class="form-check mb-12">
-                                  <input class="form-check-input" type="checkbox" id="checkbox58">
-                                  <label class="form-check-label" for="checkbox58">Бренд</label>
-                                </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox18">
+                                      <label class="form-check-label" for="checkbox18">Бренд</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox28">
+                                      <label class="form-check-label" for="checkbox28">Бренд</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox38">
+                                      <label class="form-check-label" for="checkbox38">Бренд</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox48">
+                                      <label class="form-check-label" for="checkbox48">Бренд</label>
+                                    </div>
+                                    <div class="form-check mb-12">
+                                      <input class="form-check-input" type="checkbox" id="checkbox58">
+                                      <label class="form-check-label" for="checkbox58">Бренд</label>
+                                    </div>
                               </div>
                             </div>
                           </div>
@@ -507,26 +594,26 @@
                     </div>
                     <div class="accordion-collapse collapse" id="panelsStayOpenCollapse0">
                       <div class="accordion-body catalog-filter-accordion">
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox10">
-                          <label class="form-check-label" for="checkbox10">Категорії Категорії Категорії Категорії</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox20">
-                          <label class="form-check-label" for="checkbox20">Категорії</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox30">
-                          <label class="form-check-label" for="checkbox30">Категорії</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox40">
-                          <label class="form-check-label" for="checkbox40">Категорії</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox50">
-                          <label class="form-check-label" for="checkbox50">Категорії</label>
-                        </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox10">
+                              <label class="form-check-label" for="checkbox10">Категорії Категорії Категорії Категорії</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox20">
+                              <label class="form-check-label" for="checkbox20">Категорії</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox30">
+                              <label class="form-check-label" for="checkbox30">Категорії</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox40">
+                              <label class="form-check-label" for="checkbox40">Категорії</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox50">
+                              <label class="form-check-label" for="checkbox50">Категорії</label>
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -536,26 +623,26 @@
                     </div>
                     <div class="accordion-collapse collapse" id="panelsStayOpenCollapse1">
                       <div class="accordion-body catalog-filter-accordion">
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox11">
-                          <label class="form-check-label" for="checkbox11">Сезон Сезон Сезон Сезон</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox21">
-                          <label class="form-check-label" for="checkbox21">Сезон</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox31">
-                          <label class="form-check-label" for="checkbox31">Сезон</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox41">
-                          <label class="form-check-label" for="checkbox41">Сезон</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox51">
-                          <label class="form-check-label" for="checkbox51">Сезон</label>
-                        </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox11">
+                              <label class="form-check-label" for="checkbox11">Сезон Сезон Сезон Сезон</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox21">
+                              <label class="form-check-label" for="checkbox21">Сезон</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox31">
+                              <label class="form-check-label" for="checkbox31">Сезон</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox41">
+                              <label class="form-check-label" for="checkbox41">Сезон</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox51">
+                              <label class="form-check-label" for="checkbox51">Сезон</label>
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -565,26 +652,26 @@
                     </div>
                     <div class="accordion-collapse collapse" id="panelsStayOpenCollapse2">
                       <div class="accordion-body catalog-filter-accordion">
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox12">
-                          <label class="form-check-label" for="checkbox12">Стать Стать Стать Стать</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox22">
-                          <label class="form-check-label" for="checkbox22">Стать</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox32">
-                          <label class="form-check-label" for="checkbox32">Стать</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox42">
-                          <label class="form-check-label" for="checkbox42">Стать</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox52">
-                          <label class="form-check-label" for="checkbox52">Стать</label>
-                        </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox12">
+                              <label class="form-check-label" for="checkbox12">Стать Стать Стать Стать</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox22">
+                              <label class="form-check-label" for="checkbox22">Стать</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox32">
+                              <label class="form-check-label" for="checkbox32">Стать</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox42">
+                              <label class="form-check-label" for="checkbox42">Стать</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox52">
+                              <label class="form-check-label" for="checkbox52">Стать</label>
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -594,26 +681,26 @@
                     </div>
                     <div class="accordion-collapse collapse" id="panelsStayOpenCollapse3">
                       <div class="accordion-body catalog-filter-accordion">
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox13">
-                          <label class="form-check-label" for="checkbox13">Розмір Розмір Розмір Розмір</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox23">
-                          <label class="form-check-label" for="checkbox23">Розмір</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox33">
-                          <label class="form-check-label" for="checkbox33">Розмір</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox43">
-                          <label class="form-check-label" for="checkbox43">Розмір</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox53">
-                          <label class="form-check-label" for="checkbox53">Розмір</label>
-                        </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox13">
+                              <label class="form-check-label" for="checkbox13">Розмір Розмір Розмір Розмір</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox23">
+                              <label class="form-check-label" for="checkbox23">Розмір</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox33">
+                              <label class="form-check-label" for="checkbox33">Розмір</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox43">
+                              <label class="form-check-label" for="checkbox43">Розмір</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox53">
+                              <label class="form-check-label" for="checkbox53">Розмір</label>
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -623,26 +710,26 @@
                     </div>
                     <div class="accordion-collapse collapse" id="panelsStayOpenCollapse4">
                       <div class="accordion-body catalog-filter-accordion">
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox14">
-                          <label class="form-check-label" for="checkbox14">Матеріал Матеріал Матеріал Матеріал</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox24">
-                          <label class="form-check-label" for="checkbox24">Матеріал</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox34">
-                          <label class="form-check-label" for="checkbox34">Матеріал</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox44">
-                          <label class="form-check-label" for="checkbox44">Матеріал</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox54">
-                          <label class="form-check-label" for="checkbox54">Матеріал</label>
-                        </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox14">
+                              <label class="form-check-label" for="checkbox14">Матеріал Матеріал Матеріал Матеріал</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox24">
+                              <label class="form-check-label" for="checkbox24">Матеріал</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox34">
+                              <label class="form-check-label" for="checkbox34">Матеріал</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox44">
+                              <label class="form-check-label" for="checkbox44">Матеріал</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox54">
+                              <label class="form-check-label" for="checkbox54">Матеріал</label>
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -652,26 +739,26 @@
                     </div>
                     <div class="accordion-collapse collapse" id="panelsStayOpenCollapse5">
                       <div class="accordion-body catalog-filter-accordion">
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox15">
-                          <label class="form-check-label" for="checkbox15">Колір Колір Колір Колір</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox25">
-                          <label class="form-check-label" for="checkbox25">Колір</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox35">
-                          <label class="form-check-label" for="checkbox35">Колір</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox45">
-                          <label class="form-check-label" for="checkbox45">Колір</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox55">
-                          <label class="form-check-label" for="checkbox55">Колір</label>
-                        </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox15">
+                              <label class="form-check-label" for="checkbox15">Колір Колір Колір Колір</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox25">
+                              <label class="form-check-label" for="checkbox25">Колір</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox35">
+                              <label class="form-check-label" for="checkbox35">Колір</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox45">
+                              <label class="form-check-label" for="checkbox45">Колір</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox55">
+                              <label class="form-check-label" for="checkbox55">Колір</label>
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -681,26 +768,26 @@
                     </div>
                     <div class="accordion-collapse collapse" id="panelsStayOpenCollapse6">
                       <div class="accordion-body catalog-filter-accordion">
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox16">
-                          <label class="form-check-label" for="checkbox16">Рік Рік Рік Рік</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox26">
-                          <label class="form-check-label" for="checkbox26">Рік</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox36">
-                          <label class="form-check-label" for="checkbox36">Рік</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox46">
-                          <label class="form-check-label" for="checkbox46">Рік</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox56">
-                          <label class="form-check-label" for="checkbox56">Рік</label>
-                        </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox16">
+                              <label class="form-check-label" for="checkbox16">Рік Рік Рік Рік</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox26">
+                              <label class="form-check-label" for="checkbox26">Рік</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox36">
+                              <label class="form-check-label" for="checkbox36">Рік</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox46">
+                              <label class="form-check-label" for="checkbox46">Рік</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox56">
+                              <label class="form-check-label" for="checkbox56">Рік</label>
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -710,26 +797,26 @@
                     </div>
                     <div class="accordion-collapse collapse" id="panelsStayOpenCollapse7">
                       <div class="accordion-body catalog-filter-accordion">
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox17">
-                          <label class="form-check-label" for="checkbox17">Знижка Знижка Знижка Знижка</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox27">
-                          <label class="form-check-label" for="checkbox27">Знижка</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox37">
-                          <label class="form-check-label" for="checkbox37">Знижка</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox47">
-                          <label class="form-check-label" for="checkbox47">Знижка</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox57">
-                          <label class="form-check-label" for="checkbox57">Знижка</label>
-                        </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox17">
+                              <label class="form-check-label" for="checkbox17">Знижка Знижка Знижка Знижка</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox27">
+                              <label class="form-check-label" for="checkbox27">Знижка</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox37">
+                              <label class="form-check-label" for="checkbox37">Знижка</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox47">
+                              <label class="form-check-label" for="checkbox47">Знижка</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox57">
+                              <label class="form-check-label" for="checkbox57">Знижка</label>
+                            </div>
                       </div>
                     </div>
                   </div>
@@ -745,26 +832,26 @@
                             <button class="btn btn-control"><i class="ci-Search_Magnifying_Glass"></i></button>
                           </div>
                         </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox18">
-                          <label class="form-check-label" for="checkbox18">Бренд</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox28">
-                          <label class="form-check-label" for="checkbox28">Бренд</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox38">
-                          <label class="form-check-label" for="checkbox38">Бренд</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox48">
-                          <label class="form-check-label" for="checkbox48">Бренд</label>
-                        </div>
-                        <div class="form-check mb-12">
-                          <input class="form-check-input" type="checkbox" id="checkbox58">
-                          <label class="form-check-label" for="checkbox58">Бренд</label>
-                        </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox18">
+                              <label class="form-check-label" for="checkbox18">Бренд</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox28">
+                              <label class="form-check-label" for="checkbox28">Бренд</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox38">
+                              <label class="form-check-label" for="checkbox38">Бренд</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox48">
+                              <label class="form-check-label" for="checkbox48">Бренд</label>
+                            </div>
+                            <div class="form-check mb-12">
+                              <input class="form-check-input" type="checkbox" id="checkbox58">
+                              <label class="form-check-label" for="checkbox58">Бренд</label>
+                            </div>
                       </div>
                     </div>
                   </div>
