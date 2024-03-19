@@ -22516,14 +22516,17 @@ input[type="number"] {
   input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none; }
 
+.input-counter.input-counter-sm,
 .input-counter {
   width: 86px;
   height: 28px; }
+  .input-counter.input-counter-sm .btn,
   .input-counter .btn {
     margin: 0;
     line-height: 1px;
     padding: 5px 5px;
     height: 28px; }
+  .input-counter.input-counter-sm .form-control,
   .input-counter .form-control {
     height: 28px;
     width: 34px;
@@ -22846,8 +22849,16 @@ input[type="number"] {
   border-bottom: 1px solid #DFDFDF;
   margin: 0 0 16px 0;
   padding: 0 0 16px 0; }
+  .placing-an-order-item-delete {
+    position: absolute;
+    top: 0;
+    right: 0; }
   .placing-an-order-item-block {
     position: relative; }
+    .placing-an-order-item-block .badge {
+      position: absolute;
+      right: 0;
+      top: 40px; }
   .placing-an-order-item-image {
     min-width: 100px;
     max-width: 100px;
@@ -22861,12 +22872,7 @@ input[type="number"] {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    width: 100%; }
-  .placing-an-order-item-position-block {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 112px; }
+    width: calc(100% - 20px); }
   .placing-an-order-item a.text-dark:hover, .placing-an-order-item a.text-dark:focus {
     color: #FF0000 !important; }
 
@@ -22875,18 +22881,11 @@ input[type="number"] {
   overflow: hidden;
   position: relative; }
 
-@media (min-width: 540px) {
+@media (min-width: 1320px) {
   .placing-an-order-item {
     border-bottom: 1px solid #DFDFDF;
     margin: 0 0 16px 0;
     padding: 0 20px 16px 20px; } }
-
-@media (min-width: 1320px) {
-  .placing-an-order-item-name {
-    max-height: 48px;
-    white-space: normal; }
-  .placing-an-order-item-position-block {
-    position: static; } }
 
 .mobile-footer-menu {
   position: fixed;

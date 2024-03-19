@@ -12,7 +12,8 @@ block main
 		.container-fluid.container-xxl
 			+TopSlider()
 			.mb-66
-				+Delivery()
+				- var delivery = [{title: 'Безкоштовна доставка', text: 'по Україні при замовленні від 2000 ₴', icon: 'icon-1'}, {title: 'Легке повернення', text: '14 днів', icon: 'icon-6'}, {title: 'Примірка і накладений плітіж', text: '', icon: 'icon-7'}, {title: '60% Товарів', text: 'натурального та органічного складу', icon: 'icon-8'}, {title: '99% Товарів', text: 'від українських брендів', icon: 'icon-9'}]
+				+Delivery(delivery)
 			section.mb-80
 				p.h4.f-medium Новинки
 				.row.row-cols-xl-5.row-cols-lg-4.row-cols-md-3.row-cols-2

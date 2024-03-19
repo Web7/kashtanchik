@@ -1,10 +1,7 @@
 include ../atoms/icon-delivery
 
-mixin Delivery()
+mixin Delivery(data)
     .delivery-scroll-container
         .d-flex.align-items-center.justify-content-between.delivery-container
-            +IconDelivery('Безкоштовна доставка', 'по Україні при замовленні від 2000 ₴', 'icon-1')
-            +IconDelivery('Легке повернення', '14 днів', 'icon-6')
-            +IconDelivery('Примірка і накладений плітіж', '', 'icon-7')
-            +IconDelivery('60% Товарів', 'натурального та органічного складу', 'icon-8')
-            +IconDelivery('99% Товарів', 'від українських брендів', 'icon-9')
+            each item in data
+                +IconDelivery(item.title, item.text, item.icon)
