@@ -18,7 +18,6 @@ import datepicker from 'bootstrap-datepicker';
 // import buttonScrollToTop from './js/button-scroll-to-top.min';
 //
 // window.buttonScrollToTop = buttonScrollToTop;
-global.buttonScrollToTop = require('./js/button-scroll-to-top.min');
 
 window.jQuery = $;
 window.Dotdotdot = Dotdotdot;
@@ -29,4 +28,5 @@ window.datepicker = datepicker;
 
 require('bootstrap-datepicker/js/locales/bootstrap-datepicker.uk');
 
+require('./js/button-scroll-to-top');
 import './js/common.js';

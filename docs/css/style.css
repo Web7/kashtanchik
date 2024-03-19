@@ -1551,6 +1551,242 @@ i {
 .select-js-label + .select-js-select {
 	text-align: right;
 }
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./src/css/button-scroll-to-top.css ***!
+  \************************************************************************************/
+html, body {
+	height: 2000px;
+}
+
+.opacity {
+	opacity: 0.35;
+	transition: ease 500ms;
+}
+
+.opacity:hover {
+	opacity: 1;
+}
+
+.button-scroll-to-top {
+	position: fixed;
+	bottom: 60px;
+	right: 60px;
+	height: 56px;
+	width: 56px;
+	cursor: pointer;
+}
+
+.button-scroll-to-top.square {
+	border-radius: 4px;
+}
+
+.button-scroll-to-top.square-o {
+	border-radius: 4px;
+	border: 4px solid transparent;
+	height: 42px;
+	width: 42px;
+}
+
+.button-scroll-to-top.circle {
+	border-radius: 50%;
+}
+
+.button-scroll-to-top.circle-o {
+	border-radius: 50%;
+	border: 4px solid transparent;
+	height: 42px;
+	width: 42px;
+}
+
+
+.button-scroll-to-top.chevron-up:before,
+.button-scroll-to-top.chevron-up:after {
+	content: "";
+	display: block;
+	position: absolute;
+	height: 6px;
+	width: 20px;
+	top: -2px;
+	bottom: 0;
+	margin: auto;
+}
+
+.button-scroll-to-top.chevron-up:before {
+	transform: rotate(-45deg);
+	left: -10px;
+	right: 0;
+}
+
+.button-scroll-to-top.chevron-up:after {
+	transform: rotate(45deg);
+	left: 0;
+	right: -10px;
+}
+
+.button-scroll-to-top.arrow-up:before {
+	content: "\2191";
+	display: inline-block;
+	position: absolute;
+	top: -3px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 10px;
+	height: 18px;
+	font-weight: bold;
+	font-size: 18px;
+	line-height: 1;
+}
+
+.button-scroll-to-top.caret-up:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: -3px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 15px solid transparent;
+}
+
+.square.button-scroll-to-top.chevron-up:after,
+.circle.button-scroll-to-top.chevron-up:after,
+.square.button-scroll-to-top.chevron-up:before,
+.circle.button-scroll-to-top.chevron-up:before {
+	background-color: #ffffff;
+}
+
+.button-scroll-to-top.square,
+.button-scroll-to-top.circle,
+.square-o.button-scroll-to-top.chevron-up:after,
+.circle-o.button-scroll-to-top.chevron-up:after,
+.square-o.button-scroll-to-top.chevron-up:before,
+.circle-o.button-scroll-to-top.chevron-up:before {
+	background-color: #ffffff;
+	border: 1px solid #7fc394;
+}
+
+
+.square.button-scroll-to-top.caret-up:before,
+.circle.button-scroll-to-top.caret-up:before {
+	border-color: #ffffff;
+}
+
+.button-scroll-to-top.square-o,
+.button-scroll-to-top.circle-o,
+.square-o.button-scroll-to-top.caret-up:before,
+.circle-o.button-scroll-to-top.caret-up:before {
+	background-color: #ffffff;
+	border-color: #555555;
+}
+
+/*#428bca*/
+
+
+.color-primary {
+	/*#428bca*/
+}
+.color-primary.button-scroll-to-top.square,
+.color-primary.button-scroll-to-top.circle,
+.color-primary.square-o.button-scroll-to-top.chevron-up:after,
+.color-primary.circle-o.button-scroll-to-top.chevron-up:after,
+.color-primary.square-o.button-scroll-to-top.chevron-up:before,
+.color-primary.circle-o.button-scroll-to-top.chevron-up:before {
+	background-color: #428bca;
+}
+
+.color-primary.button-scroll-to-top.square-o,
+.color-primary.button-scroll-to-top.circle-o,
+.color-primary.square-o.button-scroll-to-top.caret-up:before,
+.color-primary.circle-o.button-scroll-to-top.caret-up:before {
+	border-color: #428bca;
+}
+
+.color-success {
+	/*#5cb85c*/
+}
+
+.color-success.button-scroll-to-top.square,
+.color-success.button-scroll-to-top.circle,
+.color-success.square-o.button-scroll-to-top.chevron-up:after,
+.color-success.circle-o.button-scroll-to-top.chevron-up:after,
+.color-success.square-o.button-scroll-to-top.chevron-up:before,
+.color-success.circle-o.button-scroll-to-top.chevron-up:before {
+	background-color: #5cb85c;
+}
+
+.color-success.button-scroll-to-top.square-o,
+.color-success.button-scroll-to-top.circle-o,
+.color-success.square-o.button-scroll-to-top.caret-up:before,
+.color-success.circle-o.button-scroll-to-top.caret-up:before {
+	border-color: #5cb85c;
+}
+
+.color-info {
+	/*#5bc0de*/
+}
+
+.color-info.button-scroll-to-top.square,
+.color-info.button-scroll-to-top.circle,
+.color-info.square-o.button-scroll-to-top.chevron-up:after,
+.color-info.circle-o.button-scroll-to-top.chevron-up:after,
+.color-info.square-o.button-scroll-to-top.chevron-up:before,
+.color-info.circle-o.button-scroll-to-top.chevron-up:before {
+	background-color: #5bc0de;
+}
+
+.color-info.button-scroll-to-top.square-o,
+.color-info.button-scroll-to-top.circle-o,
+.color-info.square-o.button-scroll-to-top.caret-up:before,
+.color-info.circle-o.button-scroll-to-top.caret-up:before {
+	border-color: #5bc0de;
+}
+
+.color-warning {
+	/*#f0ad4e*/
+}
+
+.color-warning.button-scroll-to-top.square,
+.color-warning.button-scroll-to-top.circle,
+.color-warning.square-o.button-scroll-to-top.chevron-up:after,
+.color-warning.circle-o.button-scroll-to-top.chevron-up:after,
+.color-warning.square-o.button-scroll-to-top.chevron-up:before,
+.color-warning.circle-o.button-scroll-to-top.chevron-up:before {
+	background-color: #f0ad4e;
+}
+
+.color-warning.button-scroll-to-top.square-o,
+.color-warning.button-scroll-to-top.circle-o,
+.color-warning.square-o.button-scroll-to-top.caret-up:before,
+.color-warning.circle-o.button-scroll-to-top.caret-up:before {
+	border-color: #f0ad4e;
+}
+
+.color-danger {
+	/*#d9534f*/
+}
+
+.color-danger.button-scroll-to-top.square,
+.color-danger.button-scroll-to-top.circle,
+.color-danger.square-o.button-scroll-to-top.chevron-up:after,
+.color-danger.circle-o.button-scroll-to-top.chevron-up:after,
+.color-danger.square-o.button-scroll-to-top.chevron-up:before,
+.color-danger.circle-o.button-scroll-to-top.chevron-up:before {
+	background-color: #d9534f;
+}
+
+.color-danger.button-scroll-to-top.square-o,
+.color-danger.button-scroll-to-top.circle-o,
+.color-danger.square-o.button-scroll-to-top.caret-up:before,
+.color-danger.circle-o.button-scroll-to-top.caret-up:before {
+	border-color: #d9534f;
+}
 /*!***********************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/slick-carousel/slick/slick.css ***!
   \***********************************************************************************************/

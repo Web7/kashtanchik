@@ -72,7 +72,6 @@
 	};
 
 	var updateProductImagesSlick = function() {
-		console.log(innerWidth);
 		if (innerWidth < 540) {
 			if ($kshtProductImages.exists()) {
 				$kshtProductImages.slick({
@@ -120,7 +119,7 @@
 		$productImagesCounter = $('.product-images-counter');
 		// var $header =
 
-
+		buttonScrollToTop();
 
 		if ($formPhone.exists()) {
 			$formPhone.each(function(){
