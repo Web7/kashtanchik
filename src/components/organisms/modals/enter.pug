@@ -1,0 +1,46 @@
+include ../../atoms/checkbox
+include ../../atoms/input
+include ../../atoms/input-password
+
+mixin Enter()
+    .modal.fade#modalEnter
+        .modal-dialog
+            .modal-content
+                .modal-header.border-bottom.justify-content-end.border-bottom-0
+                    button.btn-close(type="button" data-bs-dismiss="modal")
+                .modal-body
+                    nav
+                        .nav.nav-pills.row-cols-2#nav-tab
+                            a.nav-link.active#nav-login-tab(href="#" data-bs-toggle="tab" data-bs-target="#nav-login") Увійти
+                            a.nav-link#nav-registration-tab(href="#" data-bs-toggle="tab" data-bs-target="#nav-registration") Створити акаунт
+                    .tab-content#nav-tabContent
+                        .tab-pane.fade.show.active#nav-login(tabindex="0")
+                            +Input()(class="mb-28" id="" type="text" placeholder="Номер телефону або e-mail" label="Номер телефону або e-mail*" invalidFeedback="Введіть коректний E-mail" required="true")
+                            +InputPassword()(class="mb-16" placeholder="Пароль" label="Пароль*" invalidFeedback="Пароль повинен бути не менше ніж 6 символів" required="true")
+                            .d-flex.justify-content-between.mb-28
+                                +Checkbox()(id="saveMe" label="Запам'ятати мене?")
+                                a.text-black(href="#" data-bs-toggle="modal" data-bs-target="#modalPasswordRecovery") Забули пароль?
+                            button.btn.btn-green-secondary.w-100.mb-28(type="button") Увійти
+                            p.text-center.p4.mb-16 Прив'яжіть до акаунта
+                                .d-flex.mb-36
+                                    a.btn.btn-outline-light.text-black.py-8.w-100
+                                        img.me-12(src="images/gg.png" width="34" height="34" alt="" title="")
+                                        span Google
+                                    a.btn.btn-outline-light.text-black.py-8.w-100
+                                        img.me-12(src="images/fb.png" width="34" height="34" alt="" title="")
+                                        span Facebook
+                        .tab-pane.fade#nav-registration(tabindex="0")
+                            +Input()(class="mb-28" id="" type="text" placeholder="Номер телефону або e-mail" label="Номер телефону або e-mail*" invalidFeedback="Введіть коректний E-mail" required="true")
+                            +InputPassword()(class="mb-28" placeholder="Пароль" label="Пароль*" invalidFeedback="Пароль повинен бути не менше ніж 6 символів" required="true")
+                            button.btn.btn-green-secondary.w-100.mb-12(type="button") Створити акаунт
+                            +Checkbox()(class="p6 mb-8 text-dark lh-16" id="check1" label="Так, я хочу підписатися на розсилку новин та отримати знижку 10%(необов’язково)")
+                            +Checkbox()(class="p6 mb-28 text-dark lh-16" id="check2" label="*Я приймаю умови користування сайтом і даю згоду на використання моїх персональних даних в маркетингових цілях")
+
+                            p.text-center.p4.mb-16 Створіть акаунт за допомогою
+                                .d-flex.mb-36
+                                    a.btn.btn-outline-light.text-black.py-8.w-100
+                                        img.me-12(src="images/gg.png" width="34" height="34" alt="" title="")
+                                        span Google
+                                    a.btn.btn-outline-light.text-black.py-8.w-100
+                                        img.me-12(src="images/fb.png" width="34" height="34" alt="" title="")
+                                        span Facebook
