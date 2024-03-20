@@ -163,11 +163,11 @@ https://github.com/alexshnur/select-js
 		$this.removeClass([classNames.selectJs, classNames.selectContainer].join(' '));
 	};
 
-	$(document).on('click touchstart', function () {
+	$(document).on('click touch', function () {
 		closeListSelect();
 	});
 
-	$(document).on('click touchstart', selectors.selectJsSelect, function (e) {
+	$(document).on('click touch', selectors.selectJsSelect, function (e) {
 		var $this = $(this);
 
 		closeListSelect($this);
@@ -183,7 +183,7 @@ https://github.com/alexshnur/select-js
 		return false;
 	});
 
-	$(document).on('click touchend', selectors.selectJsListItem, function () {
+	$(document).on('click touch', selectors.selectJsListItem, function () {
 		if (this.getAttribute('disabled')) {
 			return;
 		}
