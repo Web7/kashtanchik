@@ -22506,7 +22506,21 @@ textarea.form-control-lg {
   bottom: 16px;
   left: 16px; }
 
+.product-more-photo {
+  display: none; }
+
 @media (min-width: 540px) {
+  .product-more-photo {
+    display: block;
+    position: absolute;
+    background-color: #E6A08C;
+    padding: 4px 8px;
+    border-radius: 25px;
+    color: #ffffff;
+    font-size: 12px;
+    line-height: 16px;
+    bottom: 28px;
+    right: 16px; }
   .product-images-counter {
     display: none; }
   .ksht-product-image {
@@ -22521,6 +22535,12 @@ textarea.form-control-lg {
         height: 201px; } }
 
 @media (min-width: 1320px) {
+  .product-more-photo {
+    padding: 8px 24px;
+    font-size: 13px;
+    line-height: 18px;
+    bottom: 36px;
+    right: 24px; }
   .ksht-product-images > div {
     margin-bottom: 20px; }
     .ksht-product-images > div:nth-child(1), .ksht-product-images > div:nth-child(2) {
