@@ -27,9 +27,10 @@
 		return this;
 	};
 
+
 	var kshtLettersContainerPS;
 	// var kshtBasketItemsContainerPS;
-	var deliverContainerPS;
+	var deliveryContainerPS;
 	var placingAnOrderItemsContainerPS;
 	var $kshtProductImages;
 	var $productImagesCounter;
@@ -70,8 +71,8 @@
 		if ($deliveryContainer.exists()) {
 			$deliveryContainer.scrollTop(0);
 		}
-		if (deliverContainerPS) {
-			deliverContainerPS.update();
+		if (deliveryContainerPS) {
+			deliveryContainerPS.update();
 		}
 	};
 
@@ -122,13 +123,15 @@
 		updateSelectJsListScroll();
 	};
 
-	var $header = document.querySelector('.header-sticky')
-	var observer = new IntersectionObserver(
-		([e]) => e.target.classList.toggle('short', e.intersectionRatio < 1),
-		{ threshold: [1] }
-	);
 
-	observer.observe($header);
+	var $header = document.querySelector('.header-sticky')
+	if ($header) {
+		var observer = new IntersectionObserver(
+			([e]) => e.target.classList.toggle('short', e.intersectionRatio < 1),
+			{threshold: [1]}
+		);
+		observer.observe($header);
+	}
 
 	$(function (){
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');
@@ -190,7 +193,7 @@
 		}
 
 		if ($deliveryContainer.exists()) {
-			deliverContainerPS = new PerfectScrollbar('.delivery-container', {wheelPropagation: true})
+			deliveryContainerPS = new PerfectScrollbar('.delivery-container', {wheelPropagation: true})
 		}
 
 		if ($kshtLettersContainer.exists()) {
