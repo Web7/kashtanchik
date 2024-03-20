@@ -4,7 +4,9 @@ mixin PlacingAnOrderItem()
     .placing-an-order-item
         .placing-an-order-item-block
             .d-flex.mb-16.w-100
-                .placing-an-order-item-image()
+                .placing-an-order-item-image(style="background-image: none")
+                    a.ksht-add-to-favorites(href="#")
+                        i(class= (false ? 'ci-Heart_Fill_01' : 'ci-Heart_01'))
                 .position-relative.w-100
                     div.w-100
                         p.p2.f-medium.placing-an-order-item-name.mb-4.dotdotdot-name Chamonix Floral Snowsuit Violet Grape Floral Snowsuit Floralllllll Floral Snowsuit

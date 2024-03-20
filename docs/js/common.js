@@ -124,14 +124,14 @@
 	};
 
 
-	var $header = document.querySelector('.header-sticky')
-	if ($header) {
-		var observer = new IntersectionObserver(
-			([e]) => e.target.classList.toggle('short', e.intersectionRatio < 1),
-			{threshold: [1]}
-		);
-		observer.observe($header);
-	}
+	// var $header = document.querySelector('.header-sticky')
+	// if ($header) {
+	// 	var observer = new IntersectionObserver(
+	// 		([e]) => e.target.classList.toggle('short', e.intersectionRatio < 1),
+	// 		{threshold: [1]}
+	// 	);
+	// 	observer.observe($header);
+	// }
 
 	$(function (){
 		var $kshtSelectionContainerCols4 = $('.ksht-selection-container-cols-4');

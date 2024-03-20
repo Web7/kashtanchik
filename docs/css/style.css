@@ -22356,7 +22356,7 @@ textarea.form-control-lg {
   border-right: none; }
 
 .catalog-filter {
-  top: 220px; }
+  top: 96px; }
   .catalog-filter-accordion .form-check-label {
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -22373,6 +22373,10 @@ textarea.form-control-lg {
     border-top: 1px solid #DFDFDF;
     border-bottom: 1px solid #DFDFDF;
     border-right: 1px solid #DFDFDF; }
+
+@media (min-width: 1320px) {
+  .catalog-filter {
+    top: 223px; } }
 
 .ksht-blog-item-image {
   background-color: #d9d9d9;
@@ -23100,10 +23104,9 @@ input[type="number"] {
     width: 425px; } }
 
 header {
-  margin-bottom: 12px;
-  position: sticky;
-  top: -1px;
-  z-index: 110; }
+  margin-bottom: 12px; }
+  header:not(.header-index) {
+    height: 120px; }
   header .input-group {
     margin-top: 16px; }
     header .input-group-text {
@@ -23238,6 +23241,19 @@ header {
 .offcanvas-body .row.row-cols-2 > * {
   padding: 0 8px; }
 
+.header-sticky {
+  position: sticky;
+  top: -1px;
+  z-index: 110;
+  left: 0;
+  right: 0; }
+  .header-sticky.short {
+    position: fixed; }
+
+@media (min-width: 540px) {
+  header:not(.header-index) {
+    height: 134px; } }
+
 @media (max-width: 1140px) {
   .header-sticky {
     height: 172px; }
@@ -23269,6 +23285,10 @@ header {
       font-weight: 500;
       margin-right: 20px;
       border-bottom: 1px solid #000000; } }
+
+@media (min-width: 1320px) {
+  header:not(.header-index) {
+    height: 207px; } }
 
 .footer {
   margin-bottom: 40px; }

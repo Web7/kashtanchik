@@ -77,11 +77,13 @@
     overflow: hidden
     text-overflow: ellipsis
     &-block
-      width: calc(100% - 90px)
+
+  &-info-block
+    width: 58%
   &-product-item
     padding: 16px 0
     border-bottom: 1px solid $gray-100
-    width: 100%
+    width: auto
     &:first-child
       border-top: 1px solid $gray-100
   &-price-container
@@ -145,18 +147,23 @@
       width: 425px
 
 @media (min-width: 960px)
-  .order-status
-    &-product-item
-      width: 721px
-    &-xl-image
-      width: 100px
-      height: 119px
-    &-product-name
-      &-block
-        width: 250px
+  //.order-status
+  //  &-product-item
+  //    width: 721px
+  //  &-xl-image
+  //    width: 100px
+  //    height: 119px
+  //  &-product-name
+  //    &-block
+  //      width: 250px
 
 @media (min-width: 1320px)
   .order-status
+    &-info-block
+      width: auto
+    &-product-name
+      &-block
+        width: 250px
     &-separator
       width: 31px
       height: 3px
