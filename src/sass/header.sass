@@ -1,8 +1,7 @@
 header
   margin-bottom: 12px
-  position: sticky
-  top: -1px
-  z-index: 110
+  &:not(.header-index)
+    height: 120px
 
   .input-group
     margin-top: 16px
@@ -151,6 +150,19 @@ header
   .row.row-cols-2 > *
     padding: 0 8px
 
+.header-sticky
+  position: sticky
+  top: -1px
+  z-index: 110
+  left: 0
+  right: 0
+  &.short
+    position: fixed
+
+@media (min-width: 540px)
+  header:not(.header-index)
+    height: 134px
+
 @media (max-width: 1140px)
   .header-sticky
     height: 172px
@@ -190,3 +202,8 @@ header
           font-weight: 500
           margin-right: 20px
           border-bottom: 1px solid $black
+
+
+@media (min-width: 1320px)
+  header:not(.header-index)
+    height: 207px

@@ -29,4 +29,5 @@ window.datepicker = datepicker;
 require('bootstrap-datepicker/js/locales/bootstrap-datepicker.uk');
 
 require('./js/button-scroll-to-top');
+require('./js/scroll-toggle-menu');
 import './js/common.js';

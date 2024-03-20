@@ -3,7 +3,7 @@ include left-side-sub-menu
 include modals/enter
 include modals/password-recovery
 
-header
+header.header-index
     .header-sticky.position-static
         .bg-primary.header
             .container-fluid
@@ -63,6 +63,10 @@ header
                 a.text-black(href="catalog.html") Меблі та декор
                 a.text-black(href="catalog.html") Послуги
                 a.text-black(href="catalog.html") Sale
+        .d-flex.ksht-short-menu.align-items-center.d-xl-none.bg-white
+            a(href="#") Дітям
+            .ksht-short-menu-space
+            a.active(href="#") Батькам
 +LeftSideMenu()
 +LeftSideSubMenu()
 +Enter()
