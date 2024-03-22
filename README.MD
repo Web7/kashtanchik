@@ -11,17 +11,17 @@
 
 Все классы которые содержат префикс, будут с цветом
 
-- `primary` `#A7D8B6`
-- `green-secondary` `#7FC394`
-- `secondary` `#E6A08C`
-- `secondary-light` `#E8AB80`
-- `success` `#5BA973`
-- `warning` `#E8AB80`
-- `danger` `#FF0000`
-- `light` `#DFDFDF`
-- `dark` `#7D7D7D`
-- `orange` `#E8AB80`
-- `danger-dark` `#BF685C`
+- ![#A7D8B6](https://placehold.co/15x15/A7D8B6/A7D8B6.png) `primary` `#A7D8B6`
+- ![#7FC394](https://placehold.co/15x15/7FC394/7FC394.png) `green-secondary` `#7FC394`
+- ![#E6A08C](https://placehold.co/15x15/E6A08C/E6A08C.png) `secondary` `#E6A08C`
+- ![#E8AB80](https://placehold.co/15x15/E8AB80/E8AB80.png) `secondary-light` `#E8AB80`
+- ![#5BA973](https://placehold.co/15x15/5BA973/5BA973.png) `success` `#5BA973`
+- ![#E8AB80](https://placehold.co/15x15/E8AB80/E8AB80.png) `warning` `#E8AB80`
+- ![#FF0000](https://placehold.co/15x15/FF0000/FF0000.png) `danger` `#FF0000`
+- ![#DFDFDF](https://placehold.co/15x15/DFDFDF/DFDFDF.png) `light` `#DFDFDF`
+- ![#7D7D7D](https://placehold.co/15x15/7D7D7D/7D7D7D.png) `dark` `#7D7D7D`
+- ![#E8AB80](https://placehold.co/15x15/E8AB80/E8AB80.png) `orange` `#E8AB80`
+- ![#BF685C](https://placehold.co/15x15/BF685C/BF685C.png) `danger-dark` `#BF685C`
 
 
 Отступы `margin` и `padding`
