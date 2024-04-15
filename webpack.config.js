@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const WebpackBuildLogPlugin = require('webpack-build-log-plugin');
 const PAGES = fs.readdirSync('./src/components/pages/').filter(fileName => fileName.endsWith('.pug'));
 
 const configureCopy = () => {
@@ -12,7 +13,20 @@ const configureCopy = () => {
         // {from: "src/video/", to: "video/"},
         {from: 'src/images/', to: 'images/'},
         // {from: 'src/fonts/', to: 'fonts/'},
-        {from: 'src/js/', to: 'js/'}
+        {from: 'src/js/', to: 'js/'},
+        {from: path.resolve('node_modules/jquery/dist/jquery.min.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('node_modules/popper.js/dist/popper.min.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('node_modules/bootstrap/dist/js/bootstrap.min.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('node_modules/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('node_modules/bootstrap-datepicker/js/locales/bootstrap-datepicker.uk.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('node_modules/perfect-scrollbar/dist/perfect-scrollbar.min.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('node_modules/dotdotdot-js/dist/dotdotdot.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('node_modules/slick-carousel/slick/slick.min.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('node_modules/intl-tel-input/build/js/intlTelInput-jquery.min.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('src/js/button-scroll-to-top.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('src/js/scroll-toggle-menu.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('src/js/select-js.js'), to: path.resolve('docs/js/')},
+        {from: path.resolve('src/js/common.js'), to: path.resolve('docs/js/')},
     ]
 };
 
@@ -24,7 +38,7 @@ module.exports = {
     },
 
     output: {
-        filename: 'js/temp-index.min.js',
+        // filename: 'js/temp-index.min.js',
         path: path.resolve(__dirname, 'docs')
     },
 
@@ -39,7 +53,14 @@ module.exports = {
             },
             {
                 test: /\.(svg|png|jpg|gif|jpeg)$/,
-                type: 'asset/resource',
+                exclude: /src\/fonts/,
+                // use: [{
+                //     loader: 'file-loader',
+                //     options: {
+                //         name: '[name].[ext]',
+                //         outputPath: 'images/'
+                //     }
+                // }]
                 generator: {
                     filename: 'images/[name][ext]'
                 },
@@ -52,8 +73,16 @@ module.exports = {
                 },
             },
             {
-                test: /\.(woff|woff2|eot|ttf|svg)$/,
-                type: 'asset/resource',
+                test: /\.(woff(2)?|ttf|eot|svg|otf)(\?v=\d+\.\d+\.\d+)?$/,
+                exclude: /src\/images/,
+                // use: [{
+                //     loader: 'file-loader',
+                //     options: {
+                //         name: '[name].[ext]',
+                //         outputPath: 'fonts/'
+                //     }
+                // }]
+                // type: 'asset/resource',
                 generator: {
                     filename: 'fonts/[name][ext]'
                 }

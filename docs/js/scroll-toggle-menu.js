@@ -1,12 +1,4 @@
-(function (factory, jQuery, Zepto) {
-	if (typeof define === 'function' && define.amd) {
-		define(['jquery'], factory);
-	} else if (typeof exports === 'object' && typeof Meteor === 'undefined') {
-		module.exports = factory(require('jquery'));
-	} else {
-		factory(jQuery || Zepto);
-	}
-}(function($){
+(function () {
 	var classNames = {
 		smToggleMenu: 'header-sticky',
 		smTogglePosition: 'sm-toggle-position',
@@ -71,4 +63,4 @@
 	});
 
 	$(document).on('scroll', render);
-}, window.jQuery, window.Zepto));
+})();
