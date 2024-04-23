@@ -14,7 +14,7 @@ mixin ProductPreviewItem(data)
         .d-flex.flex-column.ksht-product-preview-item-link.d-block
             .d-flex.align-items-start
                 a.text-black.p3&attributes(attributes)= data.name
-                a(href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket")
+                a.ms-auto(href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket")
                     i.ci-Shopping_Cart_02.ksht-icon-circle.bg-green-secondary.me-6.mx-xxl-16
             .mt-auto
                 if data.oldPrice

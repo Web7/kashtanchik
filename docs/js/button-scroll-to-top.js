@@ -40,7 +40,7 @@ function scrollToTop() {
     }
 }
 
-var buttonScrollToTop = function(otions) {
+global.buttonScrollToTop = function(otions) {
     var defaultOptions = {
         arrow: 'arrow',
         typeButton: 'circle',
