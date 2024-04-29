@@ -2274,7 +2274,9 @@ html, body {
   --bs-black: #000000;
   --bs-white: #ffffff;
   --bs-gray: #6c757d;
+  --bs-gray-light: #DFDFDF;
   --bs-gray-dark: #d9d9d9;
+  --bs-gray-dark-second: #7D7D7D;
   --bs-gray-100: #DFDFDF;
   --bs-gray-200: #e9ecef;
   --bs-gray-300: #dee2e6;
@@ -22143,6 +22145,8 @@ textarea.form-control-lg {
   max-height: 293px;
   min-height: 293px;
   position: relative; }
+  .ksht-product-preview-item.not-available .product-link-name {
+    color: #7d7d7d !important; }
   .ksht-product-preview-item-img {
     background-color: #d9d9d9;
     height: 188px;
@@ -22174,6 +22178,7 @@ textarea.form-control-lg {
     bottom: 0; }
 
 .ksht-add-to-favorites {
+  border: 0;
   display: block;
   width: 30px;
   height: 30px;
@@ -22193,6 +22198,10 @@ textarea.form-control-lg {
   position: absolute;
   top: 6px;
   right: 6px; }
+
+.product-link-name {
+  height: 68px;
+  display: block; }
 
 @media (min-width: 540px) {
   .ksht-product-preview-item {
@@ -22250,6 +22259,11 @@ textarea.form-control-lg {
     width: 100%;
     height: 380px;
     background-color: #d9d9d9; }
+  .ksht-selection-item span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block; }
 
 .ksht-subscription-section {
   width: 100%;
@@ -22866,8 +22880,8 @@ input[type="number"] {
   min-height: 128px;
   margin-bottom: 2px; }
   .delivery-container > .delivery-item {
-    margin-left: 25px;
-    margin-right: 25px; }
+    margin-left: 20px;
+    margin-right: 20px; }
     .delivery-container > .delivery-item:first-child {
       margin-left: 0; }
     .delivery-container > .delivery-item:last-child {
@@ -22880,14 +22894,15 @@ input[type="number"] {
       width: 167px;
       min-width: 167px; }
     .delivery-container > .delivery-item:nth-child(3) {
-      width: 216px;
-      min-width: 216px; }
+      width: 195px;
+      min-width: 195px; }
     .delivery-container > .delivery-item:nth-child(4) {
       width: 190px;
       min-width: 190px; }
     .delivery-container > .delivery-item:nth-child(5) {
-      width: 245px;
-      min-width: 245px; }
+      width: 240px;
+      min-width: 240px;
+      margin-right: 0; }
   .delivery-container .icon-delivery {
     width: 74px;
     min-width: 74px;

@@ -120,7 +120,7 @@ module.exports = {
             patterns: configureCopy()
         }),
         new MiniCssExtractPlugin({
-            filename: 'css/style.css',
+            filename: 'css/stylesheet.css',
             chunkFilename: '[id].css'
         }),
         ...PAGES.map(page => new HtmlWebPackPlugin({

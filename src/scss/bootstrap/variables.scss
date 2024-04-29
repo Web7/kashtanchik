@@ -63,7 +63,9 @@ $colors: (
   "black":      $black,
   "white":      $white,
   "gray":       $gray-600,
-  "gray-dark":  $gray-800
+  "gray-light": $gray-100,
+  "gray-dark":  $gray-800,
+  "gray-dark-second":  $gray-900
 ) !default;
 // scss-docs-end colors-map
 

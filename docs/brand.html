@@ -7,7 +7,7 @@
       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       <title></title>
       <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <script defer src="index.js"></script><link href="css/style.css" rel="stylesheet"></head>
+  <script defer src="index.js"></script><link href="css/stylesheet.css" rel="stylesheet"></head>
   <body class="d-flex flex-column">
     <header>
       <div class="header-sticky position-static">
@@ -911,157 +911,184 @@
               </div>
               <div class="row row-cols-xxl-4 row-cols-2 row-cols-lg-3">
                 <div class="col">
-                  <div class="ksht-product-preview-item d-inline-block mb-30">
-                    <div class="ksht-product-preview-item-img" style="background-image: url()">
-                      <div class="badge-container">
-                        <div class="badge new text-white bg-secondary p3 d-none d-xxl-block mb-8">New</div>
-                        <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                  <form method="post" data-oc-toggle="ajax" data-oc-load="index.php?route=common/cart.info&amp;language=en-gb" data-oc-target="#header-cart">
+                    <div class="ksht-product-preview-item d-inline-block mb-30 not-available">
+                      <div class="ksht-product-preview-item-img" style="background-image: url()">
+                        <div class="badge-container">
+                          <div class="badge new text-white bg-secondary p3 d-none d-xxl-block mb-8">New</div>
+                          <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                        </div>
+                        <div class="right-container">
+                          <button class="ksht-add-to-favorites" type="submit" formaction="index.php?route=account/wishlist.add&amp;language=en-gb"><i class="ci-Heart_01"></i></button>
+                        </div>
                       </div>
-                      <div class="right-container"><a class="ksht-add-to-favorites" href="#"><i class="ci-Heart_01"></i></a>
+                      <div class="d-flex flex-column ksht-product-preview-item-link d-block">
+                        <div class="d-flex align-items-start"><a class="product-link-name dotdotdot-name p3 text-black" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle me-6 mx-xxl-16 bg-green-secondary"></i></a></div>
+                        <div class="mt-auto">
+                          <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column ksht-product-preview-item-link d-block">
-                      <div class="d-flex align-items-start"><a class="text-black p3" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle bg-green-secondary me-6 mx-xxl-16"></i></a></div>
-                      <div class="mt-auto">
-                        <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="col">
-                  <div class="ksht-product-preview-item d-inline-block mb-30">
-                    <div class="ksht-product-preview-item-img" style="background-image: url()">
-                      <div class="badge-container">
-                        <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                  <form method="post" data-oc-toggle="ajax" data-oc-load="index.php?route=common/cart.info&amp;language=en-gb" data-oc-target="#header-cart">
+                    <div class="ksht-product-preview-item d-inline-block mb-30 not-available">
+                      <div class="ksht-product-preview-item-img" style="background-image: url()">
+                        <div class="badge-container">
+                          <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                        </div>
+                        <div class="right-container">
+                          <button class="ksht-add-to-favorites" type="submit" formaction="index.php?route=account/wishlist.add&amp;language=en-gb"><i class="ci-Heart_01"></i></button>
+                        </div>
                       </div>
-                      <div class="right-container"><a class="ksht-add-to-favorites" href="#"><i class="ci-Heart_01"></i></a>
+                      <div class="d-flex flex-column ksht-product-preview-item-link d-block">
+                        <div class="d-flex align-items-start"><a class="product-link-name dotdotdot-name p3 text-black" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle me-6 mx-xxl-16 bg-green-secondary"></i></a></div>
+                        <div class="mt-auto">
+                          <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column ksht-product-preview-item-link d-block">
-                      <div class="d-flex align-items-start"><a class="text-black p3" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle bg-green-secondary me-6 mx-xxl-16"></i></a></div>
-                      <div class="mt-auto">
-                        <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="col">
-                  <div class="ksht-product-preview-item d-inline-block mb-30">
-                    <div class="ksht-product-preview-item-img" style="background-image: url()">
-                      <div class="badge-container">
+                  <form method="post" data-oc-toggle="ajax" data-oc-load="index.php?route=common/cart.info&amp;language=en-gb" data-oc-target="#header-cart">
+                    <div class="ksht-product-preview-item d-inline-block mb-30 not-available">
+                      <div class="ksht-product-preview-item-img" style="background-image: url()">
+                        <div class="badge-container">
+                        </div>
+                        <div class="right-container">
+                          <button class="ksht-add-to-favorites" type="submit" formaction="index.php?route=account/wishlist.add&amp;language=en-gb"><i class="ci-Heart_01"></i></button><i class="ki-chestnut"></i>
+                        </div>
                       </div>
-                      <div class="right-container"><a class="ksht-add-to-favorites" href="#"><i class="ci-Heart_01"></i></a><i class="ki-chestnut"></i>
+                      <div class="d-flex flex-column ksht-product-preview-item-link d-block">
+                        <div class="d-flex align-items-start"><a class="product-link-name dotdotdot-name p3 text-black" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle me-6 mx-xxl-16 bg-green-secondary"></i></a></div>
+                        <div class="mt-auto">
+                          <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column ksht-product-preview-item-link d-block">
-                      <div class="d-flex align-items-start"><a class="text-black p3" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle bg-green-secondary me-6 mx-xxl-16"></i></a></div>
-                      <div class="mt-auto">
-                        <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="col">
-                  <div class="ksht-product-preview-item d-inline-block mb-30">
-                    <div class="ksht-product-preview-item-img" style="background-image: url()">
-                      <div class="badge-container">
-                        <div class="badge new text-white bg-secondary p3 d-none d-xxl-block mb-8">New</div>
-                        <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                  <form method="post" data-oc-toggle="ajax" data-oc-load="index.php?route=common/cart.info&amp;language=en-gb" data-oc-target="#header-cart">
+                    <div class="ksht-product-preview-item d-inline-block mb-30 not-available">
+                      <div class="ksht-product-preview-item-img" style="background-image: url()">
+                        <div class="badge-container">
+                          <div class="badge new text-white bg-secondary p3 d-none d-xxl-block mb-8">New</div>
+                          <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                        </div>
+                        <div class="right-container">
+                          <button class="ksht-add-to-favorites" type="submit" formaction="index.php?route=account/wishlist.add&amp;language=en-gb"><i class="ci-Heart_01"></i></button>
+                        </div>
                       </div>
-                      <div class="right-container"><a class="ksht-add-to-favorites" href="#"><i class="ci-Heart_01"></i></a>
+                      <div class="d-flex flex-column ksht-product-preview-item-link d-block">
+                        <div class="d-flex align-items-start"><a class="product-link-name dotdotdot-name p3 text-black" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle me-6 mx-xxl-16 bg-green-secondary"></i></a></div>
+                        <div class="mt-auto">
+                          <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column ksht-product-preview-item-link d-block">
-                      <div class="d-flex align-items-start"><a class="text-black p3" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle bg-green-secondary me-6 mx-xxl-16"></i></a></div>
-                      <div class="mt-auto">
-                        <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="col">
-                  <div class="ksht-product-preview-item d-inline-block mb-30">
-                    <div class="ksht-product-preview-item-img" style="background-image: url()">
-                      <div class="badge-container">
-                        <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                  <form method="post" data-oc-toggle="ajax" data-oc-load="index.php?route=common/cart.info&amp;language=en-gb" data-oc-target="#header-cart">
+                    <div class="ksht-product-preview-item d-inline-block mb-30 not-available">
+                      <div class="ksht-product-preview-item-img" style="background-image: url()">
+                        <div class="badge-container">
+                          <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                        </div>
+                        <div class="right-container">
+                          <button class="ksht-add-to-favorites" type="submit" formaction="index.php?route=account/wishlist.add&amp;language=en-gb"><i class="ci-Heart_01"></i></button>
+                        </div>
                       </div>
-                      <div class="right-container"><a class="ksht-add-to-favorites" href="#"><i class="ci-Heart_01"></i></a>
+                      <div class="d-flex flex-column ksht-product-preview-item-link d-block">
+                        <div class="d-flex align-items-start"><a class="product-link-name dotdotdot-name p3 text-black" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle me-6 mx-xxl-16 bg-green-secondary"></i></a></div>
+                        <div class="mt-auto">
+                          <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column ksht-product-preview-item-link d-block">
-                      <div class="d-flex align-items-start"><a class="text-black p3" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle bg-green-secondary me-6 mx-xxl-16"></i></a></div>
-                      <div class="mt-auto">
-                        <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="col">
-                  <div class="ksht-product-preview-item d-inline-block mb-30">
-                    <div class="ksht-product-preview-item-img" style="background-image: url()">
-                      <div class="badge-container">
+                  <form method="post" data-oc-toggle="ajax" data-oc-load="index.php?route=common/cart.info&amp;language=en-gb" data-oc-target="#header-cart">
+                    <div class="ksht-product-preview-item d-inline-block mb-30 not-available">
+                      <div class="ksht-product-preview-item-img" style="background-image: url()">
+                        <div class="badge-container">
+                        </div>
+                        <div class="right-container">
+                          <button class="ksht-add-to-favorites" type="submit" formaction="index.php?route=account/wishlist.add&amp;language=en-gb"><i class="ci-Heart_01"></i></button><i class="ki-chestnut"></i>
+                        </div>
                       </div>
-                      <div class="right-container"><a class="ksht-add-to-favorites" href="#"><i class="ci-Heart_01"></i></a><i class="ki-chestnut"></i>
+                      <div class="d-flex flex-column ksht-product-preview-item-link d-block">
+                        <div class="d-flex align-items-start"><a class="product-link-name dotdotdot-name p3 text-black" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle me-6 mx-xxl-16 bg-green-secondary"></i></a></div>
+                        <div class="mt-auto">
+                          <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column ksht-product-preview-item-link d-block">
-                      <div class="d-flex align-items-start"><a class="text-black p3" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle bg-green-secondary me-6 mx-xxl-16"></i></a></div>
-                      <div class="mt-auto">
-                        <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="col">
-                  <div class="ksht-product-preview-item d-inline-block mb-30">
-                    <div class="ksht-product-preview-item-img" style="background-image: url()">
-                      <div class="badge-container">
-                        <div class="badge new text-white bg-secondary p3 d-none d-xxl-block mb-8">New</div>
-                        <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                  <form method="post" data-oc-toggle="ajax" data-oc-load="index.php?route=common/cart.info&amp;language=en-gb" data-oc-target="#header-cart">
+                    <div class="ksht-product-preview-item d-inline-block mb-30 not-available">
+                      <div class="ksht-product-preview-item-img" style="background-image: url()">
+                        <div class="badge-container">
+                          <div class="badge new text-white bg-secondary p3 d-none d-xxl-block mb-8">New</div>
+                          <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                        </div>
+                        <div class="right-container">
+                          <button class="ksht-add-to-favorites" type="submit" formaction="index.php?route=account/wishlist.add&amp;language=en-gb"><i class="ci-Heart_01"></i></button>
+                        </div>
                       </div>
-                      <div class="right-container"><a class="ksht-add-to-favorites" href="#"><i class="ci-Heart_01"></i></a>
+                      <div class="d-flex flex-column ksht-product-preview-item-link d-block">
+                        <div class="d-flex align-items-start"><a class="product-link-name dotdotdot-name p3 text-black" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle me-6 mx-xxl-16 bg-green-secondary"></i></a></div>
+                        <div class="mt-auto">
+                          <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column ksht-product-preview-item-link d-block">
-                      <div class="d-flex align-items-start"><a class="text-black p3" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle bg-green-secondary me-6 mx-xxl-16"></i></a></div>
-                      <div class="mt-auto">
-                        <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="col">
-                  <div class="ksht-product-preview-item d-inline-block mb-30">
-                    <div class="ksht-product-preview-item-img" style="background-image: url()">
-                      <div class="badge-container">
-                        <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                  <form method="post" data-oc-toggle="ajax" data-oc-load="index.php?route=common/cart.info&amp;language=en-gb" data-oc-target="#header-cart">
+                    <div class="ksht-product-preview-item d-inline-block mb-30 not-available">
+                      <div class="ksht-product-preview-item-img" style="background-image: url()">
+                        <div class="badge-container">
+                          <div class="badge new text-white bg-orange p3 d-none d-xxl-block">-30%</div>
+                        </div>
+                        <div class="right-container">
+                          <button class="ksht-add-to-favorites" type="submit" formaction="index.php?route=account/wishlist.add&amp;language=en-gb"><i class="ci-Heart_01"></i></button>
+                        </div>
                       </div>
-                      <div class="right-container"><a class="ksht-add-to-favorites" href="#"><i class="ci-Heart_01"></i></a>
+                      <div class="d-flex flex-column ksht-product-preview-item-link d-block">
+                        <div class="d-flex align-items-start"><a class="product-link-name dotdotdot-name p3 text-black" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle me-6 mx-xxl-16 bg-green-secondary"></i></a></div>
+                        <div class="mt-auto">
+                          <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column ksht-product-preview-item-link d-block">
-                      <div class="d-flex align-items-start"><a class="text-black p3" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle bg-green-secondary me-6 mx-xxl-16"></i></a></div>
-                      <div class="mt-auto">
-                        <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
                 <div class="col">
-                  <div class="ksht-product-preview-item d-inline-block mb-30">
-                    <div class="ksht-product-preview-item-img" style="background-image: url()">
-                      <div class="badge-container">
+                  <form method="post" data-oc-toggle="ajax" data-oc-load="index.php?route=common/cart.info&amp;language=en-gb" data-oc-target="#header-cart">
+                    <div class="ksht-product-preview-item d-inline-block mb-30 not-available">
+                      <div class="ksht-product-preview-item-img" style="background-image: url()">
+                        <div class="badge-container">
+                        </div>
+                        <div class="right-container">
+                          <button class="ksht-add-to-favorites" type="submit" formaction="index.php?route=account/wishlist.add&amp;language=en-gb"><i class="ci-Heart_01"></i></button><i class="ki-chestnut"></i>
+                        </div>
                       </div>
-                      <div class="right-container"><a class="ksht-add-to-favorites" href="#"><i class="ci-Heart_01"></i></a><i class="ki-chestnut"></i>
+                      <div class="d-flex flex-column ksht-product-preview-item-link d-block">
+                        <div class="d-flex align-items-start"><a class="product-link-name dotdotdot-name p3 text-black" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle me-6 mx-xxl-16 bg-green-secondary"></i></a></div>
+                        <div class="mt-auto">
+                          <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
+                        </div>
                       </div>
                     </div>
-                    <div class="d-flex flex-column ksht-product-preview-item-link d-block">
-                      <div class="d-flex align-items-start"><a class="text-black p3" href="product.html">Новорічниай одяг для вашого малюка</a><a class="ms-auto" href="#" data-bs-toggle="modal" data-bs-target="#modalAddToBasket"><i class="ci-Shopping_Cart_02 ksht-icon-circle bg-green-secondary me-6 mx-xxl-16"></i></a></div>
-                      <div class="mt-auto">
-                        <s class="p3 text-dark me-8 me-xxl-16">1785 ₴</s><b class="p2 text-black f-medium">1200 ₴</b>
-                      </div>
-                    </div>
-                  </div>
+                  </form>
                 </div>
               </div>
               <div class="text-center"><a class="btn btn-green-secondary w-250">Дивитися ще</a></div>

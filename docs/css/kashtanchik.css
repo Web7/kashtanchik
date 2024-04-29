@@ -1,0 +1,20 @@
+.ksht-top-slider .carousel-item {
+  background-size: cover;}
+
+#childCategory,
+#parentCategory,
+.ksht-short-menu a {
+  cursor: pointer;
+}
+
+.ksht-selection-item-image {
+  background-size: cover;
+}
+
+.ksht-instagram-item {
+  background-size: cover;
+}
+
+.ksht-product-preview-item-img {
+  background-size: cover;
+}

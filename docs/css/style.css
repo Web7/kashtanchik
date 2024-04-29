@@ -22174,6 +22174,7 @@ textarea.form-control-lg {
     bottom: 0; }
 
 .ksht-add-to-favorites {
+  border: 0;
   display: block;
   width: 30px;
   height: 30px;
@@ -22193,6 +22194,10 @@ textarea.form-control-lg {
   position: absolute;
   top: 6px;
   right: 6px; }
+
+.product-link-name {
+  height: 68px;
+  display: block; }
 
 @media (min-width: 540px) {
   .ksht-product-preview-item {
@@ -22250,6 +22255,10 @@ textarea.form-control-lg {
     width: 100%;
     height: 380px;
     background-color: #d9d9d9; }
+  .ksht-selection-item span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
 
 .ksht-subscription-section {
   width: 100%;
