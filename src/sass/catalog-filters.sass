@@ -4,7 +4,7 @@
     border-right: none
 
 .catalog-filter
-  top: 96px
+  top: 0
   &-accordion
     .form-check-label
       white-space: nowrap
@@ -24,6 +24,11 @@
       border-bottom: 1px solid $gray-100
       border-right: 1px solid $gray-100
 
+@media (min-width: 540px)
+  .catalog-filter
+    top: 16px
+
 @media (min-width: 1320px)
   .catalog-filter
-    top: 223px
+    top: 16px
+    //top: 223px

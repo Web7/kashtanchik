@@ -11,16 +11,25 @@ mixin LeftSideMenu()
                 i.ci-Shopping_Cart_02
             button.btn-close.ms-auto(type="button" data-bs-dismiss="offcanvas" aria-label="Close")
         .offcanvas-body
-            .d-flex.ksht-short-menu.align-items-center.border-bottom.mb-28
-                a(href="#") Дітям
-                .ksht-short-menu-space
-                a.active(href="#") Батькам
-            .row.row-cols-2
-                - var menus = ['Хіти', 'NEW', 'Малюкам до року', 'Дівчаткам', 'Хлопчикам', 'Іграшки', 'Розвиток та школа', 'Гігієна та догляд', 'Харчування', 'Текстиль', 'Меблі та декор', 'Послуги', 'Sale', 'Подарунки']
-                each menu, index in menus
-                    a.pb-8.text-black(data-bs-toggle="offcanvas" href="#mobileSubMenu" aria-controls="mobileSubMenu")
-                        img.mb-4(src="images/menu-" + index + ".png" width="156" height="74" alt= menu title= menu)
-                        p.p3= menu
+            nav.d-flex.ksht-short-menu.align-items-center.border-bottom.mb-28
+                .nav.nav-pills.row-cols-2#nav-tab-menu.w-100
+                    a.nav-link.active#nav-children-tab(href="#" data-bs-toggle="tab" data-bs-target="#nav-children") Дітям
+                    a.nav-link#nav-parents-tab(href="#" data-bs-toggle="tab" data-bs-target="#nav-parents") Батькам
+            .tab-content#nav-tabContent
+                .tab-pane.fade.show.active#nav-children(tabindex="0")
+                    .row.row-cols-2
+                        - var menus = ['Хіти', 'NEW', 'Малюкам до року', 'Дівчаткам', 'Хлопчикам', 'Іграшки', 'Розвиток та школа', 'Гігієна та догляд', 'Харчування', 'Текстиль', 'Меблі та декор', 'Послуги', 'Sale', 'Подарунки']
+                        each menu, index in menus
+                            a.pb-8.text-black(data-bs-toggle="offcanvas" href="#mobileSubMenu" aria-controls="mobileSubMenu")
+                                img.mb-4(src="images/menu-" + index + ".png" width="156" height="74" alt= menu title= menu)
+                                p.p3= menu
+                .tab-pane.fade#nav-parents(tabindex="1")
+                    .row.row-cols-2
+                        - var menus = ['Хіти', 'NEW', 'Малюкам до року', 'Дівчаткам', 'Хлопчикам', 'Іграшки', 'Розвиток та школа', 'Гігієна та догляд', 'Харчування', 'Текстиль', 'Меблі та декор', 'Послуги', 'Sale', 'Подарунки']
+                        each menu, index in menus
+                            a.pb-8.text-black(data-bs-toggle="offcanvas" href="#mobileSubMenu" aria-controls="mobileSubMenu")
+                                img.mb-4(src="images/menu-" + index + ".png" width="156" height="74" alt= menu title= menu)
+                                p.p3= menu
             .mt-20
                 - var menus = [{name: 'Про нас', href: 'about-us.html'}, {name: 'Бренди', href: 'brands.html'}, {name: 'Акції', href: 'stock.html'}, {name: 'Подарунки', href: 'presents.html'}, {name: 'Оплата та доставка', href: 'payment-methods.html'}, {name: 'Співпраця', href: 'cooperation.html'} ]
                 each menu, index in menus

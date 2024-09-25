@@ -15,10 +15,24 @@ footer
   flex: 0 0 auto
 
 @import 'UI/form-check'
+@import 'UI/input'
 @import 'UI/input-phone'
 @import 'UI/input-password'
 @import 'UI/input-datepicker'
 @import 'UI/toast'
+
+.list-circle
+  list-style: none
+  li
+    display: flex
+    &:before
+      content: "" !important
+      display: inline-block
+      width: 8px
+      height: 8px
+      margin: 8px
+      border-radius: 50%
+      border: 1px solid $green-secondary
 
 .col-auto
   //max-width: max-content
@@ -68,13 +82,13 @@ footer
   text-decoration: none !important
   border-bottom: none !important
 
-.w
-  &-250
-    width: 250px
-  &-315
-    width: 315px
-  &-425
-    width: 425px
+//.w
+//  &-250
+//    width: 250px
+//  &-315
+//    width: 315px
+//  &-425
+//    width: 425px
 
 ol:not(.breadcrumb)
   counter-reset: listCounter
@@ -107,18 +121,19 @@ a
 @media (min-width: 1140px)
   .container
     &-fluid
-      padding-left: 60px
-      padding-right: 60px
+      padding-left: 50px
+      padding-right: 50px
 
 @media (min-width: 1320px)
   .border-xxl-start
     border-left: 1px solid $gray-100 !important
 
+
 .slick
   &-arrow
     display: inline-block
-    width: 32px
-    height: 32px
+    width: 26px
+    height: 26px
     background-color: $green-secondary
     border: none
     position: static
@@ -137,6 +152,17 @@ a
   &-next
     &:before
       content: "\e982"
+
+@media (min-width: 540px)
+  .slick
+    &-arrow
+      width: 32px
+      height: 32px
+@media (min-width: 1320px)
+  .slick
+    &-arrow
+      width: 32px
+      height: 32px
 
 .form
   &-select

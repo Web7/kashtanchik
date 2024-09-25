@@ -112,3 +112,15 @@ $fontSizes: (24, 21, 18, 16, 15, 14, 13, 12)
 
 .invalid-feedback
 	font-size: 12px
+
+$widths: (250, 315, 425)
+
+.w
+	@each $breakpoint in map-keys($grid-breakpoints)
+		$next: breakpoint-next($breakpoint, $grid-breakpoints)
+		$infix: breakpoint-infix($next, $grid-breakpoints)
+		&#{$infix}
+			@include media-breakpoint-up($next)
+				@each $size in $widths
+					&-#{$size}
+						width: #{$size}px !important

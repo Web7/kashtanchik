@@ -15,7 +15,9 @@
 		positionFixed: 'short'
 	};
 
+
 	var ids = {};
+
 
 	var buildSelectors = function (selectors, source, characterToPrependWith) {
 		$.each(source, function (propertyName, value) {

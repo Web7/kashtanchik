@@ -419,6 +419,8 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 // scss-docs-start spacer-variables-maps
 $spacer: 1rem !default;
 $spacers: (
+  -48: -48px,
+  -18: -18px,
   0: 0,
   4: 4px,
   5: 5px,
@@ -527,7 +529,7 @@ $grid-breakpoints: (
   lg: 992px,
   xl: 1200px,
   xxl: 1400px,
-  xxxl: 1920px
+  xxxl: 1480px
 ) !default;
 // scss-docs-end grid-breakpoints
 
@@ -546,7 +548,7 @@ $container-max-widths: (
   lg: 960px,
   xl: 1140px,
   xxl: 1320px,
-  xxxl: 1440px
+  xxxl: 1420px
 ) !default;
 // scss-docs-end container-max-widths
 
@@ -695,7 +697,7 @@ $headings-margin-bottom:      $spacer * .5 !default;
 $headings-font-family:        null !default;
 $headings-font-style:         null !default;
 $headings-font-weight:        500 !default;
-$headings-line-height:        1.2 !default;
+$headings-line-height:        1 !default;
 $headings-color:              null !default;
 // scss-docs-end headings-variables
 
@@ -1217,7 +1219,7 @@ $nav-tabs-link-active-border-color: var(--#{$prefix}border-color) var(--#{$prefi
 
 $nav-pills-border-radius:           var(--#{$prefix}border-radius) !default;
 $nav-pills-link-active-color:       $component-active-color !default;
-$nav-pills-link-active-bg:          $component-active-bg !default;
+$nav-pills-link-active-bg:          $green-secondary !default;
 
 $nav-underline-gap:                 1rem !default;
 $nav-underline-border-width:        .125rem !default;
@@ -1440,18 +1442,18 @@ $accordion-button-active-icon:  url("data:image/svg+xml,<svg xmlns='http://www.w
 // Tooltips
 
 // scss-docs-start tooltip-variables
-$tooltip-font-size:                 $font-size-sm !default;
-$tooltip-max-width:                 200px !default;
-$tooltip-color:                     var(--#{$prefix}body-bg) !default;
-$tooltip-bg:                        var(--#{$prefix}emphasis-color) !default;
-$tooltip-border-radius:             var(--#{$prefix}border-radius) !default;
-$tooltip-opacity:                   .9 !default;
-$tooltip-padding-y:                 $spacer * .25 !default;
-$tooltip-padding-x:                 $spacer * .5 !default;
+$tooltip-font-size:                 12px;
+$tooltip-max-width:                 103px !default;
+$tooltip-color:                     $black !default;
+$tooltip-bg:                        $white !default;
+$tooltip-border-radius:             0 !default;
+$tooltip-opacity:                   1 !default;
+$tooltip-padding-y:                 8px !default;
+$tooltip-padding-x:                 8px !default;
 $tooltip-margin:                    null !default; // TODO: remove this in v6
 
-$tooltip-arrow-width:               .8rem !default;
-$tooltip-arrow-height:              .4rem !default;
+$tooltip-arrow-width:               0 !default;
+$tooltip-arrow-height:              0 !default;
 // fusv-disable
 $tooltip-arrow-color:               null !default; // Deprecated in Bootstrap 5.2.0 for CSS variables
 // fusv-enable

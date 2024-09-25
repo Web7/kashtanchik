@@ -6,13 +6,28 @@
   position: relative
   min-height: 128px
   margin-bottom: 2px
+  zoom: 1
   > .delivery-item
-    margin-left: 20px
-    margin-right: 20px
-    &:first-child
-      margin-left: 0
+    margin-right: 71px
     &:last-child
       margin-right: 0
+    &.delivery-main
+      &:nth-child(1)
+        width: 227px
+        min-width: 227px
+      &:nth-child(2)
+        width: 206px
+        min-width: 206px
+      &:nth-child(3)
+        width: 207px
+        min-width: 207px
+      &:nth-child(4)
+        width: 198px
+        min-width: 198px
+      &:nth-child(5)
+        width: 198px
+        min-width: 198px
+        margin-right: 0
     &:nth-child(1)
       width: 248px
       min-width: 248px
@@ -30,6 +45,9 @@
       width: 240px
       min-width: 240px
       margin-right: 0
+    span
+      line-height: 16px
+      display: block
   .icon
     &-delivery
       width: 74px
@@ -56,3 +74,11 @@
       background-image: url(../images/icon-delivery.svg#icon-8)
     &-9
       background-image: url(../images/icon-delivery.svg#icon-9)
+
+@media (min-width: 1140px)
+  .delivery-container
+    zoom: 0.9
+
+@media (min-width: 1320px)
+  .delivery-container
+    zoom: 1

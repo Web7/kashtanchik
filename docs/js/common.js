@@ -144,7 +144,7 @@
 		$productImagesCounter = $('.product-images-counter');
 		// var $header =
 
-		buttonScrollToTop();
+		global.buttonScrollToTop();
 
 		if ($formPhone.exists()) {
 			$formPhone.each(function(){

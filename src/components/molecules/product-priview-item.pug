@@ -4,9 +4,9 @@ mixin ProductPreviewItem(data)
             .ksht-product-preview-item-img(style="background-image: url(" + data.image + ")")
                 .badge-container
                     if data.isNew
-                        .badge.new.text-white.bg-secondary.p3.d-none.d-xxl-block.mb-8 New
+                        .badge.new.text-white.bg-secondary.p3.mb-8 New
                     if data.salePercent
-                        .badge.new.text-white.bg-orange.p3.d-none.d-xxl-block= data.salePercent
+                        .badge.new.text-white.bg-orange.p3= data.salePercent
                 .right-container
                     button.ksht-add-to-favorites(type="submit" formaction="index.php?route=account/wishlist.add&language=en-gb")
                         i(class= (data.isFavorite ? 'ci-Heart_Fill_01' : 'ci-Heart_01'))
@@ -23,4 +23,4 @@ mixin ProductPreviewItem(data)
                             s.p3.text-dark.me-8.me-xxl-16= data.oldPrice
                         b.p2.text-black.f-medium= data.price
                     else
-                        p.p2.f-medium.text-dark Немає в наявності
+                        p.p3.f-medium.text-dark Немає в наявності
